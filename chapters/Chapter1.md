@@ -1,45 +1,6 @@
 # Введение в интеллектуальную аналитику данных: от Data Mining к AI Analytics
 
-[📊 Открыть интерактивную карту курса](maps/Введение в интеллектуальную аналитику данных.svg)
-
-## 🗺️ Карта курса
-
-<div align="center">
-
-<svg width="800" height="400" viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
-  <defs>
-    <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" style="stop-color:#4CAF50;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#45a049;stop-opacity:1" />
-    </linearGradient>
-  </defs>
-  
-  <!-- Стрелки связей -->
-  <defs>
-    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
-      <polygon points="0 0, 10 3.5, 0 7" fill="#666"/>
-    </marker>
-  </defs>
-  
-  <!-- Глава 1 -->
-  <a href="chapters/01-introduction.md">
-    <rect x="50" y="150" width="200" height="80" rx="15" fill="url(#grad1)" stroke="#2E7D32" stroke-width="2"/>
-    <text x="150" y="185" text-anchor="middle" fill="white" font-family="Arial" font-size="16" font-weight="bold">Глава 1</text>
-    <text x="150" y="210" text-anchor="middle" fill="white" font-family="Arial" font-size="12">Введение</text>
-  </a>
-  
-  <!-- Стрелка -->
-  <line x1="250" y1="190" x2="310" y2="190" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
-  
-  <!-- Глава 2 -->
-  <a href="chapters/02-basics.md">
-    <rect x="320" y="150" width="200" height="80" rx="15" fill="#2196F3" stroke="#1565C0" stroke-width="2"/>
-    <text x="420" y="185" text-anchor="middle" fill="white" font-family="Arial" font-size="16" font-weight="bold">Глава 2</text>
-    <text x="420" y="210" text-anchor="middle" fill="white" font-family="Arial" font-size="12">Основы</text>
-  </a>
-</svg>
-
-</div>
+[Открыть интерактивную карту главы →](../../maps/Chapter.svg)
 
 ## 1. Введение
 
