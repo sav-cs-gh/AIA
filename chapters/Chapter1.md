@@ -1,6 +1,6 @@
 # Введение в интеллектуальную аналитику данных: от Data Mining к AI Analytics
 
-[Открыть интерактивную карту главы →](../../maps/Chapter1.svg)
+[Открыть интерактивную карту главы →](https://github.com/sav-cs-gh/AIA/blob/main/maps/Chapter1.svg)
 
 ## 1. Введение
 
