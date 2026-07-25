@@ -1,0 +1,156 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1600" font-family="Arial, Helvetica, sans-serif">
+  
+  <!-- Общий фон -->
+  <rect width="1200" height="1600" fill="#f0f0f0"/>
+  
+  <!-- ==================== ЗАГОЛОВОК ==================== -->
+  <rect x="30" y="15" width="1140" height="90" rx="12" fill="#2a2a2a"/>
+  <text x="600" y="55" text-anchor="middle" font-size="32" font-weight="bold" fill="#ffffff">Глава 1. Введение в интеллектуальную аналитику данных</text>
+  <text x="600" y="92" text-anchor="middle" font-size="26" fill="#cccccc">от Data Mining к AI Analytics</text>
+  
+  <!-- ==================== БЛОК 1: Эволюция ==================== -->
+  <rect x="30" y="125" width="555" height="260" rx="10" fill="#e6e6e6" stroke="#555" stroke-width="2"/>
+  <rect x="30" y="125" width="555" height="50" rx="10" fill="#4a4a4a"/>
+  <rect x="30" y="157" width="555" height="18" fill="#4a4a4a"/>
+  <text x="307" y="158" text-anchor="middle" font-size="24" font-weight="bold" fill="#ffffff">1. Эволюция аналитики</text>
+  
+  <rect x="50" y="195" width="250" height="40" rx="6" fill="#c8c8c8" stroke="#666" stroke-width="1.5"/>
+  <text x="175" y="221" text-anchor="middle" font-size="17" font-weight="bold" fill="#1a1a1a">Data Mining</text>
+  <text x="320" y="221" font-size="22" fill="#555">→</text>
+  
+  <rect x="350" y="195" width="220" height="40" rx="6" fill="#c8c8c8" stroke="#666" stroke-width="1.5"/>
+  <text x="460" y="221" text-anchor="middle" font-size="17" font-weight="bold" fill="#1a1a1a">Data Science</text>
+  
+  <text x="50" y="270" font-size="16" fill="#333">Поиск закономерностей</text>
+  <text x="350" y="270" font-size="16" fill="#333">Полный жизненный цикл</text>
+  
+  <rect x="50" y="300" width="250" height="40" rx="6" fill="#c8c8c8" stroke="#666" stroke-width="1.5"/>
+  <text x="175" y="326" text-anchor="middle" font-size="17" font-weight="bold" fill="#1a1a1a">ML</text>
+  <text x="320" y="326" font-size="22" fill="#555">→</text>
+  
+  <rect x="350" y="300" width="220" height="40" rx="6" fill="#c8c8c8" stroke="#666" stroke-width="1.5"/>
+  <text x="460" y="326" text-anchor="middle" font-size="17" font-weight="bold" fill="#1a1a1a">AI Analytics</text>
+  
+  <text x="50" y="375" font-size="16" fill="#333">Автоматическое обучение</text>
+  <text x="350" y="375" font-size="16" fill="#333">Интеграция ИИ в аналитику</text>
+  
+  <!-- ==================== БЛОК 2: Data Mining ==================== -->
+  <rect x="615" y="125" width="555" height="260" rx="10" fill="#e6e6e6" stroke="#555" stroke-width="2"/>
+  <rect x="615" y="125" width="555" height="50" rx="10" fill="#4a4a4a"/>
+  <rect x="615" y="157" width="555" height="18" fill="#4a4a4a"/>
+  <text x="892" y="158" text-anchor="middle" font-size="24" font-weight="bold" fill="#ffffff">2. Data Mining</text>
+  
+  <text x="635" y="205" font-size="17" font-weight="bold" fill="#1a1a1a">Классические задачи:</text>
+  <text x="650" y="232" font-size="15" fill="#333">• Классификация</text>
+  <text x="650" y="256" font-size="15" fill="#333">• Регрессия</text>
+  <text x="650" y="280" font-size="15" fill="#333">• Кластеризация</text>
+  <text x="650" y="304" font-size="15" fill="#333">• Ассоциативные правила</text>
+  <text x="650" y="328" font-size="15" fill="#333">• Обнаружение аномалий</text>
+  <text x="650" y="352" font-size="15" fill="#333">• Снижение размерности</text>
+  
+  <text x="635" y="388" font-size="17" font-weight="bold" fill="#1a1a1a">На стыке дисциплин:</text>
+  <text x="650" y="415" font-size="15" fill="#333">Статистика, БД, распознавание, ML, ИИ</text>
+  
+  <!-- ==================== БЛОК 3: ML ==================== -->
+  <rect x="30" y="405" width="555" height="250" rx="10" fill="#e6e6e6" stroke="#555" stroke-width="2"/>
+  <rect x="30" y="405" width="555" height="50" rx="10" fill="#4a4a4a"/>
+  <rect x="30" y="437" width="555" height="18" fill="#4a4a4a"/>
+  <text x="307" y="438" text-anchor="middle" font-size="24" font-weight="bold" fill="#ffffff">3. Машинное обучение (ML)</text>
+  
+  <text x="50" y="485" font-size="17" font-weight="bold" fill="#1a1a1a">Обучение с учителем:</text>
+  <text x="65" y="512" font-size="15" fill="#333">Классификация, регрессия</text>
+  <text x="65" y="535" font-size="15" fill="#333">Примеры: линейная регрессия, деревья, нейросети</text>
+  
+  <text x="50" y="570" font-size="17" font-weight="bold" fill="#1a1a1a">Обучение без учителя:</text>
+  <text x="65" y="597" font-size="15" fill="#333">Кластеризация, снижение размерности</text>
+  <text x="65" y="620" font-size="15" fill="#333">Примеры: k-means, DBSCAN, PCA</text>
+  
+  <text x="50" y="655" font-size="17" font-weight="bold" fill="#1a1a1a">Обучение с подкреплением:</text>
+  <text x="65" y="682" font-size="15" fill="#333">Робототехника, управление, оптимизация</text>
+  
+  <!-- ==================== БЛОК 4: Типы данных ==================== -->
+  <rect x="615" y="405" width="555" height="250" rx="10" fill="#e6e6e6" stroke="#555" stroke-width="2"/>
+  <rect x="615" y="405" width="555" height="50" rx="10" fill="#4a4a4a"/>
+  <rect x="615" y="437" width="555" height="18" fill="#4a4a4a"/>
+  <text x="892" y="438" text-anchor="middle" font-size="24" font-weight="bold" fill="#ffffff">4. Типы данных</text>
+  
+  <text x="635" y="485" font-size="16" font-weight="bold" fill="#1a1a1a">Структурированные:</text>
+  <text x="650" y="510" font-size="15" fill="#333">Таблицы БД, транзакции</text>
+  
+  <text x="635" y="543" font-size="16" font-weight="bold" fill="#1a1a1a">Полуструктурированные:</text>
+  <text x="650" y="568" font-size="15" fill="#333">XML, JSON, логи, API</text>
+  
+  <text x="635" y="601" font-size="16" font-weight="bold" fill="#1a1a1a">Неструктурированные:</text>
+  <text x="650" y="626" font-size="15" fill="#333">Тексты, изображения, аудио, видео</text>
+  
+  <text x="635" y="659" font-size="16" font-weight="bold" fill="#1a1a1a">Временные ряды / Графовые данные</text>
+  
+  <!-- ==================== БЛОК 5: GenAI ==================== -->
+  <rect x="30" y="675" width="555" height="260" rx="10" fill="#e6e6e6" stroke="#555" stroke-width="2"/>
+  <rect x="30" y="675" width="555" height="50" rx="10" fill="#4a4a4a"/>
+  <rect x="30" y="707" width="555" height="18" fill="#4a4a4a"/>
+  <text x="307" y="708" text-anchor="middle" font-size="24" font-weight="bold" fill="#ffffff">5. Генеративный ИИ</text>
+  
+  <text x="50" y="755" font-size="17" font-weight="bold" fill="#1a1a1a">Генерирует:</text>
+  <text x="65" y="782" font-size="15" fill="#333">Тексты, изображения, код, аудио, видео</text>
+  
+  <text x="50" y="818" font-size="17" font-weight="bold" fill="#1a1a1a">Модели:</text>
+  <text x="65" y="845" font-size="15" fill="#333">LLM, диффузионные, GAN, VAE</text>
+  
+  <text x="50" y="880" font-size="17" font-weight="bold" fill="#1a1a1a">Применение:</text>
+  <text x="65" y="907" font-size="15" fill="#333">SQL-запросы, отчёты, диалоги, синтез данных</text>
+  
+  <text x="50" y="945" font-size="17" font-weight="bold" fill="#1a1a1a">Риски:</text>
+  <text x="65" y="972" font-size="15" fill="#333">Галлюцинации, фактические ошибки, приватность</text>
+  
+  <!-- ==================== БЛОК 6: Multimodal AI ==================== -->
+  <rect x="615" y="675" width="555" height="260" rx="10" fill="#e6e6e6" stroke="#555" stroke-width="2"/>
+  <rect x="615" y="675" width="555" height="50" rx="10" fill="#4a4a4a"/>
+  <rect x="615" y="707" width="555" height="18" fill="#4a4a4a"/>
+  <text x="892" y="708" text-anchor="middle" font-size="24" font-weight="bold" fill="#ffffff">6. Мультимодальный ИИ</text>
+  
+  <text x="635" y="755" font-size="17" font-weight="bold" fill="#1a1a1a">Обрабатывает:</text>
+  <text x="650" y="782" font-size="15" fill="#333">Текст + изображения + аудио + видео</text>
+  
+  <text x="635" y="818" font-size="17" font-weight="bold" fill="#1a1a1a">Применения:</text>
+  <text x="650" y="845" font-size="15" fill="#333">• Медицинская диагностика</text>
+  <text x="650" y="870" font-size="15" fill="#333">• Промышленность</text>
+  <text x="650" y="895" font-size="15" fill="#333">• Финансы</text>
+  <text x="650" y="920" font-size="15" fill="#333">• Безопасность</text>
+  
+  <!-- ==================== БЛОК 7: Decision Intelligence ==================== -->
+  <rect x="30" y="955" width="555" height="200" rx="10" fill="#e6e6e6" stroke="#555" stroke-width="2"/>
+  <rect x="30" y="955" width="555" height="50" rx="10" fill="#4a4a4a"/>
+  <rect x="30" y="987" width="555" height="18" fill="#4a4a4a"/>
+  <text x="307" y="988" text-anchor="middle" font-size="24" font-weight="bold" fill="#ffffff">7. Decision Intelligence</text>
+  
+  <text x="50" y="1035" font-size="17" font-weight="bold" fill="#1a1a1a">Смещение акцента:</text>
+  <text x="65" y="1062" font-size="16" fill="#333">От анализа данных → к качеству решений</text>
+  
+  <text x="50" y="1098" font-size="17" font-weight="bold" fill="#1a1a1a">Подходы:</text>
+  <text x="65" y="1125" font-size="15" fill="#333">• Причинно-следственный анализ</text>
+  <text x="65" y="1150" font-size="15" fill="#333">• Сценарное моделирование</text>
+  <text x="65" y="1175" font-size="15" fill="#333">• Оптимизация решений</text>
+  
+  <!-- ==================== БЛОК 8: Вызовы ==================== -->
+  <rect x="615" y="955" width="555" height="200" rx="10" fill="#d9d9d9" stroke="#555" stroke-width="2"/>
+  <rect x="615" y="955" width="555" height="50" rx="10" fill="#3a3a3a"/>
+  <rect x="615" y="987" width="555" height="18" fill="#3a3a3a"/>
+  <text x="892" y="988" text-anchor="middle" font-size="24" font-weight="bold" fill="#ffffff">8. Вызовы аналитики</text>
+  
+  <text x="635" y="1035" font-size="17" font-weight="bold" fill="#1a1a1a">Качество данных:</text>
+  <text x="650" y="1062" font-size="15" fill="#333">Ошибки, пропуски, несогласованность</text>
+  
+  <text x="635" y="1098" font-size="17" font-weight="bold" fill="#1a1a1a">Интерпретируемость:</text>
+  <text x="650" y="1125" font-size="15" fill="#333">Сложные модели — "чёрные ящики"</text>
+  
+  <text x="635" y="1160" font-size="17" font-weight="bold" fill="#1a1a1a">Этические вопросы:</text>
+  <text x="650" y="1187" font-size="15" fill="#333">Предвзятость, приватность, ответственность</text>
+  
+  <!-- ==================== ЗАКЛЮЧЕНИЕ ==================== -->
+  <rect x="30" y="1175" width="1140" height="120" rx="10" fill="#2a2a2a"/>
+  <text x="600" y="1210" text-anchor="middle" font-size="22" font-weight="bold" fill="#ffffff">Заключение: От поиска закономерностей → к интеллектуальным системам</text>
+  <text x="600" y="1245" text-anchor="middle" font-size="19" fill="#cccccc">Data Mining → Data Science → ML → AI Analytics → Decision Intelligence</text>
+  <text x="600" y="1280" text-anchor="middle" font-size="18" fill="#bbbbbb">Ключевые направления: объяснимость, надёжность, мультимодальность, поддержка решений</text>
+  
+</svg>
