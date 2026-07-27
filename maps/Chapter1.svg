@@ -15,7 +15,7 @@
   <rect x="30" y="157" width="555" height="18" fill="#4a4a4a"/>
   <text x="307" y="158" text-anchor="middle" font-size="24" font-weight="bold" fill="#ffffff">1. Эволюция аналитики</text>
 
-  <a href="https://github.com/sav-cs-gh/AIA/blob/main/chapters/Chapter1.md">
+  <a href="https://github.com/sav-cs-gh/AIA/blob/main/chapters/Chapter1.md#data-mining">
   <rect x="50" y="195" width="250" height="40" rx="6" fill="#c8c8c8" stroke="#666" stroke-width="1.5"/>
   <text x="175" y="221" text-anchor="middle" font-size="17" font-weight="bold" fill="#1a1a1a">Data Mining</text>
   <text x="320" y="221" font-size="22" fill="#555">→</text>
