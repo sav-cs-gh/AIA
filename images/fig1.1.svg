@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1050 480" font-family="Segoe UI, Arial, sans-serif">
+  <defs>
+    <filter id="shadow1" x="-2%" y="-2%" width="104%" height="108%">
+      <feDropShadow dx="2" dy="3" stdDeviation="3" flood-opacity="0.12"/>
+    </filter>
+  </defs>
+
+  <text x="525" y="42" text-anchor="middle" font-size="30" font-weight="bold" fill="#000000">Эволюция аналитики данных</text>
+
+  <!-- Блок 1: Data Mining -->
+  <rect x="30" y="70" width="215" height="120" rx="12" fill="#e8e8e8" stroke="#000000" stroke-width="3" filter="url(#shadow1)"/>
+  <rect x="30" y="70" width="215" height="48" rx="12" fill="#555555"/>
+  <rect x="30" y="106" width="215" height="12" fill="#555555"/>
+  <text x="137" y="100" text-anchor="middle" font-size="22" font-weight="bold" fill="#ffffff">Data Mining</text>
+  <text x="137" y="135" text-anchor="middle" font-size="16" fill="#000000">1990-е годы</text>
+  <text x="137" y="160" text-anchor="middle" font-size="15" fill="#333333">Поиск закономерностей</text>
+  <text x="137" y="180" text-anchor="middle" font-size="15" fill="#333333">в структурированных данных</text>
+
+  <!-- Стрелка 1→2 -->
+  <polygon points="250,130 285,116 285,144" fill="#888888"/>
+  <line x1="245" y1="130" x2="275" y2="130" stroke="#888888" stroke-width="4"/>
+
+  <!-- Блок 2: Data Science -->
+  <rect x="290" y="70" width="215" height="120" rx="12" fill="#e8e8e8" stroke="#000000" stroke-width="3" filter="url(#shadow1)"/>
+  <rect x="290" y="70" width="215" height="48" rx="12" fill="#777777"/>
+  <rect x="290" y="106" width="215" height="12" fill="#777777"/>
+  <text x="397" y="100" text-anchor="middle" font-size="22" font-weight="bold" fill="#ffffff">Data Science</text>
+  <text x="397" y="135" text-anchor="middle" font-size="16" fill="#000000">2000-е годы</text>
+  <text x="397" y="160" text-anchor="middle" font-size="15" fill="#333333">Полный жизненный цикл</text>
+  <text x="397" y="180" text-anchor="middle" font-size="15" fill="#333333">+ ML, визуализация</text>
+
+  <!-- Стрелка 2→3 -->
+  <polygon points="510,130 545,116 545,144" fill="#888888"/>
+  <line x1="505" y1="130" x2="535" y2="130" stroke="#888888" stroke-width="4"/>
+
+  <!-- Блок 3: AI Analytics -->
+  <rect x="550" y="70" width="215" height="120" rx="12" fill="#e8e8e8" stroke="#000000" stroke-width="3" filter="url(#shadow1)"/>
+  <rect x="550" y="70" width="215" height="48" rx="12" fill="#444444"/>
+  <rect x="550" y="106" width="215" height="12" fill="#444444"/>
+  <text x="657" y="100" text-anchor="middle" font-size="22" font-weight="bold" fill="#ffffff">ИИ аналитика</text>
+  <text x="657" y="135" text-anchor="middle" font-size="16" fill="#000000">2010-е годы</text>
+  <text x="657" y="160" text-anchor="middle" font-size="15" fill="#333333">Автоматизация анализа</text>
+  <text x="657" y="180" text-anchor="middle" font-size="15" fill="#333333">AutoML, LLM, GenAI</text>
+
+  <!-- Стрелка 3→4 -->
+  <polygon points="770,130 805,116 805,144" fill="#888888"/>
+  <line x1="765" y1="130" x2="795" y2="130" stroke="#888888" stroke-width="4"/>
+
+  <!-- Блок 4: Decision Intelligence -->
+  <rect x="810" y="70" width="215" height="120" rx="12" fill="#e8e8e8" stroke="#000000" stroke-width="3" filter="url(#shadow1)"/>
+  <rect x="810" y="70" width="215" height="48" rx="12" fill="#333333"/>
+  <rect x="810" y="106" width="215" height="12" fill="#333333"/>
+  <text x="917" y="100" text-anchor="middle" font-size="18" font-weight="bold" fill="#ffffff">Инт.поддержка реш-ий</text>
+  <text x="917" y="135" text-anchor="middle" font-size="16" fill="#000000">2020-е годы</text>
+  <text x="917" y="160" text-anchor="middle" font-size="15" fill="#333333">Поддержка решений</text>
+  <text x="917" y="180" text-anchor="middle" font-size="15" fill="#333333">Causal AI</text>
+
+  <!-- Подписи годов -->
+  <text x="137" y="215" text-anchor="middle" font-size="14" fill="#000000">1990–2000</text>
+  <text x="397" y="215" text-anchor="middle" font-size="14" fill="#000000">2000–2010</text>
+  <text x="657" y="215" text-anchor="middle" font-size="14" fill="#000000">2010–2020</text>
+  <text x="917" y="215" text-anchor="middle" font-size="14" fill="#000000">2020–н.в.</text>
+
+  <!-- Шкала автоматизации -->
+  <text x="525" y="270" text-anchor="middle" font-size="18" font-weight="bold" fill="#000000">Уровень автоматизации</text>
+  <line x1="80" y1="290" x2="980" y2="290" stroke="#cccccc" stroke-width="4"/>
+  <line x1="80" y1="282" x2="80" y2="298" stroke="#999999" stroke-width="3"/>
+  <text x="80" y="320" text-anchor="middle" font-size="16" fill="#000000">Низкий</text>
+  <line x1="980" y1="282" x2="980" y2="298" stroke="#999999" stroke-width="3"/>
+  <text x="980" y="320" text-anchor="middle" font-size="16" fill="#000000">Высокий</text>
+  <rect x="80" y="285" width="900" height="6" rx="3" fill="#dddddd"/>
+  <rect x="80" y="285" width="215" height="6" rx="3" fill="#555555" opacity="0.4"/>
+  <rect x="290" y="285" width="215" height="6" rx="3" fill="#777777" opacity="0.4"/>
+  <rect x="550" y="285" width="215" height="6" rx="3" fill="#444444" opacity="0.4"/>
+  <rect x="810" y="285" width="215" height="6" rx="3" fill="#333333" opacity="0.4"/>
+
+  <!-- Роль человека -->
+  <text x="525" y="370" text-anchor="middle" font-size="18" font-weight="bold" fill="#000000">Роль человека</text>
+  <line x1="80" y1="390" x2="980" y2="390" stroke="#cccccc" stroke-width="4"/>
+  <line x1="80" y1="382" x2="80" y2="398" stroke="#999999" stroke-width="3"/>
+  <text x="80" y="420" text-anchor="middle" font-size="16" fill="#000000">Аналитик</text>
+  <line x1="980" y1="382" x2="980" y2="398" stroke="#999999" stroke-width="3"/>
+  <text x="980" y="420" text-anchor="middle" font-size="16" fill="#000000">Стратег</text>
+  <rect x="80" y="385" width="900" height="6" rx="3" fill="#dddddd"/>
+  <rect x="80" y="385" width="215" height="6" rx="3" fill="#555555" opacity="0.3"/>
+  <rect x="290" y="385" width="215" height="6" rx="3" fill="#777777" opacity="0.3"/>
+  <rect x="550" y="385" width="215" height="6" rx="3" fill="#444444" opacity="0.3"/>
+  <rect x="810" y="385" width="215" height="6" rx="3" fill="#333333" opacity="0.3"/>
+</svg>
