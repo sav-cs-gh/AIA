@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1050 640" font-family="Segoe UI, Arial, sans-serif">
+  <defs>
+    <filter id="shadow5" x="-2%" y="-2%" width="104%" height="108%">
+      <feDropShadow dx="2" dy="3" stdDeviation="3" flood-opacity="0.10"/>
+    </filter>
+  </defs>
+
+  <text x="525" y="40" text-anchor="middle" font-size="30" font-weight="bold" fill="#000000">Классификация современных типов данных</text>
+
+  <!-- Корневой блок -->
+  <rect x="320" y="65" width="400" height="55" rx="27" fill="#333333" stroke="#000000" stroke-width="3.5" filter="url(#shadow5)"/>
+  <text x="525" y="100" text-anchor="middle" font-size="22" font-weight="bold" fill="#ffffff">СОВРЕМЕННЫЕ ТИПЫ ДАННЫХ</text>
+
+  <line x1="525" y1="120" x2="525" y2="150" stroke="#000000" stroke-width="3.5"/>
+  <line x1="140" y1="150" x2="910" y2="150" stroke="#000000" stroke-width="3.5"/>
+  <line x1="230" y1="150" x2="230" y2="178" stroke="#000000" stroke-width="3.5"/>
+  <line x1="525" y1="150" x2="525" y2="178" stroke="#000000" stroke-width="3.5"/>
+  <line x1="820" y1="150" x2="820" y2="178" stroke="#000000" stroke-width="3.5"/>
+
+  <!-- Категория 1 -->
+  <rect x="110" y="178" width="240" height="55" rx="10" fill="#555555" stroke="#000000" stroke-width="3" filter="url(#shadow5)"/>
+  <text x="230" y="214" text-anchor="middle" font-size="20" font-weight="bold" fill="#ffffff">СТРУКТУРИРОВАННЫЕ</text>
+  <rect x="110" y="240" width="240" height="130" rx="8" fill="#f0f0f0" stroke="#000000" stroke-width="2.5"/>
+  <text x="135" y="272" font-size="16" fill="#000000">• Таблицы баз данных</text>
+  <text x="135" y="300" font-size="16" fill="#000000">• Транзакции</text>
+  <text x="135" y="328" font-size="16" fill="#000000">• Учётные записи</text>
+  <text x="135" y="356" font-size="16" fill="#000000">• Показатели датчиков</text>
+
+  <!-- Категория 2 -->
+  <rect x="377" y="178" width="295" height="55" rx="10" fill="#777777" stroke="#000000" stroke-width="3" filter="url(#shadow5)"/>
+  <text x="525" y="214" text-anchor="middle" font-size="20" font-weight="bold" fill="#ffffff">ПОЛУСТРУКТУРИРОВАННЫЕ</text>
+  <rect x="405" y="240" width="240" height="130" rx="8" fill="#f0f0f0" stroke="#000000" stroke-width="2.5"/>
+  <text x="430" y="272" font-size="16" fill="#000000">• JSON</text>
+  <text x="430" y="300" font-size="16" fill="#000000">• XML</text>
+  <text x="430" y="328" font-size="16" fill="#000000">• Логи систем</text>
+  <text x="430" y="356" font-size="16" fill="#000000">• Данные API</text>
+
+  <!-- Категория 3 -->
+  <rect x="690" y="178" width="260" height="55" rx="10" fill="#999999" stroke="#000000" stroke-width="3" filter="url(#shadow5)"/>
+  <text x="820" y="214" text-anchor="middle" font-size="20" font-weight="bold" fill="#000000">НЕСТРУКТУРИРОВАННЫЕ</text>
+  <rect x="700" y="240" width="240" height="130" rx="8" fill="#f0f0f0" stroke="#000000" stroke-width="2.5"/>
+  <text x="725" y="272" font-size="16" fill="#000000">• Тексты документов</text>
+  <text x="725" y="300" font-size="16" fill="#000000">• Изображения</text>
+  <text x="725" y="328" font-size="16" fill="#000000">• Аудио / Видео</text>
+  <text x="725" y="356" font-size="16" fill="#000000">• Электронная почта</text>
+
+  <line x1="230" y1="370" x2="230" y2="405" stroke="#000000" stroke-width="3"/>
+  <line x1="525" y1="370" x2="525" y2="405" stroke="#000000" stroke-width="3"/>
+  <line x1="820" y1="370" x2="820" y2="405" stroke="#000000" stroke-width="3"/>
+  <line x1="230" y1="405" x2="820" y2="405" stroke="#000000" stroke-width="3"/>
+  <line x1="230" y1="405" x2="230" y2="433" stroke="#000000" stroke-width="3"/>
+  <line x1="525" y1="405" x2="525" y2="433" stroke="#000000" stroke-width="3"/>
+  <line x1="820" y1="405" x2="820" y2="433" stroke="#000000" stroke-width="3"/>
+
+  <!-- Специальные типы -->
+  <rect x="110" y="433" width="240" height="55" rx="10" fill="#444444" stroke="#000000" stroke-width="3" filter="url(#shadow5)"/>
+  <text x="230" y="469" text-anchor="middle" font-size="19" font-weight="bold" fill="#ffffff">ВРЕМЕННЫЕ РЯДЫ</text>
+  <rect x="110" y="495" width="240" height="120" rx="8" fill="#f0f0f0" stroke="#000000" stroke-width="2.5"/>
+  <text x="135" y="525" font-size="16" fill="#000000">• Котировки</text>
+  <text x="135" y="553" font-size="16" fill="#000000">• Телеметрия</text>
+  <text x="135" y="581" font-size="16" fill="#000000">• IoT сигналы</text>
+  <text x="135" y="609" font-size="16" fill="#000000">• Кликовые потоки</text>
+
+  <rect x="405" y="433" width="240" height="55" rx="10" fill="#666666" stroke="#000000" stroke-width="3" filter="url(#shadow5)"/>
+  <text x="525" y="469" text-anchor="middle" font-size="19" font-weight="bold" fill="#ffffff">ГРАФОВЫЕ ДАННЫЕ</text>
+  <rect x="405" y="495" width="240" height="120" rx="8" fill="#f0f0f0" stroke="#000000" stroke-width="2.5"/>
+  <text x="430" y="525" font-size="16" fill="#000000">• Социальные сети</text>
+  <text x="430" y="553" font-size="16" fill="#000000">• Логистические цепочки</text>
+  <text x="430" y="581" font-size="16" fill="#000000">• Финансовые связи</text>
+  <text x="430" y="609" font-size="16" fill="#000000">• Онтологии знаний</text>
+
+  <rect x="700" y="433" width="240" height="55" rx="10" fill="#888888" stroke="#000000" stroke-width="3" filter="url(#shadow5)"/>
+  <text x="820" y="469" text-anchor="middle" font-size="19" font-weight="bold" fill="#000000">МУЛЬТИМОДАЛЬНЫЕ</text>
+  <rect x="700" y="495" width="240" height="120" rx="8" fill="#f0f0f0" stroke="#000000" stroke-width="2.5"/>
+  <text x="725" y="525" font-size="16" fill="#000000">• Текст + изображение</text>
+  <text x="725" y="553" font-size="16" fill="#000000">• Видео + аудио</text>
+  <text x="725" y="581" font-size="16" fill="#000000">• Сенсоры + описания</text>
+  <text x="725" y="609" font-size="16" fill="#000000">• Документы со схемами</text>
+</svg>

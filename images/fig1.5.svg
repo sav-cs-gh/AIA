@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1060 420" font-family="Segoe UI, Arial, sans-serif">
+  <defs>
+    <filter id="shadow8" x="-2%" y="-2%" width="104%" height="108%">
+      <feDropShadow dx="2" dy="3" stdDeviation="3" flood-opacity="0.10"/>
+    </filter>
+  </defs>
+
+  <rect x="20" y="15" width="1020" height="380" rx="14" fill="#f5f5f5" stroke="#000000" stroke-width="4"/>
+  <text x="530" y="50" text-anchor="middle" font-size="26" font-weight="bold" fill="#000000">Интеллектуальная система поддержки решений (Decision Intelligence)</text>
+
+  <!-- Блок 1 -->
+  <rect x="40" y="80" width="220" height="240" rx="12" fill="#f0f0f0" stroke="#000000" stroke-width="3" filter="url(#shadow8)"/>
+  <rect x="40" y="80" width="220" height="50" rx="12" fill="#555555"/>
+  <rect x="40" y="118" width="220" height="12" fill="#555555"/>
+  <text x="150" y="110" text-anchor="middle" font-size="22" font-weight="bold" fill="#ffffff">ДАННЫЕ</text>
+  <text x="65" y="152" font-size="16" fill="#000000">• Таблицы БД</text>
+  <text x="65" y="182" font-size="16" fill="#000000">• JSON / XML</text>
+  <text x="65" y="212" font-size="16" fill="#000000">• Тексты документов</text>
+  <text x="65" y="242" font-size="16" fill="#000000">• Изображения</text>
+  <text x="65" y="272" font-size="16" fill="#000000">• Аудио / Видео</text>
+  <text x="65" y="302" font-size="16" fill="#000000">• Графовые данные</text>
+
+  <!-- Стрелка 1→2 -->
+  <polygon points="270,200 305,185 305,215" fill="#888888"/>
+  <line x1="260" y1="200" x2="295" y2="200" stroke="#888888" stroke-width="4"/>
+
+  <!-- Блок 2 -->
+  <rect x="310" y="80" width="220" height="240" rx="12" fill="#f0f0f0" stroke="#000000" stroke-width="3" filter="url(#shadow8)"/>
+  <rect x="310" y="80" width="220" height="50" rx="12" fill="#777777"/>
+  <rect x="310" y="118" width="220" height="12" fill="#777777"/>
+  <text x="420" y="103" text-anchor="middle" font-size="19" font-weight="bold" fill="#ffffff">ОБРАБОТКА И</text>
+  <text x="420" y="123" text-anchor="middle" font-size="16" fill="#ffffff">ИНТЕГРАЦИЯ (ETL)</text>
+  <text x="335" y="165" font-size="16" fill="#000000">• Очистка данных</text>
+  <text x="335" y="195" font-size="16" fill="#000000">• Нормализация</text>
+  <text x="335" y="225" font-size="16" fill="#000000">• Обогащение</text>
+  <text x="335" y="255" font-size="16" fill="#000000">• Векторизация</text>
+  <text x="335" y="285" font-size="16" fill="#000000">• Агрегация</text>
+
+  <!-- Стрелка 2→3 -->
+  <polygon points="540,200 575,185 575,215" fill="#888888"/>
+  <line x1="530" y1="200" x2="565" y2="200" stroke="#888888" stroke-width="4"/>
+
+  <!-- Блок 3 -->
+  <rect x="580" y="80" width="220" height="240" rx="12" fill="#f0f0f0" stroke="#000000" stroke-width="3" filter="url(#shadow8)"/>
+  <rect x="580" y="80" width="220" height="50" rx="12" fill="#888888"/>
+  <rect x="580" y="118" width="220" height="12" fill="#888888"/>
+  <text x="690" y="103" text-anchor="middle" font-size="19" font-weight="bold" fill="#000000">АНАЛИЗ И</text>
+  <text x="690" y="123" text-anchor="middle" font-size="16" font-weight="bold" fill="#000000">МОДЕЛИРОВАНИЕ</text>
+  <text x="593" y="165" font-size="15" fill="#000000">• ML модели</text>
+  <text x="593" y="195" font-size="15" fill="#000000">• LLM / GenAI</text>
+  <text x="593" y="225" font-size="15" fill="#000000">• Мультимодальный анализ</text>
+  <text x="593" y="255" font-size="15" fill="#000000">• Причинно-следственный</text>
+  <text x="593" y="285" font-size="15" fill="#000000">• Сценарное моделирование</text>
+
+  <!-- Стрелка 3→4 -->
+  <polygon points="810,200 845,185 845,215" fill="#888888"/>
+  <line x1="800" y1="200" x2="835" y2="200" stroke="#888888" stroke-width="4"/>
+
+  <!-- Блок 4 -->
+  <rect x="850" y="80" width="180" height="240" rx="12" fill="#f0f0f0" stroke="#000000" stroke-width="3" filter="url(#shadow8)"/>
+  <rect x="850" y="80" width="180" height="50" rx="12" fill="#aaaaaa"/>
+  <rect x="850" y="118" width="180" height="12" fill="#aaaaaa"/>
+  <text x="940" y="103" text-anchor="middle" font-size="19" font-weight="bold" fill="#000000">ПОДДЕРЖКА</text>
+  <text x="940" y="123" text-anchor="middle" font-size="16" font-weight="bold" fill="#000000">РЕШЕНИЙ</text>
+  <text x="870" y="165" font-size="16" fill="#000000">• Прогнозы</text>
+  <text x="870" y="195" font-size="16" fill="#000000">• Рекомендации</text>
+  <text x="870" y="225" font-size="16" fill="#000000">• Сценарии</text>
+  <text x="870" y="255" font-size="16" fill="#000000">• Объяснения</text>
+  <text x="870" y="285" font-size="16" fill="#000000">• Визуализация</text>
+
+  <!-- Обратная связь -->
+  <line x1="940" y1="320" x2="940" y2="355" stroke="#000000" stroke-width="2.5" stroke-dasharray="10,5"/>
+  <line x1="940" y1="355" x2="150" y2="355" stroke="#000000" stroke-width="2.5" stroke-dasharray="10,5"/>
+  <polygon points="138,355 150,349 150,361" fill="#000000"/>
+  <text x="530" y="375" text-anchor="middle" font-size="16" fill="#000000">◄ Обратная связь и дообучение моделей ►</text>
+</svg>
