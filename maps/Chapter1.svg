@@ -1,0 +1,167 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1600" font-family="Arial, Helvetica, sans-serif">
+  
+  <!-- Общий фон -->
+  <rect width="1200" height="1400" fill="#f0f0f0"/>
+  
+  <!-- ==================== ЗАГОЛОВОК ==================== -->
+  <rect x="30" y="15" width="1140" height="90" rx="12" fill="#2a2a2a"/>
+  <text x="600" y="55" text-anchor="middle" font-size="32" font-weight="bold" fill="#ffffff">Глава 1. Введение в интеллектуальную аналитику данных</text>
+  <text x="600" y="92" text-anchor="middle" font-size="26" fill="#cccccc">от Data Mining к AI Analytics</text>
+  
+  <!-- ==================== БЛОК 1: Эволюция ==================== -->
+  <rect x="30" y="125" width="555" height="300" rx="10" fill="#e6e6e6" stroke="#555" stroke-width="2"/>
+  <rect x="30" y="125" width="555" height="50" rx="10" fill="#4a4a4a"/>
+  <rect x="30" y="157" width="555" height="18" fill="#4a4a4a"/>
+  <text x="307" y="158" text-anchor="middle" font-size="24" font-weight="bold" fill="#ffffff">1. Эволюция аналитики</text>
+  <a href="https://github.com/sav-cs-gh/AIA/blob/main/chapters/Chapter1.md#sect2">
+  <rect x="50" y="195" width="250" height="40" rx="6" fill="#c8c8c8" stroke="#666" stroke-width="1.5"/>
+  <text x="175" y="221" text-anchor="middle" font-size="17" font-weight="bold" fill="#1a1a1a">Data Mining</text>
+  <text x="320" y="221" font-size="22" fill="#555">→</text>
+  </a>
+  <a href="https://github.com/sav-cs-gh/AIA/blob/main/chapters/Chapter1.md#sect3">
+  <rect x="350" y="195" width="220" height="40" rx="6" fill="#c8c8c8" stroke="#666" stroke-width="1.5"/>
+  <text x="460" y="221" text-anchor="middle" font-size="17" font-weight="bold" fill="#1a1a1a">Data Science</text>
+  </a>
+  <text x="50" y="270" font-size="16" fill="#333">Поиск закономерностей</text>
+  <text x="350" y="270" font-size="16" fill="#333">Полный жизненный цикл</text>
+   <a href="https://github.com/sav-cs-gh/AIA/blob/main/chapters/Chapter1.md#sect4">
+  <rect x="50" y="300" width="250" height="40" rx="6" fill="#c8c8c8" stroke="#666" stroke-width="1.5"/>
+  <text x="175" y="326" text-anchor="middle" font-size="17" font-weight="bold" fill="#1a1a1a">ML</text>
+  <text x="320" y="326" font-size="22" fill="#555">→</text>
+  </a>
+   <a href="https://github.com/sav-cs-gh/AIA/blob/main/chapters/Chapter1.md#sect5">
+  <rect x="350" y="300" width="220" height="40" rx="6" fill="#c8c8c8" stroke="#666" stroke-width="1.5"/>
+  <text x="460" y="326" text-anchor="middle" font-size="17" font-weight="bold" fill="#1a1a1a">AI Analytics</text>
+  </a>
+  <text x="50" y="375" font-size="16" fill="#333">Автоматическое обучение</text>
+  <text x="350" y="375" font-size="16" fill="#333">Интеграция ИИ в аналитику</text>
+  
+  <!-- ==================== БЛОК 2: Data Mining ==================== -->
+   <a href="https://github.com/sav-cs-gh/AIA/blob/main/chapters/Chapter1.md#sect2">
+  <rect x="615" y="125" width="555" height="300" rx="10" fill="#e6e6e6" stroke="#555" stroke-width="2"/>
+  <rect x="615" y="125" width="555" height="50" rx="10" fill="#4a4a4a"/>
+  <rect x="615" y="157" width="555" height="18" fill="#4a4a4a"/>
+  <text x="892" y="158" text-anchor="middle" font-size="24" font-weight="bold" fill="#ffffff">2. Data Mining</text>
+  </a>
+  <text x="635" y="205" font-size="17" font-weight="bold" fill="#1a1a1a">Классические задачи:</text>
+  <text x="650" y="232" font-size="15" fill="#333">• Классификация</text>
+  <text x="650" y="256" font-size="15" fill="#333">• Регрессия</text>
+  <text x="650" y="280" font-size="15" fill="#333">• Кластеризация</text>
+  <text x="650" y="304" font-size="15" fill="#333">• Ассоциативные правила</text>
+  <text x="650" y="328" font-size="15" fill="#333">• Обнаружение аномалий</text>
+  <text x="650" y="352" font-size="15" fill="#333">• Снижение размерности</text>
+  
+  <text x="635" y="388" font-size="17" font-weight="bold" fill="#1a1a1a">На стыке дисциплин:</text>
+  <text x="650" y="415" font-size="15" fill="#333">Статистика, БД, распознавание, ML, ИИ</text>
+  
+  <!-- ==================== БЛОК 3: ML ==================== -->
+   <a href="https://github.com/sav-cs-gh/AIA/blob/main/chapters/Chapter1.md#sect4">
+  <rect x="30" y="430" width="555" height="275" rx="10" fill="#e6e6e6" stroke="#555" stroke-width="2"/>
+  <rect x="30" y="430" width="555" height="50" rx="10" fill="#4a4a4a"/>
+  <rect x="30" y="457" width="555" height="18" fill="#4a4a4a"/>
+  <text x="307" y="458" text-anchor="middle" font-size="24" font-weight="bold" fill="#ffffff">3. Машинное обучение (ML)</text>
+  </a>
+  <text x="50" y="500" font-size="17" font-weight="bold" fill="#1a1a1a">Обучение с учителем:</text>
+  <text x="65" y="527" font-size="15" fill="#333">Классификация, регрессия</text>
+  <text x="65" y="550" font-size="15" fill="#333">Примеры: линейная регрессия, деревья, нейросети</text>
+  
+  <text x="50" y="585" font-size="17" font-weight="bold" fill="#1a1a1a">Обучение без учителя:</text>
+  <text x="65" y="612" font-size="15" fill="#333">Кластеризация, снижение размерности</text>
+  <text x="65" y="635" font-size="15" fill="#333">Примеры: k-means, DBSCAN, PCA</text>
+  
+  <text x="50" y="670" font-size="17" font-weight="bold" fill="#1a1a1a">Обучение с подкреплением:</text>
+  <text x="65" y="690" font-size="15" fill="#333">Робототехника, управление, оптимизация</text>
+  
+  <!-- ==================== БЛОК 4: Типы данных ==================== -->
+  <a href="https://github.com/sav-cs-gh/AIA/blob/main/chapters/Chapter1.md#sect8">
+  <rect x="615" y="430" width="555" height="275" rx="10" fill="#e6e6e6" stroke="#555" stroke-width="2"/>
+  <rect x="615" y="430" width="555" height="50" rx="10" fill="#4a4a4a"/>
+  <rect x="615" y="457" width="555" height="18" fill="#4a4a4a"/>
+  <text x="892" y="458" text-anchor="middle" font-size="24" font-weight="bold" fill="#ffffff">4. Типы данных</text>
+  </a>
+  <text x="635" y="500" font-size="16" font-weight="bold" fill="#1a1a1a">Структурированные:</text>
+  <text x="650" y="527" font-size="15" fill="#333">Таблицы БД, транзакции</text>
+  
+  <text x="635" y="558" font-size="16" font-weight="bold" fill="#1a1a1a">Полуструктурированные:</text>
+  <text x="650" y="583" font-size="15" fill="#333">XML, JSON, логи, API</text>
+  
+  <text x="635" y="616" font-size="16" font-weight="bold" fill="#1a1a1a">Неструктурированные:</text>
+  <text x="650" y="641" font-size="15" fill="#333">Тексты, изображения, аудио, видео</text>
+  
+  <text x="635" y="674" font-size="16" font-weight="bold" fill="#1a1a1a">Временные ряды / Графовые данные</text>
+  
+  <!-- ==================== БЛОК 5: GenAI ==================== -->
+  <a href="https://github.com/sav-cs-gh/AIA/blob/main/chapters/Chapter1.md#sect5">
+  <rect x="30" y="715" width="555" height="295" rx="10" fill="#e6e6e6" stroke="#555" stroke-width="2"/>
+  <rect x="30" y="710" width="555" height="50" rx="10" fill="#4a4a4a"/>
+  <rect x="30" y="747" width="555" height="18" fill="#4a4a4a"/>
+  <text x="307" y="748" text-anchor="middle" font-size="24" font-weight="bold" fill="#ffffff">5. Генеративный ИИ</text>
+  </a>
+  <text x="50" y="785" font-size="17" font-weight="bold" fill="#1a1a1a">Генерирует:</text>
+  <text x="65" y="812" font-size="15" fill="#333">Тексты, изображения, код, аудио, видео</text>
+  
+  <text x="50" y="848" font-size="17" font-weight="bold" fill="#1a1a1a">Модели:</text>
+  <text x="65" y="875" font-size="15" fill="#333">LLM, диффузионные, GAN, VAE</text>
+  
+  <text x="50" y="910" font-size="17" font-weight="bold" fill="#1a1a1a">Применение:</text>
+  <text x="65" y="937" font-size="15" fill="#333">SQL-запросы, отчёты, диалоги, синтез данных</text>
+  
+  <text x="50" y="975" font-size="17" font-weight="bold" fill="#1a1a1a">Риски:</text>
+  <text x="65" y="1002" font-size="15" fill="#333">Галлюцинации, фактические ошибки, приватность</text>
+  
+  <!-- ==================== БЛОК 6: Multimodal AI ==================== -->
+  <a href="https://github.com/sav-cs-gh/AIA/blob/main/chapters/Chapter1.md#sect10">
+  <rect x="615" y="715" width="555" height="295" rx="10" fill="#e6e6e6" stroke="#555" stroke-width="2"/>
+  <rect x="615" y="710" width="555" height="50" rx="10" fill="#4a4a4a"/>
+  <rect x="615" y="747" width="555" height="18" fill="#4a4a4a"/>
+  <text x="892" y="748" text-anchor="middle" font-size="24" font-weight="bold" fill="#ffffff">6. Мультимодальный ИИ</text>
+  </a>
+  <text x="635" y="785" font-size="17" font-weight="bold" fill="#1a1a1a">Обрабатывает:</text>
+  <text x="650" y="812" font-size="15" fill="#333">Текст + изображения + аудио + видео</text>
+  
+  <text x="635" y="848" font-size="17" font-weight="bold" fill="#1a1a1a">Применения:</text>
+  <text x="650" y="875" font-size="15" fill="#333">• Медицинская диагностика</text>
+  <text x="650" y="900" font-size="15" fill="#333">• Промышленность</text>
+  <text x="650" y="925" font-size="15" fill="#333">• Финансы</text>
+  <text x="650" y="950" font-size="15" fill="#333">• Безопасность</text>
+  
+  <!-- ==================== БЛОК 7: Decision Intelligence ==================== -->
+  <a href="https://github.com/sav-cs-gh/AIA/blob/main/chapters/Chapter1.md#sect11">
+  <rect x="30" y="1020" width="555" height="195" rx="10" fill="#e6e6e6" stroke="#555" stroke-width="2"/>
+  <rect x="30" y="1020" width="555" height="50" rx="10" fill="#4a4a4a"/>
+  <rect x="30" y="1052" width="555" height="18" fill="#4a4a4a"/>
+  <text x="307" y="1053" text-anchor="middle" font-size="24" font-weight="bold" fill="#ffffff">7. Decision Intelligence</text>
+  </a>
+  <text x="50" y="1090" font-size="17" font-weight="bold" fill="#1a1a1a">Смещение акцента:</text>
+  <text x="65" y="1117" font-size="16" fill="#333">От анализа данных → к качеству решений</text>
+  
+  <text x="50" y="1140" font-size="17" font-weight="bold" fill="#1a1a1a">Подходы:</text>
+  <text x="65" y="1160" font-size="15" fill="#333">• Причинно-следственный анализ</text>
+  <text x="65" y="1" font-size="15" fill="#333">• Оптимизация решений</text>
+  <text x="65" y="1180" font-size="15" fill="#333">• Сценарное моделирование</text>
+  
+  <!-- ==================== БЛОК 8: Вызовы ==================== -->
+  <a href="https://github.com/sav-cs-gh/AIA/blob/main/chapters/Chapter1.md#sect12">
+  <rect x="615" y="1020" width="555" height="195" rx="10" fill="#d9d9d9" stroke="#555" stroke-width="2"/>
+  <rect x="615" y="1020" width="555" height="50" rx="10" fill="#3a3a3a"/>
+  <rect x="615" y="1052" width="555" height="18" fill="#3a3a3a"/>
+  <text x="892" y="1053" text-anchor="middle" font-size="24" font-weight="bold" fill="#ffffff">8. Вызовы аналитики</text>
+  </a>
+  <text x="635" y="1090" font-size="17" font-weight="bold" fill="#1a1a1a">Качество данных:</text>
+  <text x="650" y="1117" font-size="15" fill="#333">Ошибки, пропуски, несогласованность</text>
+  
+  <text x="635" y="1140" font-size="17" font-weight="bold" fill="#1a1a1a">Интерпретируемость:</text>
+  <text x="650" y="1160" font-size="15" fill="#333">Сложные модели — "чёрные ящики"</text>
+  
+  <text x="635" y="1180" font-size="17" font-weight="bold" fill="#1a1a1a">Этические вопросы:</text>
+  <text x="650" y="1200" font-size="15" fill="#333">Предвзятость, приватность, ответственность</text>
+  
+  <!-- ==================== ЗАКЛЮЧЕНИЕ ==================== -->
+  <a href="https://github.com/sav-cs-gh/AIA/blob/main/chapters/Chapter1.md#sect13">
+  <rect x="30" y="1230" width="1140" height="120" rx="10" fill="#2a2a2a"/>
+  <text x="600" y="1255" text-anchor="middle" font-size="22" font-weight="bold" fill="#ffffff">Заключение: От поиска закономерностей → к интеллектуальным системам</text>
+  </a>
+  <text x="600" y="1290" text-anchor="middle" font-size="19" fill="#cccccc">Data Mining → Data Science → ML → AI Analytics → Decision Intelligence</text>
+  <text x="600" y="1325" text-anchor="middle" font-size="18" fill="#bbbbbb">Ключевые направления: объяснимость, надёжность, мультимодальность, поддержка решений</text>
+  
+</svg>
