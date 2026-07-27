@@ -15,35 +15,37 @@
   <rect x="30" y="157" width="555" height="18" fill="#4a4a4a"/>
   <text x="307" y="158" text-anchor="middle" font-size="24" font-weight="bold" fill="#ffffff">1. Эволюция аналитики</text>
 
-  <a href="https://github.com/sav-cs-gh/AIA/blob/main/chapters/Chapter1.md#data-mining">
+  <a href="https://github.com/sav-cs-gh/AIA/blob/main/chapters/Chapter1.md#sect2">
   <rect x="50" y="195" width="250" height="40" rx="6" fill="#c8c8c8" stroke="#666" stroke-width="1.5"/>
   <text x="175" y="221" text-anchor="middle" font-size="17" font-weight="bold" fill="#1a1a1a">Data Mining</text>
   <text x="320" y="221" font-size="22" fill="#555">→</text>
   </a>
-  
+  <a href="https://github.com/sav-cs-gh/AIA/blob/main/chapters/Chapter1.md#sect3">
   <rect x="350" y="195" width="220" height="40" rx="6" fill="#c8c8c8" stroke="#666" stroke-width="1.5"/>
   <text x="460" y="221" text-anchor="middle" font-size="17" font-weight="bold" fill="#1a1a1a">Data Science</text>
-  
+  </a>
   <text x="50" y="270" font-size="16" fill="#333">Поиск закономерностей</text>
   <text x="350" y="270" font-size="16" fill="#333">Полный жизненный цикл</text>
-  
+  <a href="https://github.com/sav-cs-gh/AIA/blob/main/chapters/Chapter1.md#sect4">
   <rect x="50" y="300" width="250" height="40" rx="6" fill="#c8c8c8" stroke="#666" stroke-width="1.5"/>
   <text x="175" y="326" text-anchor="middle" font-size="17" font-weight="bold" fill="#1a1a1a">ML</text>
   <text x="320" y="326" font-size="22" fill="#555">→</text>
-  
+  </a>
+    <a href="https://github.com/sav-cs-gh/AIA/blob/main/chapters/Chapter1.md#sect5">
   <rect x="350" y="300" width="220" height="40" rx="6" fill="#c8c8c8" stroke="#666" stroke-width="1.5"/>
   <text x="460" y="326" text-anchor="middle" font-size="17" font-weight="bold" fill="#1a1a1a">AI Analytics</text>
-  
+  </a>
   <text x="50" y="375" font-size="16" fill="#333">Автоматическое обучение</text>
   <text x="350" y="375" font-size="16" fill="#333">Интеграция ИИ в аналитику</text>
   
   <!-- ==================== БЛОК 2: Data Mining ==================== -->
- 
+   <a href="https://github.com/sav-cs-gh/AIA/blob/main/chapters/Chapter1.md#sect2">
+
   <rect x="615" y="125" width="555" height="260" rx="10" fill="#e6e6e6" stroke="#555" stroke-width="2"/>
   <rect x="615" y="125" width="555" height="50" rx="10" fill="#4a4a4a"/>
   <rect x="615" y="157" width="555" height="18" fill="#4a4a4a"/>
   <text x="892" y="158" text-anchor="middle" font-size="24" font-weight="bold" fill="#ffffff">2. Data Mining</text>
-  
+  </a>
   <text x="635" y="205" font-size="17" font-weight="bold" fill="#1a1a1a">Классические задачи:</text>
   <text x="650" y="232" font-size="15" fill="#333">• Классификация</text>
   <text x="650" y="256" font-size="15" fill="#333">• Регрессия</text>
