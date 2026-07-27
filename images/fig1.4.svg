@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1020 600" font-family="Segoe UI, Arial, sans-serif">
+  <defs>
+    <filter id="shadow6" x="-2%" y="-2%" width="104%" height="108%">
+      <feDropShadow dx="2" dy="3" stdDeviation="3" flood-opacity="0.10"/>
+    </filter>
+  </defs>
+
+  <text x="510" y="25" text-anchor="middle" font-size="30" font-weight="bold" fill="#000000">Роль генеративного ИИ в аналитике</text>
+
+  <!-- Центральный блок -->
+  <ellipse cx="510" cy="190" rx="180" ry="60" fill="#888888" stroke="#000000" stroke-width="4" filter="url(#shadow6)"/>
+  <text x="510" y="180" text-anchor="middle" font-size="24" font-weight="bold" fill="#ffffff">ГЕНЕРАТИВНЫЙ</text>
+  <text x="510" y="215" text-anchor="middle" font-size="24" font-weight="bold" fill="#ffffff">ИИ В АНАЛИТИКЕ</text>
+
+  <!-- Линии к блокам -->
+  <line x1="510" y1="130" x2="510" y2="70" stroke="#000000" stroke-width="3.5"/>
+  <line x1="510" y1="130" x2="170" y2="70" stroke="#000000" stroke-width="3.5"/>
+  <line x1="510" y1="130" x2="850" y2="70" stroke="#000000" stroke-width="3.5"/>
+  <line x1="333" y1="190" x2="140" y2="190" stroke="#000000" stroke-width="3.5"/>
+  <line x1="688" y1="190" x2="880" y2="190" stroke="#000000" stroke-width="3.5"/>
+  <line x1="510" y1="250" x2="510" y2="318" stroke="#000000" stroke-width="3.5"/>
+  <line x1="510" y1="250" x2="170" y2="318" stroke="#000000" stroke-width="3.5"/>
+  <line x1="510" y1="250" x2="850" y2="318" stroke="#000000" stroke-width="3.5"/>
+
+  <!-- Блоки верхнего ряда -->
+  <rect x="50" y="45" width="240" height="62" rx="10" fill="#f0f0f0" stroke="#000000" stroke-width="3" filter="url(#shadow6)"/>
+  <text x="170" y="70" text-anchor="middle" font-size="16" font-weight="bold" fill="#000000">Генерация SQL-запросов</text>
+  <text x="170" y="96" text-anchor="middle" font-size="15" fill="#333333">и кода анализа</text>
+
+  <rect x="390" y="40" width="240" height="62" rx="10" fill="#f0f0f0" stroke="#000000" stroke-width="3" filter="url(#shadow6)"/>
+  <text x="510" y="65" text-anchor="middle" font-size="16" font-weight="bold" fill="#000000">Автоматическое</text>
+  <text x="510" y="90" text-anchor="middle" font-size="15" fill="#333333">создание отчётов</text>
+
+  <rect x="730" y="45" width="240" height="62" rx="10" fill="#f0f0f0" stroke="#000000" stroke-width="3" filter="url(#shadow6)"/>
+  <text x="850" y="70" text-anchor="middle" font-size="16" font-weight="bold" fill="#000000">Диалоговый доступ</text>
+  <text x="850" y="96" text-anchor="middle" font-size="15" fill="#333333">к данным (NL2SQL)</text>
+
+  <!-- Блоки среднего ряда -->
+  <rect x="30" y="158" width="240" height="62" rx="10" fill="#f0f0f0" stroke="#000000" stroke-width="3" filter="url(#shadow6)"/>
+  <text x="150" y="183" text-anchor="middle" font-size="16" font-weight="bold" fill="#000000">Генерация</text>
+  <text x="150" y="209" text-anchor="middle" font-size="15" fill="#333333">визуализаций и дашбордов</text>
+
+  <rect x="750" y="158" width="240" height="62" rx="10" fill="#f0f0f0" stroke="#000000" stroke-width="3" filter="url(#shadow6)"/>
+  <text x="870" y="183" text-anchor="middle" font-size="16" font-weight="bold" fill="#000000">Объяснение выводов</text>
+  <text x="870" y="209" text-anchor="middle" font-size="15" fill="#333333">на естественном языке</text>
+
+  <!-- Блоки нижнего ряда -->
+  <rect x="50" y="295" width="240" height="62" rx="10" fill="#f0f0f0" stroke="#000000" stroke-width="3" filter="url(#shadow6)"/>
+  <text x="170" y="320" text-anchor="middle" font-size="16" font-weight="bold" fill="#000000">Суммаризация</text>
+  <text x="170" y="346" text-anchor="middle" font-size="15" fill="#333333">больших массивов текстов</text>
+
+  <rect x="390" y="295" width="240" height="62" rx="10" fill="#f0f0f0" stroke="#000000" stroke-width="3" filter="url(#shadow6)"/>
+  <text x="510" y="320" text-anchor="middle" font-size="16" font-weight="bold" fill="#000000">Генерация синтетических</text>
+  <text x="510" y="346" text-anchor="middle" font-size="15" fill="#333333">данных для обучения</text>
+
+  <rect x="730" y="295" width="240" height="62" rx="10" fill="#f0f0f0" stroke="#000000" stroke-width="3" filter="url(#shadow6)"/>
+  <text x="850" y="320" text-anchor="middle" font-size="16" font-weight="bold" fill="#000000">Интеллектуальный поиск</text>
+  <text x="850" y="346" text-anchor="middle" font-size="15" fill="#333333">по корпоративным документам</text>
+
+  <text x="510" y="430" text-anchor="middle" font-size="17" fill="#000000">Генеративный ИИ расширяет возможности аналитика, автоматизируя рутинные задачи</text>
+  <text x="510" y="460" text-anchor="middle" font-size="17" fill="#000000">и предоставляя интеллектуальные интерфейсы к данным</text>
+</svg>
