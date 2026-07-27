@@ -78,7 +78,7 @@
   <rect x="615" y="430" width="555" height="50" rx="10" fill="#4a4a4a"/>
   <rect x="615" y="457" width="555" height="18" fill="#4a4a4a"/>
   <text x="892" y="458" text-anchor="middle" font-size="24" font-weight="bold" fill="#ffffff">4. Типы данных</text>
-  
+  </a>
   <text x="635" y="500" font-size="16" font-weight="bold" fill="#1a1a1a">Структурированные:</text>
   <text x="650" y="527" font-size="15" fill="#333">Таблицы БД, транзакции</text>
   
