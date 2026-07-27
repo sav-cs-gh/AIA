@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 950 600" font-family="Segoe UI, Arial, sans-serif">
+  <defs>
+    <filter id="shadow2" x="-2%" y="-2%" width="104%" height="108%">
+      <feDropShadow dx="2" dy="3" stdDeviation="3" flood-opacity="0.10"/>
+    </filter>
+  </defs>
+
+  <!-- Внешний контур Data Science -->
+  <rect x="40" y="30" width="870" height="530" rx="18" fill="#f5f5f5" stroke="#000000" stroke-width="4" filter="url(#shadow2)"/>
+  <text x="475" y="70" text-anchor="middle" font-size="30" font-weight="bold" fill="#000000">DATA SCIENCE</text>
+
+  <!-- Контур ML -->
+  <rect x="85" y="100" width="780" height="380" rx="14" fill="#eeeeee" stroke="#000000" stroke-width="3.5"/>
+  <text x="475" y="138" text-anchor="middle" font-size="26" font-weight="bold" fill="#000000">МАШИННОЕ ОБУЧЕНИЕ (ML)</text>
+
+  <!-- Контур Data Mining -->
+  <rect x="160" y="160" width="630" height="215" rx="12" fill="#e0e0e0" stroke="#000000" stroke-width="3.5"/>
+  <text x="475" y="198" text-anchor="middle" font-size="24" font-weight="bold" fill="#000000">DATA MINING</text>
+
+  <text x="190" y="235" font-size="17" fill="#000000">• Классификация</text>
+  <text x="190" y="268" font-size="17" fill="#000000">• Регрессия</text>
+  <text x="190" y="301" font-size="17" fill="#000000">• Кластеризация</text>
+  <text x="190" y="334" font-size="17" fill="#000000">• Ассоциативные правила</text>
+  <text x="190" y="367" font-size="17" fill="#000000">• Обнаружение аномалий</text>
+
+  <text x="500" y="235" font-size="17" fill="#000000">• Снижение размерности</text>
+  <text x="500" y="268" font-size="17" fill="#000000">• Анализ последовательностей</text>
+  <text x="500" y="301" font-size="17" fill="#000000">• Поиск скрытых зависимостей</text>
+  <text x="500" y="334" font-size="17" fill="#000000">• Прогнозирование</text>
+  <text x="500" y="367" font-size="17" fill="#000000">• Сегментация</text>
+
+  <!-- Типы обучения ML -->
+  <rect x="110" y="390" width="235" height="70" rx="8" fill="#dddddd" stroke="#000000" stroke-width="2.5"/>
+  <text x="227" y="422" text-anchor="middle" font-size="18" font-weight="bold" fill="#000000">Обучение с учителем</text>
+  <text x="227" y="450" text-anchor="middle" font-size="15" fill="#333333">(Supervised)</text>
+
+  <rect x="360" y="390" width="235" height="70" rx="8" fill="#dddddd" stroke="#000000" stroke-width="2.5"/>
+  <text x="477" y="422" text-anchor="middle" font-size="18" font-weight="bold" fill="#000000">Обучение без учителя</text>
+  <text x="477" y="450" text-anchor="middle" font-size="15" fill="#333333">(Unsupervised)</text>
+
+  <rect x="610" y="390" width="235" height="70" rx="8" fill="#dddddd" stroke="#000000" stroke-width="2.5"/>
+  <text x="727" y="422" text-anchor="middle" font-size="18" font-weight="bold" fill="#000000">Обучение с подкрепл.</text>
+  <text x="727" y="450" text-anchor="middle" font-size="15" fill="#333333">(Reinforcement)</text>
+
+  <!-- Компоненты Data Science -->
+  <text x="55" y="510" font-size="16" fill="#000000">• Статистика</text>
+  <text x="155" y="510" font-size="16" fill="#000000">• Программирование</text>
+  <text x="325" y="510" font-size="16" fill="#000000">• Визуализация</text>
+  <text x="445" y="510" font-size="16" fill="#000000">• Инженерия данных</text>
+  <text x="610" y="510" font-size="16" fill="#000000">• Развёртывание</text>
+  <text x="745" y="510" font-size="16" fill="#000000">• Бизнес-контекст</text>
+</svg>
