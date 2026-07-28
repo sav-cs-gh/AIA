@@ -1,0 +1,199 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1650" font-family="Arial, Helvetica, sans-serif">
+  
+  <!-- Общий фон -->
+  <rect width="1200" height="1650" fill="#f0f0f0"/>
+  
+  <!-- ==================== ЗАГОЛОВОК ==================== -->
+
+  <rect x="30" y="15" width="1140" height="90" rx="12" fill="#2a2a2a"/>
+  <text x="600" y="55" text-anchor="middle" font-size="32" font-weight="bold" fill="#ffffff">Глава 5. Современные методы машинного обучения</text>
+  <text x="600" y="92" text-anchor="middle" font-size="26" fill="#cccccc">для табличных данных</text>
+
+  
+  <!-- ==================== БЛОК 1: Место ML в аналитике ==================== -->
+  <a href="https://github.com/sav-cs-gh/AIA/blob/main/chapters/Chapter5.md#sect1">
+  <rect x="30" y="125" width="555" height="300" rx="10" fill="#e6e6e6" stroke="#555" stroke-width="2"/>
+  <rect x="30" y="125" width="555" height="50" rx="10" fill="#4a4a4a"/>
+  <rect x="30" y="157" width="555" height="18" fill="#4a4a4a"/>
+  <text x="307" y="158" text-anchor="middle" font-size="24" font-weight="bold" fill="#ffffff">1. Место ML в аналитике</text>
+   </a>
+  <text x="50" y="205" font-size="18" font-weight="bold" fill="#1a1a1a">Data Mining</text>
+  <text x="50" y="230" font-size="16" fill="#333">Выявление скрытых закономерностей</text>
+  
+  <text x="50" y="265" font-size="18" font-weight="bold" fill="#1a1a1a">Data Science</text>
+  <text x="50" y="290" font-size="16" fill="#333">Извлечение знаний и ценности из данных</text>
+  
+  <text x="50" y="325" font-size="18" font-weight="bold" fill="#1a1a1a">Machine Learning</text>
+  <text x="50" y="350" font-size="16" fill="#333">Построение предсказательных моделей</text>
+  
+  <text x="50" y="385" font-size="18" font-weight="bold" fill="#1a1a1a">AI Analytics</text>
+  <text x="50" y="410" font-size="16" fill="#333">Использование ИИ для расширенной аналитики</text>
+  
+  <!-- ==================== БЛОК 2: Особенности табличных данных ==================== -->
+  <a href="https://github.com/sav-cs-gh/AIA/blob/main/chapters/Chapter5.md#sect2">
+  <rect x="615" y="125" width="555" height="300" rx="10" fill="#e6e6e6" stroke="#555" stroke-width="2"/>
+  <rect x="615" y="125" width="555" height="50" rx="10" fill="#4a4a4a"/>
+  <rect x="615" y="157" width="555" height="18" fill="#4a4a4a"/>
+  <text x="892" y="158" text-anchor="middle" font-size="24" font-weight="bold" fill="#ffffff">2. Особенности табличных данных</text>
+  </a>
+  <text x="635" y="205" font-size="19" font-weight="bold" fill="#1a1a1a">Структура:</text>
+  <text x="650" y="235" font-size="17" fill="#2a2a2a">Строки = объекты, Столбцы = признаки</text>
+  
+  <text x="635" y="270" font-size="19" font-weight="bold" fill="#1a1a1a">Ключевые особенности:</text>
+  <text x="650" y="298" font-size="16" fill="#333">• Смешанные типы: числовые + категориальные</text>
+  <text x="650" y="325" font-size="16" fill="#333">• Пропущенные значения</text>
+  <text x="650" y="352" font-size="16" fill="#333">• Нелинейные зависимости</text>
+  <text x="650" y="379" font-size="16" fill="#333">• Дисбаланс классов</text>
+  <text x="650" y="406" font-size="16" fill="#333">• Ограниченный объём данных</text>
+  
+  <!-- ==================== БЛОК 3: Ансамблевые методы ==================== -->
+   <a href="https://github.com/sav-cs-gh/AIA/blob/main/chapters/Chapter5.md#sect3">
+  <rect x="30" y="450" width="555" height="320" rx="10" fill="#e6e6e6" stroke="#555" stroke-width="2"/>
+  <rect x="30" y="450" width="555" height="50" rx="10" fill="#4a4a4a"/>
+  <rect x="30" y="482" width="555" height="18" fill="#4a4a4a"/>
+  <text x="307" y="483" text-anchor="middle" font-size="24" font-weight="bold" fill="#ffffff">3. Ансамблевые методы</text>
+  </a>
+  <text x="50" y="530" font-size="19" font-weight="bold" fill="#1a1a1a">Стратегии:</text>
+  
+  <rect x="60" y="543" width="230" height="80" rx="6" fill="#c8c8c8" stroke="#666" stroke-width="1.5"/>
+  <text x="175" y="570" text-anchor="middle" font-size="18" font-weight="bold" fill="#1a1a1a">Bagging</text>
+  <text x="175" y="597" text-anchor="middle" font-size="15" fill="#333">Параллельное обучение</text>
+  <text x="175" y="615" text-anchor="middle" font-size="15" fill="#333">на подвыборках</text>
+ <a href="https://github.com/sav-cs-gh/AIA/blob/main/chapters/Chapter5.md#sect3.2">
+  <rect x="310" y="543" width="230" height="80" rx="6" fill="#c8c8c8" stroke="#666" stroke-width="1.5"/>
+  <text x="425" y="570" text-anchor="middle" font-size="18" font-weight="bold" fill="#1a1a1a">Boosting</text>
+  </a>
+  <text x="425" y="597" text-anchor="middle" font-size="15" fill="#333">Последовательное</text>
+  <text x="425" y="615" text-anchor="middle" font-size="15" fill="#333">исправление ошибок</text>
+  
+  <text x="50" y="650" font-size="19" font-weight="bold" fill="#1a1a1a">Stacking:</text>
+  <text x="65" y="680" font-size="16" fill="#333">Комбинация предсказаний через мета-алгоритм</text>
+  
+  <text x="50" y="720" font-size="19" font-weight="bold" fill="#1a1a1a">Ключевой вывод:</text>
+  <text x="65" y="750" font-size="16" fill="#333">Ансамбли деревьев — лучший выбор для табличных данных</text>
+  
+  <!-- ==================== БЛОК 4: Сравнение методов ==================== -->
+   <a href="https://github.com/sav-cs-gh/AIA/blob/main/chapters/Chapter5.md#sect5">
+  <rect x="615" y="450" width="555" height="320" rx="10" fill="#e6e6e6" stroke="#555" stroke-width="2"/>
+  <rect x="615" y="450" width="555" height="50" rx="10" fill="#4a4a4a"/>
+  <rect x="615" y="482" width="555" height="18" fill="#4a4a4a"/>
+  <text x="892" y="483" text-anchor="middle" font-size="24" font-weight="bold" fill="#ffffff">4. Сравнение методов</text>
+  </a>
+   <a href="https://github.com/sav-cs-gh/AIA/blob/main/chapters/Chapter5.md#sect4.1">
+  <rect x="635" y="515" width="250" height="45" rx="6" fill="#c0c0c0" stroke="#666" stroke-width="1.5"/>
+  <text x="760" y="543" text-anchor="middle" font-size="18" font-weight="bold" fill="#1a1a1a">Random Forest</text>
+  </a>
+  <text x="895" y="543" font-size="17" fill="#333">Базовая модель, устойчивость</text>
+   <a href="https://github.com/sav-cs-gh/AIA/blob/main/chapters/Chapter5.md#sect4.2">
+  <rect x="635" y="575" width="250" height="45" rx="6" fill="#c0c0c0" stroke="#666" stroke-width="1.5"/>
+  <text x="760" y="603" text-anchor="middle" font-size="18" font-weight="bold" fill="#1a1a1a">XGBoost</text>
+  </a>
+  <text x="895" y="603" font-size="17" fill="#333">Регуляризация, зрелость</text>
+   <a href="https://github.com/sav-cs-gh/AIA/blob/main/chapters/Chapter5.md#sect4.3">
+  <rect x="635" y="635" width="250" height="45" rx="6" fill="#c0c0c0" stroke="#666" stroke-width="1.5"/>
+  <text x="760" y="663" text-anchor="middle" font-size="18" font-weight="bold" fill="#1a1a1a">LightGBM</text>
+  </a>
+  <text x="895" y="663" font-size="17" fill="#333">Скорость, масштабируемость</text>
+   <a href="https://github.com/sav-cs-gh/AIA/blob/main/chapters/Chapter5.md#sect4.4">
+  <rect x="635" y="695" width="250" height="45" rx="6" fill="#c0c0c0" stroke="#666" stroke-width="1.5"/>
+  <text x="760" y="723" text-anchor="middle" font-size="18" font-weight="bold" fill="#1a1a1a">CatBoost</text>
+  </a>
+  <text x="895" y="723" font-size="17" fill="#333">Работа с категориями</text>
+  
+  <!-- ==================== БЛОК 5: Дисбаланс классов ==================== -->
+   <a href="https://github.com/sav-cs-gh/AIA/blob/main/chapters/Chapter5.md#sect5">
+  <rect x="30" y="790" width="555" height="270" rx="10" fill="#e6e6e6" stroke="#555" stroke-width="2"/>
+  <rect x="30" y="790" width="555" height="50" rx="10" fill="#4a4a4a"/>
+  <rect x="30" y="822" width="555" height="18" fill="#4a4a4a"/>
+  <text x="307" y="823" text-anchor="middle" font-size="24" font-weight="bold" fill="#ffffff">5. Дисбаланс классов</text>
+  </a>
+  <text x="50" y="865" font-size="18" font-weight="bold" fill="#1a1a1a">Проблема:</text>
+  <text x="65" y="892" font-size="16" fill="#333">Accuracy = 99% при игнорировании редкого класса</text>
+  
+  <text x="50" y="928" font-size="18" font-weight="bold" fill="#1a1a1a">Альтернативные метрики:</text>
+  <text x="65" y="956" font-size="16" fill="#333">Precision, Recall, F1, ROC-AUC, PR-AUC</text>
+  
+  <text x="50" y="992" font-size="18" font-weight="bold" fill="#1a1a1a">Методы борьбы:</text>
+  <text x="65" y="1020" font-size="16" fill="#333">• Ресэмплинг (Oversampling/Undersampling, SMOTE)</text>
+  <text x="65" y="1048" font-size="16" fill="#333">• Веса классов (cost-sensitive learning)</text>
+  
+  <!-- ==================== БЛОК 6: Валидация ==================== -->
+   <a href="https://github.com/sav-cs-gh/AIA/blob/main/chapters/Chapter5.md#sect6">
+  <rect x="615" y="790" width="555" height="270" rx="10" fill="#e6e6e6" stroke="#555" stroke-width="2"/>
+  <rect x="615" y="790" width="555" height="50" rx="10" fill="#4a4a4a"/>
+  <rect x="615" y="822" width="555" height="18" fill="#4a4a4a"/>
+  <text x="892" y="823" text-anchor="middle" font-size="24" font-weight="bold" fill="#ffffff">6. Валидация и подбор</text>
+  </a>
+  <text x="635" y="865" font-size="18" font-weight="bold" fill="#1a1a1a">Кросс-валидация:</text>
+  <text x="650" y="892" font-size="16" fill="#333">KFold, StratifiedKFold, GroupKFold</text>
+  
+  <text x="635" y="928" font-size="18" font-weight="bold" fill="#1a1a1a">Подбор гиперпараметров:</text>
+  <text x="650" y="956" font-size="16" fill="#333">• Grid Search — полный перебор</text>
+  <text x="650" y="984" font-size="16" fill="#333">• Random Search — случайный поиск</text>
+  <text x="650" y="1012" font-size="16" fill="#333">• Bayesian Optimization — интеллектуальный</text>
+  
+  <!-- ==================== БЛОК 7: Интерпретируемость ==================== -->
+   <a href="https://github.com/sav-cs-gh/AIA/blob/main/chapters/Chapter5.md#sect7">
+  <rect x="30" y="1085" width="555" height="310" rx="10" fill="#e6e6e6" stroke="#555" stroke-width="2"/>
+  <rect x="30" y="1085" width="555" height="50" rx="10" fill="#4a4a4a"/>
+  <rect x="30" y="1117" width="555" height="18" fill="#4a4a4a"/>
+  <text x="307" y="1118" text-anchor="middle" font-size="24" font-weight="bold" fill="#ffffff">7. Интерпретируемость моделей</text>
+  </a>
+  <text x="50" y="1155" font-size="18" font-weight="bold" fill="#1a1a1a">Глобальные методы:</text>
+   <a href="https://github.com/sav-cs-gh/AIA/blob/main/chapters/Chapter5.md#sect7.1">
+  <text x="65" y="1183" font-size="16" fill="#333">• Feature Importance (MDI, Permutation)</text>
+  </a>
+   <a href="https://github.com/sav-cs-gh/AIA/blob/main/chapters/Chapter5.md#sect7.2">
+  <text x="65" y="1210" font-size="16" fill="#333">• PDP — частичная зависимость</text>
+  </a>
+  <text x="50" y="1247" font-size="18" font-weight="bold" fill="#1a1a1a">Локальные методы:</text>
+   <a href="https://github.com/sav-cs-gh/AIA/blob/main/chapters/Chapter5.md#sect7.3">
+  <text x="65" y="1274" font-size="16" fill="#333">• SHAP — значения Шепли (теоретико-игровой)</text>
+  </a>
+   <a href="https://github.com/sav-cs-gh/AIA/blob/main/chapters/Chapter5.md#sect7.4">
+  <text x="65" y="1301" font-size="16" fill="#333">• LIME — локальная аппроксимация</text>
+  </a>
+  <text x="50" y="1338" font-size="18" font-weight="bold" fill="#1a1a1a">Зачем нужна интерпретируемость:</text>
+  <text x="65" y="1365" font-size="16" fill="#333">Валидация, доверие, регуляторные требования</text>
+  
+  <!-- ==================== БЛОК 8: AutoML ==================== -->
+   <a href="https://github.com/sav-cs-gh/AIA/blob/main/chapters/Chapter5.md#sect8">
+  <rect x="615" y="1085" width="555" height="310" rx="10" fill="#e6e6e6" stroke="#555" stroke-width="2"/>
+  <rect x="615" y="1085" width="555" height="50" rx="10" fill="#4a4a4a"/>
+  <rect x="615" y="1117" width="555" height="18" fill="#4a4a4a"/>
+  <text x="892" y="1118" text-anchor="middle" font-size="24" font-weight="bold" fill="#ffffff">8. AutoML</text>
+  </a>
+  <text x="635" y="1155" font-size="18" font-weight="bold" fill="#1a1a1a">Автоматизирует:</text>
+  <text x="650" y="1183" font-size="16" fill="#333">• Предобработку данных</text>
+  <text x="650" y="1210" font-size="16" fill="#333">• Выбор признаков и алгоритма</text>
+  <text x="650" y="1237" font-size="16" fill="#333">• Подбор гиперпараметров</text>
+  <text x="650" y="1264" font-size="16" fill="#333">• Построение ансамблей</text>
+  
+  <text x="635" y="1296" font-size="18" font-weight="bold" fill="#1a1a1a">Инструменты:</text>
+  <text x="650" y="1323" font-size="16" fill="#333">H2O, Auto-sklearn, TPOT, AutoGluon, FLAML</text>
+  
+  <text x="635" y="1355" font-size="18" font-weight="bold" fill="#1a1a1a">Важно:</text>
+  <text x="650" y="1382" font-size="16" fill="#333">AutoML — ускоряет, но не заменяет эксперта</text>
+  
+  <!-- ==================== РЕКОМЕНДАЦИИ ==================== -->
+  <a href="https://github.com/sav-cs-gh/AIA/blob/main/chapters/Chapter5.md#sect9">
+  <rect x="30" y="1415" width="1140" height="110" rx="10" fill="#d9d9d9" stroke="#555" stroke-width="2"/>
+  <rect x="30" y="1415" width="1140" height="50" rx="10" fill="#3a3a3a"/>
+  <rect x="30" y="1437" width="1140" height="18" fill="#3a3a3a"/>
+  <text x="600" y="1448" text-anchor="middle" font-size="24" font-weight="bold" fill="#ffffff">Практические рекомендации</text>
+  </a>
+  <text x="55" y="1485" font-size="17" fill="#1a1a1a">• Baseline: Random Forest или CatBoost</text>
+  <text x="430" y="1485" font-size="17" fill="#1a1a1a">• Много категорий → CatBoost</text>
+  <text x="780" y="1485" font-size="17" fill="#1a1a1a">• Большие данные → LightGBM</text>
+  <text x="55" y="1512" font-size="17" fill="#1a1a1a">• Высокая точность → XGBoost</text>
+  <text x="430" y="1512" font-size="17" fill="#1a1a1a">• Интерпретируемость → SHAP, PDP</text>
+  <text x="780" y="1512" font-size="17" fill="#1a1a1a">• Быстрый baseline → AutoML</text>
+  
+  <!-- ==================== ВЫВОД ==================== -->
+   <a href="https://github.com/sav-cs-gh/AIA/blob/main/chapters/Chapter5.md#sect10">
+  <rect x="30" y="1545" width="1140" height="80" rx="10" fill="#2a2a2a"/>
+  <text x="600" y="1578" text-anchor="middle" font-size="22" font-weight="bold" fill="#ffffff">Вывод: Ансамбли деревьев (Random Forest, XGBoost, LightGBM, CatBoost) —</text>
+  </a>
+  <text x="600" y="1610" text-anchor="middle" font-size="20" fill="#bbbbbb">основа современного ML для табличных данных. Успех зависит от методологии: валидация, интерпретация, AutoML</text>
+  
+</svg>
