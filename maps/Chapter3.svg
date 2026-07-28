@@ -136,7 +136,7 @@
   <text x="650" y="1214" font-size="15" fill="#333">6. Достоверность (Validity)</text>
   
   <!-- ==================== БЛОК 9: EDA и GenAI ==================== -->
-   <a href="https://github.com/sav-cs-gh/AIA/blob/main/chapters/Chapter3.md#sect8">
+   <a href="https://github.com/sav-cs-gh/AIA/blob/main/chapters/Chapter3.md#sect6">
   <rect x="30" y="1275" width="1140" height="210" rx="10" fill="#d9d9d9" stroke="#555" stroke-width="2"/>
   <rect x="30" y="1275" width="1140" height="50" rx="10" fill="#3a3a3a"/>
   <rect x="30" y="1307" width="1140" height="18" fill="#3a3a3a"/>
