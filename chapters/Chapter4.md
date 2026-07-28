@@ -188,6 +188,8 @@
 P(y \mid x) \propto P(y)\prod_{i=1}^{n} P(x_i \mid y)
 \]
 
+![P(y \mid x) \propto P(y)\prod_{i=1}^{n} P(x_i \mid y)](https://latex.codecogs.com/svg.image?\inline&space;P(y&space;\mid&space;x)&space;\propto&space;P(y)\prod_{i=1}^{n}&space;P(x_i&space;\mid&space;y))
+
 Объект относится к классу с максимальной апостериорной вероятностью.
 
 ### Основные разновидности
