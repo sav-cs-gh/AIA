@@ -1,0 +1,164 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1600" font-family="Arial, Helvetica, sans-serif">
+  
+  <!-- Общий фон -->
+  <rect width="1200" height="1600" fill="#f0f0f0"/>
+  
+  <!-- ==================== ЗАГОЛОВОК ==================== -->
+  <rect x="30" y="15" width="1140" height="90" rx="12" fill="#2a2a2a"/>
+  <text x="600" y="55" text-anchor="middle" font-size="32" font-weight="bold" fill="#ffffff">Глава 3. Подготовка данных</text>
+  <a href="https://github.com/sav-cs-gh/AIA/blob/main/chapters/Chapter3.md#sect5">
+  <text x="600" y="92" text-anchor="middle" font-size="28" fill="#cccccc">и разведочный анализ данных (EDA)</text>
+  </a>
+  <!-- ==================== БЛОК 1: Подготовка данных ==================== -->
+   <a href="https://github.com/sav-cs-gh/AIA/blob/main/chapters/Chapter3.md#sect1">
+  <rect x="30" y="125" width="570" height="250" rx="10" fill="#e6e6e6" stroke="#555" stroke-width="2"/>
+  <rect x="30" y="125" width="570" height="50" rx="10" fill="#4a4a4a"/>
+  <rect x="30" y="157" width="570" height="18" fill="#4a4a4a"/>
+  <text x="307" y="158" text-anchor="middle" font-size="24" font-weight="bold" fill="#ffffff">1. Подготовка данных</text>
+  </a>
+  <text x="50" y="205" font-size="18" font-weight="bold" fill="#1a1a1a">Цели:</text>
+  <text x="65" y="232" font-size="16" fill="#333">• Обеспечение полноты и достоверности</text>
+  <text x="65" y="258" font-size="16" fill="#333">• Устранение ошибок измерения</text>
+  <text x="65" y="284" font-size="16" fill="#333">• Преобразование к машинно-читаемому формату</text>
+  <text x="65" y="310" font-size="16" fill="#333">• Повышение устойчивости моделей</text>
+  
+  <text x="50" y="348" font-size="18" font-weight="bold" fill="#1a1a1a">Занимает 70–80% времени проекта</text>
+  
+  <!-- ==================== БЛОК 2: Очистка данных ==================== -->
+   <a href="https://github.com/sav-cs-gh/AIA/blob/main/chapters/Chapter3.md#sect2">
+  <rect x="615" y="125" width="555" height="250" rx="10" fill="#e6e6e6" stroke="#555" stroke-width="2"/>
+  <rect x="615" y="125" width="555" height="50" rx="10" fill="#4a4a4a"/>
+  <rect x="615" y="157" width="555" height="18" fill="#4a4a4a"/>
+  <text x="892" y="158" text-anchor="middle" font-size="24" font-weight="bold" fill="#ffffff">2. Очистка данных</text>
+  </a>
+  <text x="635" y="205" font-size="18" font-weight="bold" fill="#1a1a1a">Типовые задачи:</text>
+  <text x="650" y="232" font-size="16" fill="#333">• Удаление дубликатов</text>
+  <text x="650" y="258" font-size="16" fill="#333">• Исправление опечаток</text>
+  <text x="650" y="284" font-size="16" fill="#333">• Унификация форматов</text>
+  <text x="650" y="310" font-size="16" fill="#333">• Проверка диапазонов</text>
+  <text x="650" y="336" font-size="16" fill="#333">• Обработка пропусков</text>
+  <text x="650" y="362" font-size="16" fill="#333">• Выявление выбросов и аномалий</text>
+  
+  <!-- ==================== БЛОК 3: Пропуски ==================== -->
+   <a href="https://github.com/sav-cs-gh/AIA/blob/main/chapters/Chapter3.md#sect2.2">
+  <rect x="30" y="395" width="570" height="280" rx="10" fill="#e6e6e6" stroke="#555" stroke-width="2"/>
+  <rect x="30" y="395" width="570" height="50" rx="10" fill="#4a4a4a"/>
+  <rect x="30" y="427" width="570" height="18" fill="#4a4a4a"/>
+  <text x="307" y="428" text-anchor="middle" font-size="24" font-weight="bold" fill="#ffffff">3. Обработка пропусков</text>
+  </a>
+  <text x="50" y="475" font-size="17" font-weight="bold" fill="#1a1a1a">Механизмы пропусков:</text>
+  <text x="65" y="502" font-size="16" fill="#333">• MCAR — полностью случайные</text>
+  <text x="65" y="528" font-size="16" fill="#333">• MAR — зависят от наблюдаемых</text>
+  <text x="65" y="554" font-size="16" fill="#333">• MNAR — зависят от отсутствующих</text>
+  
+  <text x="50" y="595" font-size="17" font-weight="bold" fill="#1a1a1a">Стратегии:</text>
+  <text x="65" y="622" font-size="15" fill="#333">• Удаление строк/столбцов</text>
+  <text x="65" y="646" font-size="15" fill="#333">• Импутация (среднее, медиана, мода, kNN, регрессия)</text>
+  <text x="65" y="670" font-size="15" fill="#333">• Индикатор пропуска</text>
+  
+  <!-- ==================== БЛОК 4: Выбросы ==================== -->
+   <a href="https://github.com/sav-cs-gh/AIA/blob/main/chapters/Chapter3.md#sect2.3">
+  <rect x="615" y="395" width="555" height="280" rx="10" fill="#e6e6e6" stroke="#555" stroke-width="2"/>
+  <rect x="615" y="395" width="555" height="50" rx="10" fill="#4a4a4a"/>
+  <rect x="615" y="427" width="555" height="18" fill="#4a4a4a"/>
+  <text x="892" y="428" text-anchor="middle" font-size="24" font-weight="bold" fill="#ffffff">4. Выбросы и аномалии</text>
+  </a>
+  <text x="635" y="475" font-size="17" font-weight="bold" fill="#1a1a1a">Методы выявления:</text>
+  <text x="650" y="502" font-size="16" fill="#333">• Статистические: IQR, Z-оценка</text>
+  <text x="650" y="528" font-size="16" fill="#333">• Визуальные: Boxplot, гистограммы</text>
+  <text x="650" y="554" font-size="16" fill="#333">• Алгоритмические: Isolation Forest, One-Class SVM</text>
+  
+  <text x="635" y="595" font-size="17" font-weight="bold" fill="#1a1a1a">Важно:</text>
+  <text x="650" y="622" font-size="16" fill="#333">Решение зависит от предметной области</text>
+  <text x="650" y="646" font-size="16" fill="#333">Выброс ≠ аномалия</text>
+  
+  <!-- ==================== БЛОК 5: Кодирование ==================== -->
+   <a href="https://github.com/sav-cs-gh/AIA/blob/main/chapters/Chapter3.md#sect3">
+  <rect x="30" y="695" width="570" height="292" rx="10" fill="#e6e6e6" stroke="#555" stroke-width="2"/>
+  <rect x="30" y="695" width="570" height="50" rx="10" fill="#4a4a4a"/>
+  <rect x="30" y="727" width="570" height="18" fill="#4a4a4a"/>
+  <text x="307" y="728" text-anchor="middle" font-size="24" font-weight="bold" fill="#ffffff">5. Кодирование признаков</text>
+  </a>
+  <text x="50" y="775" font-size="17" font-weight="bold" fill="#1a1a1a">Label Encoding:</text>
+  <text x="65" y="802" font-size="15" fill="#333">Категории → числа (для порядковых)</text>
+  
+  <text x="50" y="838" font-size="17" font-weight="bold" fill="#1a1a1a">One-Hot Encoding:</text>
+  <text x="65" y="865" font-size="15" fill="#333">Бинарные столбцы для каждой категории</text>
+  <text x="65" y="890" font-size="15" fill="#333">(увеличивает размерность)</text>
+  
+  <text x="50" y="930" font-size="17" font-weight="bold" fill="#1a1a1a">Target Encoding:</text>
+  <text x="65" y="957" font-size="15" fill="#333">Замена средним целевой переменной</text>
+  <text x="65" y="977" font-size="15" fill="#333">(риск утечки данных)</text>
+  
+  <!-- ==================== БЛОК 6: Масштабирование ==================== -->
+   <a href="https://github.com/sav-cs-gh/AIA/blob/main/chapters/Chapter3.md#sect3.2">
+  <rect x="615" y="695" width="555" height="292" rx="10" fill="#e6e6e6" stroke="#555" stroke-width="2"/>
+  <rect x="615" y="695" width="555" height="50" rx="10" fill="#4a4a4a"/>
+  <rect x="615" y="727" width="555" height="18" fill="#4a4a4a"/>
+  <text x="892" y="728" text-anchor="middle" font-size="24" font-weight="bold" fill="#ffffff">6. Масштабирование</text>
+  </a>
+  <text x="635" y="775" font-size="17" font-weight="bold" fill="#1a1a1a">Для моделей, чувствительных к масштабу:</text>
+  <text x="650" y="802" font-size="15" fill="#333">SVM, логистическая регрессия, нейросети, kNN</text>
+  
+  <text x="635" y="838" font-size="17" font-weight="bold" fill="#1a1a1a">Методы:</text>
+  <text x="650" y="865" font-size="16" fill="#333">• Стандартизация (Z-score) → среднее=0, σ=1</text>
+  <text x="650" y="892" font-size="16" fill="#333">• Нормализация (Min-Max) → [0, 1]</text>
+  <text x="650" y="919" font-size="16" fill="#333">• Робастное → медиана, IQR (устойчиво к выбросам)</text>
+  
+  <!-- ==================== БЛОК 7: Отбор признаков ==================== -->
+   <a href="https://github.com/sav-cs-gh/AIA/blob/main/chapters/Chapter3.md#sect3.3">
+  <rect x="30" y="1005" width="570" height="260" rx="10" fill="#e6e6e6" stroke="#555" stroke-width="2"/>
+  <rect x="30" y="1005" width="570" height="50" rx="10" fill="#4a4a4a"/>
+  <rect x="30" y="1037" width="570" height="18" fill="#4a4a4a"/>
+  <text x="307" y="1038" text-anchor="middle" font-size="24" font-weight="bold" fill="#ffffff">7. Отбор признаков</text>
+  </a>
+  <text x="50" y="1080" font-size="17" font-weight="bold" fill="#1a1a1a">Цели:</text>
+  <text x="65" y="1102" font-size="14" fill="#333">Уменьшение размерности, интерпретируемость, предотвращение переобучения</text>
+  
+  <text x="50" y="1138" font-size="17" font-weight="bold" fill="#1a1a1a">Методы:</text>
+  <text x="65" y="1165" font-size="16" fill="#333">• Фильтровые (корреляция, χ², взаимная информация)</text>
+  <text x="65" y="1192" font-size="16" fill="#333">• Обёртки (RFE, пошаговый отбор)</text>
+  <text x="65" y="1219" font-size="16" fill="#333">• Встроенные (Lasso, деревья, бустинг)</text>
+  
+  <!-- ==================== БЛОК 8: Качество данных ==================== -->
+   <a href="https://github.com/sav-cs-gh/AIA/blob/main/chapters/Chapter3.md#sect4">
+  <rect x="615" y="1005" width="555" height="260" rx="10" fill="#e6e6e6" stroke="#555" stroke-width="2"/>
+  <rect x="615" y="1005" width="555" height="50" rx="10" fill="#4a4a4a"/>
+  <rect x="615" y="1037" width="555" height="18" fill="#4a4a4a"/>
+  <text x="892" y="1038" text-anchor="middle" font-size="24" font-weight="bold" fill="#ffffff">8. Качество данных (DAMA)</text>
+  </a>
+  <text x="635" y="1080" font-size="17" font-weight="bold" fill="#1a1a1a">6 измерений:</text>
+  <text x="650" y="1102" font-size="15" fill="#333">1. Точность (Accuracy)</text>
+  <text x="650" y="1125" font-size="15" fill="#333">2. Полнота (Completeness)</text>
+  <text x="650" y="1147" font-size="15" fill="#333">3. Согласованность (Consistency)</text>
+  <text x="650" y="1170" font-size="15" fill="#333">4. Своевременность (Timeliness)</text>
+  <text x="650" y="1192" font-size="15" fill="#333">5. Уникальность (Uniqueness)</text>
+  <text x="650" y="1214" font-size="15" fill="#333">6. Достоверность (Validity)</text>
+  
+  <!-- ==================== БЛОК 9: EDA и GenAI ==================== -->
+   <a href="https://github.com/sav-cs-gh/AIA/blob/main/chapters/Chapter3.md#sect9">
+  <rect x="30" y="1275" width="1140" height="210" rx="10" fill="#d9d9d9" stroke="#555" stroke-width="2"/>
+  <rect x="30" y="1275" width="1140" height="50" rx="10" fill="#3a3a3a"/>
+  <rect x="30" y="1307" width="1140" height="18" fill="#3a3a3a"/>
+  <text x="600" y="1308" text-anchor="middle" font-size="24" font-weight="bold" fill="#ffffff">9. EDA + Генеративный ИИ (помощник аналитика)</text>
+  </a>
+  <text x="55" y="1350" font-size="17" font-weight="bold" fill="#1a1a1a">Возможности GenAI:</text>
+  <text x="70" y="1378" font-size="16" fill="#333">• Автоматическая генерация SQL-запросов</text>
+  <text x="70" y="1403" font-size="16" fill="#333">• Интерпретация визуализаций</text>
+  <text x="70" y="1428" font-size="16" fill="#333">• Генерация гипотез</text>
+  <text x="70" y="1453" font-size="16" fill="#333">• Автоматическое описание датасета</text>
+  
+  <text x="570" y="1350" font-size="17" font-weight="bold" fill="#1a1a1a">Риски и ограничения:</text>
+  <text x="585" y="1378" font-size="16" fill="#333">• Галлюцинации и фактические ошибки</text>
+  <text x="585" y="1403" font-size="16" fill="#333">• Утечка конфиденциальных данных</text>
+  <text x="585" y="1428" font-size="16" fill="#333">• Снижение критичности восприятия</text>
+  <text x="585" y="1453" font-size="16" fill="#333">• Требуется верификация результатов</text>
+  
+  <!-- ==================== ВЫВОД ==================== -->
+   <a href="https://github.com/sav-cs-gh/AIA/blob/main/chapters/Chapter3.md#sect8">
+  <rect x="30" y="1505" width="1140" height="80" rx="10" fill="#2a2a2a"/>
+  <text x="600" y="1538" text-anchor="middle" font-size="22" font-weight="bold" fill="#ffffff">Вывод: Подготовка данных и EDA — фундамент аналитики</text>
+  </a>
+  <text x="600" y="1570" text-anchor="middle" font-size="20" fill="#bbbbbb">GenAI — помощник, требующий критической проверки и предметного контекста</text>
+  
+</svg>
