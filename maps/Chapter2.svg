@@ -144,9 +144,9 @@
   <text x="665" y="1207" font-size="15" fill="#333">Многомерный анализ (Slice, Dice, Drill-down, Roll-up)</text>
   
   <!-- ==================== БЛОК 9: Тенденции ==================== -->
+    <a href="https://github.com/sav-cs-gh/AIA/blob/main/chapters/Chapter2.md#sect10">
   <rect x="30" y="1235" width="1155" height="185" rx="10" fill="#d9d9d9" stroke="#555" stroke-width="2"/>
   <rect x="30" y="1235" width="1155" height="50" rx="10" fill="#3a3a3a"/>
-   <a href="https://github.com/sav-cs-gh/AIA/blob/main/chapters/Chapter2.md#sect1">
   <rect x="30" y="1267" width="1155" height="18" fill="#3a3a3a"/>
   <text x="600" y="1268" text-anchor="middle" font-size="24" font-weight="bold" fill="#ffffff">9. Тенденции развития инфраструктуры данных</text>
   </a>
