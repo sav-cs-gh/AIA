@@ -73,7 +73,7 @@
   <text x="65" y="750" font-size="16" fill="#333">Ансамбли деревьев — лучший выбор для табличных данных</text>
   
   <!-- ==================== БЛОК 4: Сравнение методов ==================== -->
-   <a href="https://github.com/sav-cs-gh/AIA/blob/main/chapters/Chapter5.md#sect5">
+   <a href="https://github.com/sav-cs-gh/AIA/blob/main/chapters/Chapter5.md#sect4">
   <rect x="615" y="450" width="555" height="320" rx="10" fill="#e6e6e6" stroke="#555" stroke-width="2"/>
   <rect x="615" y="450" width="555" height="50" rx="10" fill="#4a4a4a"/>
   <rect x="615" y="482" width="555" height="18" fill="#4a4a4a"/>
