@@ -52,7 +52,7 @@
   <text x="650" y="425" font-size="15" fill="#333">Работа с числовыми и категориальными признаками</text>
   
   <!-- ==================== БЛОК 3: kNN ==================== -->
-    <a href="https://github.com/sav-cs-gh/AIA/blob/main/chapters/Chapter4.md#Sect1">
+    <a href="https://github.com/sav-cs-gh/AIA/blob/main/chapters/Chapter4.md#Sect3">
   <rect x="30" y="460" width="560" height="260" rx="10" fill="#e6e6e6" stroke="#555" stroke-width="2"/>
   <rect x="30" y="460" width="560" height="50" rx="10" fill="#4a4a4a"/>
   <rect x="30" y="492" width="560" height="18" fill="#4a4a4a"/>
@@ -138,7 +138,7 @@
   </a>
   <text x="65" y="1244" font-size="15" fill="#333">Нелинейный, для визуализации</text>
   <text x="65" y="1271" font-size="15" fill="#333">Сохраняет локальную структуру</text>
-    <a href="https://github.com/sav-cs-gh/AIA/blob/main/chapters/Chapter4.md#Sect7/3">
+    <a href="https://github.com/sav-cs-gh/AIA/blob/main/chapters/Chapter4.md#Sect7.3">
   <text x="50" y="1308" font-size="17" font-weight="bold" fill="#1a1a1a">UMAP:</text>
   </a>
   <text x="65" y="1337" font-size="15" fill="#333">Современный, быстрее t-SNE, сохраняет глобальную структуру</text>
@@ -163,7 +163,7 @@
   <text x="650" y="1344" font-size="15" fill="#333">Регуляризация, ранняя остановка, увеличение данных</text>
   
   <!-- ==================== ВЫВОД ==================== -->
-    <a href="https://github.com/sav-cs-gh/AIA/blob/main/chapters/Chapter4.md#Sect8">
+    <a href="https://github.com/sav-cs-gh/AIA/blob/main/chapters/Chapter4.md#Sect9">
   <rect x="30" y="1380" width="1140" height="100" rx="10" fill="#2a2a2a"/>
   <text x="600" y="1420" text-anchor="middle" font-size="22" font-weight="bold" fill="#ffffff">Вывод: Нет универсального алгоритма — выбор метода зависит от</text>
   </a>
