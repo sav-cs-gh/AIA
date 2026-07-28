@@ -1,0 +1,172 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1600" font-family="Arial, Helvetica, sans-serif">
+  
+  <!-- Общий фон -->
+  <rect width="1200" height="1480" fill="#f0f0f0"/>
+  
+  <!-- ==================== ЗАГОЛОВОК ==================== -->
+  <rect x="30" y="15" width="1140" height="90" rx="12" fill="#2a2a2a"/>
+  <text x="600" y="55" text-anchor="middle" font-size="32" font-weight="bold" fill="#ffffff">Глава 4. Базовые методы классификации, регрессии</text>
+  <text x="600" y="92" text-anchor="middle" font-size="26" fill="#cccccc">и смежные задачи интеллектуального анализа данных</text>
+  
+  <!-- ==================== БЛОК 1: Классификация и регрессия ==================== -->
+  <a href="https://github.com/sav-cs-gh/AIA/blob/main/chapters/Chapter4.md#Sect1">
+  <rect x="30" y="125" width="560" height="320" rx="10" fill="#e6e6e6" stroke="#555" stroke-width="2"/>
+  <rect x="30" y="125" width="560" height="50" rx="10" fill="#4a4a4a"/>
+  <rect x="30" y="157" width="560" height="18" fill="#4a4a4a"/>
+  <text x="307" y="158" text-anchor="middle" font-size="24" font-weight="bold" fill="#ffffff">1. Классификация и регрессия</text>
+  </a>
+  <text x="50" y="205" font-size="17" font-weight="bold" fill="#1a1a1a">Обучение с учителем:</text>
+  <text x="65" y="232" font-size="16" fill="#333">По размеченным данным строится функция f: X → Y</text>
+    <a href="https://github.com/sav-cs-gh/AIA/blob/main/chapters/Chapter4.md#Sect1.1">
+  <rect x="65" y="255" width="230" height="60" rx="6" fill="#c8c8c8" stroke="#666" stroke-width="1.5"/>
+  <text x="180" y="280" text-anchor="middle" font-size="18" font-weight="bold" fill="#1a1a1a">Классификация</text>
+  </a>
+  <text x="180" y="302" text-anchor="middle" font-size="15" fill="#333">Целевая — категория</text>
+    <a href="https://github.com/sav-cs-gh/AIA/blob/main/chapters/Chapter4.md#Sect1.2">
+  <rect x="315" y="255" width="230" height="60" rx="6" fill="#c8c8c8" stroke="#666" stroke-width="1.5"/>
+  <text x="430" y="280" text-anchor="middle" font-size="18" font-weight="bold" fill="#1a1a1a">Регрессия</text>
+  </a>
+  <text x="430" y="302" text-anchor="middle" font-size="15" fill="#333">Целевая — число</text>
+    <a href="https://github.com/sav-cs-gh/AIA/blob/main/chapters/Chapter4.md#Sect1.3">
+  <text x="50" y="345" font-size="17" font-weight="bold" fill="#1a1a1a">Этапы решения:</text>
+  </a>
+  <text x="65" y="370" font-size="14" fill="#333">Сбор → Очистка → Кодирование → Масштабирование → Обучение → Оценка</text>
+  
+  <!-- ==================== БЛОК 2: Деревья решений ==================== -->
+    <a href="https://github.com/sav-cs-gh/AIA/blob/main/chapters/Chapter4.md#Sect2">
+  <rect x="615" y="125" width="555" height="320" rx="10" fill="#e6e6e6" stroke="#555" stroke-width="2"/>
+  <rect x="615" y="125" width="555" height="50" rx="10" fill="#4a4a4a"/>
+  <rect x="615" y="157" width="555" height="18" fill="#4a4a4a"/>
+  <text x="892" y="158" text-anchor="middle" font-size="24" font-weight="bold" fill="#ffffff">2. Деревья решений</text>
+  </a>
+  <text x="635" y="205" font-size="17" font-weight="bold" fill="#1a1a1a">Принцип:</text>
+  <text x="650" y="232" font-size="16" fill="#333">Рекурсивное разбиение пространства признаков</text>
+  
+  <text x="635" y="268" font-size="17" font-weight="bold" fill="#1a1a1a">Критерии разделения:</text>
+  <text x="650" y="295" font-size="15" fill="#333">• Энтропия / Прирост информации</text>
+  <text x="650" y="320" font-size="15" fill="#333">• Индекс Джини</text>
+  <text x="650" y="345" font-size="15" fill="#333">• Дисперсия (для регрессии)</text>
+  
+  <text x="635" y="378" font-size="17" font-weight="bold" fill="#1a1a1a">Преимущества:</text>
+  <text x="650" y="402" font-size="15" fill="#333">Высокая интерпретируемость</text>
+  <text x="650" y="425" font-size="15" fill="#333">Работа с числовыми и категориальными признаками</text>
+  
+  <!-- ==================== БЛОК 3: kNN ==================== -->
+    <a href="https://github.com/sav-cs-gh/AIA/blob/main/chapters/Chapter4.md#Sect1">
+  <rect x="30" y="460" width="560" height="260" rx="10" fill="#e6e6e6" stroke="#555" stroke-width="2"/>
+  <rect x="30" y="460" width="560" height="50" rx="10" fill="#4a4a4a"/>
+  <rect x="30" y="492" width="560" height="18" fill="#4a4a4a"/>
+  <text x="307" y="493" text-anchor="middle" font-size="24" font-weight="bold" fill="#ffffff">3. Метод k ближайших соседей</text>
+  </a>
+  <text x="50" y="545" font-size="17" font-weight="bold" fill="#1a1a1a">Принцип:</text>
+  <text x="65" y="572" font-size="16" fill="#333">Похожие объекты → похожие ответы</text>
+  
+  <text x="50" y="608" font-size="17" font-weight="bold" fill="#1a1a1a">Метрики расстояния:</text>
+  <text x="65" y="635" font-size="15" fill="#333">Евклидово, Манхэттенское, Минковского, косинусное</text>
+  
+  <text x="50" y="672" font-size="17" font-weight="bold" fill="#1a1a1a">Требования:</text>
+  <text x="65" y="700" font-size="15" fill="#333">Масштабирование признаков, подбор k по валидации</text>
+  
+  <!-- ==================== БЛОК 4: Naive Bayes / SVM ==================== -->
+    <a href="https://github.com/sav-cs-gh/AIA/blob/main/chapters/Chapter4.md#Sect4">
+  <rect x="615" y="460" width="555" height="260" rx="10" fill="#e6e6e6" stroke="#555" stroke-width="2"/>
+  <rect x="615" y="460" width="555" height="50" rx="10" fill="#4a4a4a"/>
+  <rect x="615" y="492" width="555" height="18" fill="#4a4a4a"/>
+  <text x="892" y="493" text-anchor="middle" font-size="24" font-weight="bold" fill="#ffffff">4. Naive Bayes и SVM</text>
+  </a>
+  <text x="635" y="545" font-size="17" font-weight="bold" fill="#1a1a1a">Naive Bayes:</text>
+  <text x="650" y="572" font-size="15" fill="#333">Вероятностный классификатор</text>
+  <text x="650" y="596" font-size="15" fill="#333">P(y|x) = P(y) · Π P(xᵢ|y)</text>
+  <text x="650" y="620" font-size="15" fill="#333">Предположение независимости признаков</text>
+    <a href="https://github.com/sav-cs-gh/AIA/blob/main/chapters/Chapter4.md#Sect4.2">
+  <text x="635" y="655" font-size="17" font-weight="bold" fill="#1a1a1a">SVM (Support Vector Machine):</text>
+  <text x="650" y="682" font-size="15" fill="#333">Максимизация зазора (margin)</text>
+  <text x="650" y="706" font-size="15" fill="#333">Ядерный трюк → нелинейная классификация</text>
+  </a>
+  <!-- ==================== БЛОК 5: Кластеризация ==================== -->
+    <a href="https://github.com/sav-cs-gh/AIA/blob/main/chapters/Chapter4.md#Sect5">
+  <rect x="30" y="735" width="560" height="300" rx="10" fill="#e6e6e6" stroke="#555" stroke-width="2"/>
+  <rect x="30" y="735" width="560" height="50" rx="10" fill="#4a4a4a"/>
+  <rect x="30" y="757" width="560" height="18" fill="#4a4a4a"/>
+  <text x="307" y="768" text-anchor="middle" font-size="24" font-weight="bold" fill="#ffffff">5. Кластеризация</text>
+  </a>
+    <a href="https://github.com/sav-cs-gh/AIA/blob/main/chapters/Chapter4.md#Sect5.1">
+  <text x="50" y="818" font-size="17" font-weight="bold" fill="#1a1a1a">k-means:</text>
+  </a>
+  <text x="65" y="845" font-size="15" fill="#333">Центроидный метод, минимизация суммы квадратов</text>
+  <text x="65" y="872" font-size="15" fill="#333">Требуется задать k, чувствителен к инициализации</text>
+    <a href="https://github.com/sav-cs-gh/AIA/blob/main/chapters/Chapter4.md#Sect5.2">
+  <text x="50" y="910" font-size="17" font-weight="bold" fill="#1a1a1a">Иерархическая кластеризация:</text>
+  <text x="65" y="937" font-size="15" fill="#333">Дендрограмма, агломеративная / дивизимная</text>
+  </a>
+    <a href="https://github.com/sav-cs-gh/AIA/blob/main/chapters/Chapter4.md#Sect5.3">
+  <text x="50" y="965" font-size="17" font-weight="bold" fill="#1a1a1a">DBSCAN:</text>
+  <text x="65" y="992" font-size="15" fill="#333">Плотностный метод, кластеры произвольной формы, обнаружение шума</text>
+  </a>
+  <!-- ==================== БЛОК 6: Ассоциативные правила ==================== -->
+    <a href="https://github.com/sav-cs-gh/AIA/blob/main/chapters/Chapter4.md#Sect6">
+  <rect x="615" y="735" width="555" height="300" rx="10" fill="#e6e6e6" stroke="#555" stroke-width="2"/>
+  <rect x="615" y="735" width="555" height="50" rx="10" fill="#4a4a4a"/>
+  <rect x="615" y="757" width="555" height="18" fill="#4a4a4a"/>
+  <text x="892" y="768" text-anchor="middle" font-size="24" font-weight="bold" fill="#ffffff">6. Ассоциативные правила</text>
+  </a>
+  <text x="635" y="818" font-size="17" font-weight="bold" fill="#1a1a1a">Задача:</text>
+  <text x="650" y="845" font-size="16" fill="#333">Обнаружение зависимостей вида A → B</text>
+  
+  <text x="635" y="880" font-size="17" font-weight="bold" fill="#1a1a1a">Метрики:</text>
+  <text x="650" y="907" font-size="15" fill="#333">• Support — частота встречаемости A∪B</text>
+  <text x="650" y="934" font-size="15" fill="#333">• Confidence — условная вероятность P(B|A)</text>
+  <text x="650" y="960" font-size="15" fill="#333">• Lift — сила связи (нормированная)</text>
+  
+  <text x="635" y="997" font-size="17" font-weight="bold" fill="#1a1a1a">Применение:</text>
+  <text x="650" y="1025" font-size="15" fill="#333">Анализ рыночной корзины, рекомендательные системы</text>
+  
+  <!-- ==================== БЛОК 7: Снижение размерности ==================== -->
+    <a href="https://github.com/sav-cs-gh/AIA/blob/main/chapters/Chapter4.md#Sect7">
+  <rect x="30" y="1050" width="560" height="310" rx="10" fill="#e6e6e6" stroke="#555" stroke-width="2"/>
+  <rect x="30" y="1050" width="560" height="50" rx="10" fill="#4a4a4a"/>
+  <rect x="30" y="1082" width="560" height="18" fill="#4a4a4a"/>
+  <text x="307" y="1083" text-anchor="middle" font-size="24" font-weight="bold" fill="#ffffff">7. Снижение размерности</text>
+  </a>
+    <a href="https://github.com/sav-cs-gh/AIA/blob/main/chapters/Chapter4.md#Sect7.1">
+  <text x="50" y="1125" font-size="17" font-weight="bold" fill="#1a1a1a">PCA:</text>
+  </a>
+  <text x="65" y="1152" font-size="15" fill="#333">Линейный метод, максимизация дисперсии</text>
+  <text x="65" y="1180" font-size="15" fill="#333">Минимальная потеря информации</text>
+    <a href="https://github.com/sav-cs-gh/AIA/blob/main/chapters/Chapter4.md#Sect7.2">
+  <text x="50" y="1217" font-size="17" font-weight="bold" fill="#1a1a1a">t-SNE:</text>
+  </a>
+  <text x="65" y="1244" font-size="15" fill="#333">Нелинейный, для визуализации</text>
+  <text x="65" y="1271" font-size="15" fill="#333">Сохраняет локальную структуру</text>
+    <a href="https://github.com/sav-cs-gh/AIA/blob/main/chapters/Chapter4.md#Sect7/3">
+  <text x="50" y="1308" font-size="17" font-weight="bold" fill="#1a1a1a">UMAP:</text>
+  </a>
+  <text x="65" y="1337" font-size="15" fill="#333">Современный, быстрее t-SNE, сохраняет глобальную структуру</text>
+  
+  <!-- ==================== БЛОК 8: Оценка качества ==================== -->
+    <a href="https://github.com/sav-cs-gh/AIA/blob/main/chapters/Chapter4.md#Sect8">
+  <rect x="615" y="1050" width="555" height="310" rx="10" fill="#e6e6e6" stroke="#555" stroke-width="2"/>
+  <rect x="615" y="1050" width="555" height="50" rx="10" fill="#4a4a4a"/>
+  <rect x="615" y="1082" width="555" height="18" fill="#4a4a4a"/>
+  <text x="892" y="1083" text-anchor="middle" font-size="24" font-weight="bold" fill="#ffffff">8. Оценка качества моделей</text>
+  </a>
+  <text x="635" y="1125" font-size="17" font-weight="bold" fill="#1a1a1a">Метрики классификации:</text>
+  <text x="650" y="1152" font-size="15" fill="#333">Accuracy, Precision, Recall, F1, ROC-AUC</text>
+  
+  <text x="635" y="1190" font-size="17" font-weight="bold" fill="#1a1a1a">Метрики регрессии:</text>
+  <text x="650" y="1217" font-size="15" fill="#333">MAE, MSE, RMSE, R²</text>
+  
+  <text x="635" y="1254" font-size="17" font-weight="bold" fill="#1a1a1a">Кросс-валидация:</text>
+  <text x="650" y="1280" font-size="15" fill="#333">k-fold, стратифицированная, временная</text>
+  
+  <text x="635" y="1317" font-size="17" font-weight="bold" fill="#1a1a1a">Переобучение / Недообучение:</text>
+  <text x="650" y="1344" font-size="15" fill="#333">Регуляризация, ранняя остановка, увеличение данных</text>
+  
+  <!-- ==================== ВЫВОД ==================== -->
+    <a href="https://github.com/sav-cs-gh/AIA/blob/main/chapters/Chapter4.md#Sect8">
+  <rect x="30" y="1380" width="1140" height="100" rx="10" fill="#2a2a2a"/>
+  <text x="600" y="1420" text-anchor="middle" font-size="22" font-weight="bold" fill="#ffffff">Вывод: Нет универсального алгоритма — выбор метода зависит от</text>
+  </a>
+  <text x="600" y="1450" text-anchor="middle" font-size="20" fill="#cccccc">задачи, данных, требований к интерпретируемости и вычислительных ресурсов</text>
+  
+</svg>
