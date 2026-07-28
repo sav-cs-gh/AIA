@@ -26,11 +26,12 @@
   <text x="65" y="358" font-size="15" fill="#333">Гибридность, масштабируемость, потоковая обработка</text>
   
   <!-- ==================== БЛОК 2: Data Warehouse ==================== -->
+   <a href="https://github.com/sav-cs-gh/AIA/blob/main/chapters/Chaper2.md#sect2">
   <rect x="630" y="125" width="555" height="242" rx="10" fill="#e6e6e6" stroke="#555" stroke-width="2"/>
   <rect x="630" y="125" width="555" height="50" rx="10" fill="#4a4a4a"/>
   <rect x="630" y="157" width="555" height="18" fill="#4a4a4a"/>
   <text x="892" y="158" text-anchor="middle" font-size="24" font-weight="bold" fill="#ffffff">2. Хранилище данных (DWH)</text>
-  
+  </a>
   <text x="650" y="205" font-size="17" font-weight="bold" fill="#1a1a1a">Свойства (Инмон):</text>
   <text x="665" y="232" font-size="15" fill="#333">• Предметная ориентация</text>
   <text x="665" y="256" font-size="15" fill="#333">• Интегрированность</text>
@@ -41,11 +42,12 @@
   <text x="665" y="360" font-size="15" fill="#333">Звезда, Снежинка, Факт-констелляция</text>
   
   <!-- ==================== БЛОК 3: Data Lake ==================== -->
+   <a href="https://github.com/sav-cs-gh/AIA/blob/main/chapters/Chaper2.md#sect3">
   <rect x="30" y="385" width="575" height="250" rx="10" fill="#e6e6e6" stroke="#555" stroke-width="2"/>
   <rect x="30" y="385" width="575" height="50" rx="10" fill="#4a4a4a"/>
   <rect x="30" y="417" width="575" height="18" fill="#4a4a4a"/>
   <text x="307" y="418" text-anchor="middle" font-size="24" font-weight="bold" fill="#ffffff">3. Озеро данных (Data Lake)</text>
-  
+  </a>
   <text x="50" y="465" font-size="17" font-weight="bold" fill="#1a1a1a">Принцип:</text>
   <text x="65" y="492" font-size="15" fill="#333">Хранение данных в исходном виде</text>
   <text x="65" y="516" font-size="15" fill="#333">Schema-on-read (схема при чтении)</text>
@@ -56,11 +58,12 @@
   <text x="65" y="625" font-size="15" fill="#333">• Поддержка Data Science и ML</text>
   
   <!-- ==================== БЛОК 4: Lakehouse ==================== -->
+   <a href="https://github.com/sav-cs-gh/AIA/blob/main/chapters/Chaper2.md#sect4">
   <rect x="630" y="385" width="555" height="250" rx="10" fill="#e6e6e6" stroke="#555" stroke-width="2"/>
   <rect x="630" y="385" width="555" height="50" rx="10" fill="#4a4a4a"/>
   <rect x="630" y="417" width="555" height="18" fill="#4a4a4a"/>
   <text x="907" y="418" text-anchor="middle" font-size="24" font-weight="bold" fill="#ffffff">4. Озеро-хранилище (Lakehouse)</text>
-  
+  </a>
   <text x="650" y="465" font-size="17" font-weight="bold" fill="#1a1a1a">Объединяет:</text>
   <text x="665" y="492" font-size="15" fill="#333">Data Lake + Data Warehouse</text>
   
@@ -71,11 +74,12 @@
   <text x="665" y="624" font-size="15" fill="#333">• Единый слой для BI + ML</text>
   
   <!-- ==================== БЛОК 5: ETL / ELT ==================== -->
+   <a href="https://github.com/sav-cs-gh/AIA/blob/main/chapters/Chaper2.md#sect5">
   <rect x="30" y="650" width="575" height="290" rx="10" fill="#e6e6e6" stroke="#555" stroke-width="2"/>
   <rect x="30" y="650" width="575" height="50" rx="10" fill="#4a4a4a"/>
   <rect x="30" y="677" width="575" height="18" fill="#4a4a4a"/>
   <text x="307" y="683" text-anchor="middle" font-size="24" font-weight="bold" fill="#ffffff">5. ETL и ELT</text>
-  
+  </a>
   <text x="50" y="725" font-size="17" font-weight="bold" fill="#1a1a1a">ETL:</text>
   <text x="65" y="752" font-size="15" fill="#333">Extract → Transform → Load</text>
   <text x="65" y="776" font-size="15" fill="#333">Преобразование до загрузки</text>
@@ -83,16 +87,19 @@
   <text x="50" y="815" font-size="17" font-weight="bold" fill="#1a1a1a">ELT:</text>
   <text x="65" y="842" font-size="15" fill="#333">Extract → Load → Transform</text>
   <text x="65" y="866" font-size="15" fill="#333">Преобразование после загрузки</text>
-  
+   <a href="https://github.com/sav-cs-gh/AIA/blob/main/chapters/Chaper2.md#sect5.2">
   <text x="50" y="905" font-size="17" font-weight="bold" fill="#1a1a1a">Конвейеры данных:</text>
+  </a>
   <text x="65" y="927" font-size="15" fill="#333">Batch, Streaming, Micro-batch</text>
   
   <!-- ==================== БЛОК 6: Cloud Analytics ==================== -->
+  
+   <a href="https://github.com/sav-cs-gh/AIA/blob/main/chapters/Chaper2.md#sect7">
   <rect x="630" y="650" width="555" height="290" rx="10" fill="#e6e6e6" stroke="#555" stroke-width="2"/>
   <rect x="630" y="650" width="555" height="50" rx="10" fill="#4a4a4a"/>
   <rect x="630" y="677" width="555" height="18" fill="#4a4a4a"/>
   <text x="907" y="683" text-anchor="middle" font-size="24" font-weight="bold" fill="#ffffff">6. Облачная аналитика</text>
-  
+  </a>
   <text x="650" y="725" font-size="17" font-weight="bold" fill="#1a1a1a">Преимущества:</text>
   <text x="665" y="752" font-size="15" fill="#333">• Быстрое развертывание</text>
   <text x="665" y="776" font-size="15" fill="#333">• Неограниченная масштабируемость</text>
@@ -103,11 +110,12 @@
   <text x="665" y="891" font-size="15" fill="#333">• Serverless-аналитика, BI, ML-платформы</text>
   
   <!-- ==================== БЛОК 7: Feature Store ==================== -->
+   <a href="https://github.com/sav-cs-gh/AIA/blob/main/chapters/Chaper2.md#sect8">
   <rect x="30" y="950" width="575" height="265" rx="10" fill="#e6e6e6" stroke="#555" stroke-width="2"/>
   <rect x="30" y="950" width="575" height="50" rx="10" fill="#4a4a4a"/>
   <rect x="30" y="977" width="575" height="18" fill="#4a4a4a"/>
   <text x="307" y="980" text-anchor="middle" font-size="24" font-weight="bold" fill="#ffffff">7. Хранилище признаков</text>
-  
+  </a>
   <text x="50" y="1025" font-size="17" font-weight="bold" fill="#1a1a1a">Назначение:</text>
   <text x="65" y="1052" font-size="15" fill="#333">Централизованное управление признаками для ML</text>
   
@@ -117,35 +125,41 @@
   <text x="65" y="1165" font-size="15" fill="#333">• Версионирование и контроль качества</text>
   
   <!-- ==================== БЛОК 8: Streaming / BI / OLAP ==================== -->
+   <a href="https://github.com/sav-cs-gh/AIA/blob/main/chapters/Chaper2.md#sect9">
   <rect x="630" y="950" width="555" height="265" rx="10" fill="#e6e6e6" stroke="#555" stroke-width="2"/>
   <rect x="630" y="950" width="555" height="50" rx="10" fill="#4a4a4a"/>
   <rect x="630" y="977" width="555" height="18" fill="#4a4a4a"/>
   <text x="907" y="980" text-anchor="middle" font-size="24" font-weight="bold" fill="#ffffff">8. Streaming / BI / OLAP</text>
-  
   <text x="650" y="1025" font-size="17" font-weight="bold" fill="#1a1a1a">Потоковая аналитика:</text>
+  </a>
   <text x="665" y="1052" font-size="15" fill="#333">Обработка данных в реальном времени</text>
   <text x="665" y="1076" font-size="15" fill="#333">Источники: IoT, транзакции, логи</text>
-  
+   <a href="https://github.com/sav-cs-gh/AIA/blob/main/chapters/Chaper2.md#sect9.2">
   <text x="650" y="1115" font-size="17" font-weight="bold" fill="#1a1a1a">BI-платформы:</text>
+  </a>
   <text x="665" y="1142" font-size="15" fill="#333">Дашборды, отчеты, self-service</text>
-  
+   <a href="https://github.com/sav-cs-gh/AIA/blob/main/chapters/Chaper2.md#sect9/3">
   <text x="650" y="1180" font-size="17" font-weight="bold" fill="#1a1a1a">OLAP:</text>
+  </a>
   <text x="665" y="1207" font-size="15" fill="#333">Многомерный анализ (Slice, Dice, Drill-down, Roll-up)</text>
   
   <!-- ==================== БЛОК 9: Тенденции ==================== -->
   <rect x="30" y="1235" width="1155" height="185" rx="10" fill="#d9d9d9" stroke="#555" stroke-width="2"/>
   <rect x="30" y="1235" width="1155" height="50" rx="10" fill="#3a3a3a"/>
+   <a href="https://github.com/sav-cs-gh/AIA/blob/main/chapters/Chaper2.md#sect1">
   <rect x="30" y="1267" width="1155" height="18" fill="#3a3a3a"/>
   <text x="600" y="1268" text-anchor="middle" font-size="24" font-weight="bold" fill="#ffffff">9. Тенденции развития инфраструктуры данных</text>
-  
+  </a>
   <text x="55" y="1311" font-size="16" fill="#1a1a1a">1. Смещение в облако и гибридные модели</text>
   <text x="55" y="1345" font-size="16" fill="#1a1a1a">2. Конвергенция аналитики и AI (единая платформа для BI + ML)</text>
   <text x="55" y="1375" font-size="16" fill="#1a1a1a">3. Рост открытых форматов (Delta Lake, Iceberg, Hudi)</text>
   <text x="55" y="1405" font-size="16" fill="#1a1a1a">4. Автоматизация, DataOps, управление качеством и наблюдаемостью</text>
   
   <!-- ==================== ВЫВОД ==================== -->
+   <a href="https://github.com/sav-cs-gh/AIA/blob/main/chapters/Chaper2.md#sect11">
   <rect x="30" y="1435" width="1155" height="80" rx="10" fill="#2a2a2a"/>
   <text x="600" y="1468" text-anchor="middle" font-size="22" font-weight="bold" fill="#ffffff">Вывод: Современная инфраструктура данных — согласованная экосистема</text>
+  </a>
   <text x="600" y="1500" text-anchor="middle" font-size="20" fill="#bbbbbb">объединяющая хранение, интеграцию, аналитику и ML в едином архитектурном контуре</text>
   
 </svg>
