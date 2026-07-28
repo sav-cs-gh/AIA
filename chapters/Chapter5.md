@@ -457,8 +457,6 @@ Permutation importance обычно считается более надежны
 
 # Список литературы
 
-> Ниже дан пример оформления по ГОСТ Р 7.0.100–2018. При подготовке окончательной версии учебного пособия желательно проверить требования конкретного издательства или вуза.
-
 1. Breiman L. Random Forests // Machine Learning. — 2001. — Vol. 45, № 1. — P. 5–32.  
 2. Friedman J. H. Greedy Function Approximation: A Gradient Boosting Machine // Annals of Statistics. — 2001. — Vol. 29, № 5. — P. 1189–1232.  
 3. Chen T., Guestrin C. XGBoost: A Scalable Tree Boosting System // Proceedings of the 22nd ACM SIGKDD International Conference on Knowledge Discovery and Data Mining. — New York: ACM, 2016. — P. 785–794.  
