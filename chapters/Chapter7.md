@@ -1,4 +1,4 @@
-# Глава. Поиск закономерностей и аномалий
+# Глава 7. Поиск закономерностей и аномалий
 
 [Открыть интерактивную карту главы →](https://raw.githubusercontent.com/sav-cs-gh/AIA/refs/heads/main/maps/Chapter7.svg)
 
