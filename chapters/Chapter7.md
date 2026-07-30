@@ -58,10 +58,18 @@ X \Rightarrow Y,
 ### 2.2. Формальная модель транзакционных данных
 
 Пусть:
-- I = {i1, i2,..., im} — множество элементов;
-- D = {T1, T2,..., Tn} — множество транзакций, где каждая транзакция \(T_k \subseteq I\).
 
-Ассоциативное правило ![f: X \rightarrow Y](https://latex.codecogs.com/svg.image?f:%20X%20\rightarrow%20Y) <!--\(X \Rightarrow Y\) --> задается такими подмножествами \(X, Y \subseteq I\), что:
+<!-- I = \{i_1, i_2, \dots, i_m\} -->
+<img src="https://latex.codecogs.com/svg.latex?I%20%3D%20%5C%7Bi_1%2C%20i_2%2C%20%5Cdots%2C%20i_m%5C%7D" alt="I = \{i_1, i_2, \dots, i_m\}" /> — множество элементов;
+
+<!-- D = \{T_1, T_2, \dots, T_n\} -->
+<img src="https://latex.codecogs.com/svg.latex?D%20%3D%20%5C%7BT_1%2C%20T_2%2C%20%5Cdots%2C%20T_n%5C%7D" alt="D = \{T_1, T_2, \dots, T_n\}" /> — множество транзакций, где каждая транзакция
+
+<!-- T_k \subseteq I -->
+<img src="https://latex.codecogs.com/svg.latex?T_k%20%5Csubseteq%20I" alt="T_k \subseteq I" />.
+
+Ассоциативное правило X ⇒ Y задается такими подмножествами X, Y ⊆ I, что:
+
 <!-- X \cap Y = \varnothing -->
 <img src="https://latex.codecogs.com/svg.latex?X%20%5Ccap%20Y%20%3D%20%5Cvarnothing" alt="X \cap Y = \varnothing" />
 
