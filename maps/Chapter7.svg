@@ -1,0 +1,139 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1010" font-family="Arial, sans-serif">
+  <!-- Фон -->
+  <rect width="1000" height="1010" fill="#f0f0f0" rx="10"/>
+
+  <!-- Заголовок главы -->
+  <rect x="50" y="20" width="900" height="60" fill="#333" rx="8"/>
+  <text x="500" y="58" font-size="30" fill="#fff" font-weight="bold" text-anchor="middle">Поиск закономерностей и обнаружение аномалий</text>
+
+  <!-- ============================================================ -->
+  <!-- ЛЕВАЯ КОЛОНКА: АССОЦИАТИВНЫЕ ПРАВИЛА -->
+  <!-- ============================================================ -->
+   <a href="https://github.com/sav-cs-gh/AIA/blob/main/chapters/Chapter7.md#sect1">
+  <rect x="50" y="110" width="440" height="880" fill="#e6e6e6" rx="10" stroke="#999" stroke-width="2"/>
+
+  <!-- Заголовок колонки -->
+  <rect x="70" y="125" width="400" height="45" fill="#555" rx="6"/>
+  <text x="270" y="156" font-size="26" fill="#fff" font-weight="bold" text-anchor="middle">Ассоциативные правила</text>
+</a>
+  <!-- Определение -->
+  <rect x="70" y="190" width="400" height="80" fill="#d5d5d5" rx="6"/>
+  <text x="270" y="220" font-size="22" fill="#000" font-weight="bold" text-anchor="middle">X ⇒ Y</text>
+  <text x="270" y="252" font-size="18" fill="#333" text-anchor="middle">Если X, то с высокой вероятностью Y</text>
+ <a href="https://github.com/sav-cs-gh/AIA/blob/main/chapters/Chapter7.md#sect2">
+  <!-- Метрики -->
+  <rect x="70" y="290" width="400" height="45" fill="#888" rx="6"/>
+  <text x="270" y="322" font-size="24" fill="#fff" font-weight="bold" text-anchor="middle">Метрики качества</text>
+</a>
+ <a href="https://github.com/sav-cs-gh/AIA/blob/main/chapters/Chapter7.md#sect2.1">
+  <!-- Поддержка -->
+  <rect x="80" y="350" width="380" height="80" fill="#ccc" rx="6"/>
+  <text x="270" y="380" font-size="22" fill="#000" font-weight="bold" text-anchor="middle">Support (поддержка)</text>
+  </a>
+  <text x="270" y="412" font-size="18" fill="#333" text-anchor="middle">Доля транзакций, содержащих X и Y</text>
+ <a href="https://github.com/sav-cs-gh/AIA/blob/main/chapters/Chapter7.md#sect2.2">
+  <!-- Достоверность -->
+  <rect x="80" y="445" width="380" height="80" fill="#ccc" rx="6"/>
+  <text x="270" y="475" font-size="22" fill="#000" font-weight="bold" text-anchor="middle">Confidence (достоверность)</text>
+  </a>
+  <text x="270" y="507" font-size="18" fill="#333" text-anchor="middle">P(Y|X) — вероятность Y при условии X</text>
+ <a href="https://github.com/sav-cs-gh/AIA/blob/main/chapters/Chapter7.md#sect2.3">
+  <!-- Лифт -->
+  <rect x="80" y="540" width="380" height="95" fill="#ccc" rx="6"/>
+  <text x="270" y="570" font-size="22" fill="#000" font-weight="bold" text-anchor="middle">Lift (лифт)</text>
+  </a>
+  <text x="270" y="600" font-size="18" fill="#333" text-anchor="middle">P(X∪Y) / (P(X)·P(Y))</text>
+  <text x="270" y="625" font-size="16" fill="#555" text-anchor="middle">&gt;1 — положит. ассоциация, =1 — независимость</text>
+ <a href="https://github.com/sav-cs-gh/AIA/blob/main/chapters/Chapter7.md#sect3">
+  <!-- Алгоритмы -->
+  <rect x="70" y="660" width="400" height="45" fill="#888" rx="6"/>
+  <text x="270" y="692" font-size="24" fill="#fff" font-weight="bold" text-anchor="middle">Алгоритмы</text>
+</a>
+ <a href="https://github.com/sav-cs-gh/AIA/blob/main/chapters/Chapter7.md#sect3.1">
+  <!-- Apriori -->
+  <rect x="80" y="720" width="380" height="90" fill="#bbb" rx="6"/>
+  <text x="270" y="750" font-size="22" fill="#000" font-weight="bold" text-anchor="middle">Apriori</text>
+  </a>
+  <text x="270" y="780" font-size="18" fill="#333" text-anchor="middle">Анти-монотонность: все подмножества</text>
+  <text x="270" y="800" font-size="16" fill="#555" text-anchor="middle">частого набора тоже часты</text>
+ <a href="https://github.com/sav-cs-gh/AIA/blob/main/chapters/Chapter7.md#sect3.2">
+  <!-- FP-Growth -->
+  <rect x="80" y="825" width="380" height="90" fill="#bbb" rx="6"/>
+  <text x="270" y="855" font-size="22" fill="#000" font-weight="bold" text-anchor="middle">FP-Growth</text>
+  </a>
+  <text x="270" y="885" font-size="18" fill="#333" text-anchor="middle">Компактное FP-дерево</text>
+  <text x="270" y="905" font-size="16" fill="#555" text-anchor="middle">без генерации кандидатов</text>
+
+  <!-- ============================================================ -->
+  <!-- ПРАВАЯ КОЛОНКА: ОБНАРУЖЕНИЕ АНОМАЛИЙ -->
+  <!-- ============================================================ -->
+  <rect x="510" y="110" width="440" height="880" fill="#e6e6e6" rx="10" stroke="#999" stroke-width="2"/>
+ <a href="https://github.com/sav-cs-gh/AIA/blob/main/chapters/Chapter7.md#sect4">
+  <!-- Заголовок колонки -->
+  <rect x="530" y="125" width="400" height="45" fill="#555" rx="6"/>
+  <text x="730" y="156" font-size="26" fill="#fff" font-weight="bold" text-anchor="middle">Обнаружение аномалий</text>
+</a>
+  <!-- Определение -->
+  <rect x="530" y="190" width="400" height="80" fill="#d5d5d5" rx="6"/>
+  <text x="730" y="220" font-size="22" fill="#000" font-weight="bold" text-anchor="middle">Аномалия — объект, существенно</text>
+  <text x="730" y="252" font-size="22" fill="#000" font-weight="bold" text-anchor="middle">отклоняющийся от нормы</text>
+ <a href="https://github.com/sav-cs-gh/AIA/blob/main/chapters/Chapter7.md#sect5">
+  <!-- Типы аномалий -->
+  <rect x="530" y="290" width="400" height="45" fill="#888" rx="6"/>
+  <text x="730" y="322" font-size="24" fill="#fff" font-weight="bold" text-anchor="middle">Типы аномалий</text>
+</a>
+ <a href="https://github.com/sav-cs-gh/AIA/blob/main/chapters/Chapter7.md#sect5.1">
+  <!-- Точечные -->
+  <rect x="540" y="350" width="380" height="60" fill="#ccc" rx="6"/>
+  <text x="730" y="380" font-size="22" fill="#000" font-weight="bold" text-anchor="middle">Точечная (point)</text>
+  </a>
+  <text x="730" y="405" font-size="18" fill="#333" text-anchor="middle">Отдельное наблюдение-выброс</text>
+ <a href="https://github.com/sav-cs-gh/AIA/blob/main/chapters/Chapter7.md#sect5.2">
+  <!-- Контекстные -->
+  <rect x="540" y="420" width="380" height="60" fill="#ccc" rx="6"/>
+  <text x="730" y="450" font-size="22" fill="#000" font-weight="bold" text-anchor="middle">Контекстная (contextual)</text>
+  </a>
+  <text x="730" y="475" font-size="18" fill="#333" text-anchor="middle">Аномалия только в определённых условиях</text>
+ <a href="https://github.com/sav-cs-gh/AIA/blob/main/chapters/Chapter7.md#sect5.3">
+  <!-- Коллективные -->
+  <rect x="540" y="490" width="380" height="65" fill="#ccc" rx="6"/>
+  <text x="730" y="520" font-size="22" fill="#000" font-weight="bold" text-anchor="middle">Коллективная (collective)</text>
+  </a>
+  <text x="730" y="545" font-size="18" fill="#333" text-anchor="middle">Аномальна совокупность наблюдений</text>
+ <a href="https://github.com/sav-cs-gh/AIA/blob/main/chapters/Chapter7.md#sect6">
+  <!-- Методы обнаружения -->
+  <rect x="530" y="575" width="400" height="45" fill="#888" rx="6"/>
+  <text x="730" y="607" font-size="24" fill="#fff" font-weight="bold" text-anchor="middle">Методы обнаружения</text>
+</a>
+ <a href="https://github.com/sav-cs-gh/AIA/blob/main/chapters/Chapter7.md#sect6.1">
+  <!-- Статистические -->
+  <rect x="540" y="635" width="380" height="60" fill="#bbb" rx="6"/>
+  <text x="730" y="665" font-size="22" fill="#000" font-weight="bold" text-anchor="middle">Статистические</text>
+  </a>
+  <text x="730" y="690" font-size="18" fill="#333" text-anchor="middle">z-оценка, межквартильный размах</text>
+ <a href="https://github.com/sav-cs-gh/AIA/blob/main/chapters/Chapter7.md#sect6.2">
+  <!-- Distance-based -->
+  <rect x="540" y="705" width="380" height="60" fill="#bbb" rx="6"/>
+  <text x="730" y="735" font-size="22" fill="#000" font-weight="bold" text-anchor="middle">На основе расстояний</text>
+  </a>
+  <text x="730" y="760" font-size="18" fill="#333" text-anchor="middle">Объекты далеко от основной массы</text>
+ <a href="https://github.com/sav-cs-gh/AIA/blob/main/chapters/Chapter7.md#sect6.3">
+  <!-- Density-based (LOF) -->
+  <rect x="540" y="775" width="380" height="60" fill="#bbb" rx="6"/>
+  <text x="730" y="805" font-size="22" fill="#000" font-weight="bold" text-anchor="middle">Плотностные (LOF)</text>
+  </a>
+  <text x="730" y="830" font-size="18" fill="#333" text-anchor="middle">Сравнение локальной плотности</text>
+ <a href="https://github.com/sav-cs-gh/AIA/blob/main/chapters/Chapter7.md#sect6.4">
+  <!-- Isolation Forest -->
+  <rect x="540" y="845" width="380" height="60" fill="#bbb" rx="6"/>
+  <text x="730" y="875" font-size="22" fill="#000" font-weight="bold" text-anchor="middle">Isolation Forest</text>
+  </a>
+  <text x="730" y="900" font-size="18" fill="#333" text-anchor="middle">Аномалии изолируются быстрее</text>
+ <a href="https://github.com/sav-cs-gh/AIA/blob/main/chapters/Chapter7.md#sect6.5">
+  <!-- One-Class SVM -->
+  <rect x="540" y="915" width="380" height="65" fill="#bbb" rx="6"/>
+  <text x="730" y="945" font-size="22" fill="#000" font-weight="bold" text-anchor="middle">One-Class SVM</text>
+  </a>
+  <text x="730" y="970" font-size="18" fill="#333" text-anchor="middle">Граница нормальной области</text>
+
+</svg>
