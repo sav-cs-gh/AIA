@@ -1,0 +1,175 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1550" font-family="Arial, Helvetica, sans-serif">
+  
+  <!-- Общий фон -->
+  <rect width="1200" height="1550" fill="#f0f0f0"/>
+  
+  <!-- ==================== ЗАГОЛОВОК ==================== -->
+  <rect x="30" y="15" width="1140" height="90" rx="12" fill="#2a2a2a"/>
+  <text x="600" y="55" text-anchor="middle" font-size="32" font-weight="bold" fill="#ffffff">Глава 6. Кластеризация, сегментация</text>
+  <text x="600" y="92" text-anchor="middle" font-size="26" fill="#cccccc">и снижение размерности</text>
+  
+  <!-- ==================== БЛОК 1: Кластеризация ==================== -->
+  <a href="https://github.com/sav-cs-gh/AIA/blob/main/chapters/Chapter6.md#sect1">
+  <rect x="30" y="125" width="555" height="315" rx="10" fill="#e6e6e6" stroke="#555" stroke-width="2"/>
+  <rect x="30" y="125" width="555" height="50" rx="10" fill="#4a4a4a"/>
+  <rect x="30" y="157" width="555" height="18" fill="#4a4a4a"/>
+  <text x="307" y="158" text-anchor="middle" font-size="24" font-weight="bold" fill="#ffffff">1. Кластеризация</text>
+  </a>
+  <text x="50" y="205" font-size="19" font-weight="bold" fill="#1a1a1a">Определение:</text>
+  <text x="50" y="235" font-size="17" fill="#2a2a2a">Разбиение объектов на группы (кластеры)</text>
+  <text x="50" y="262" font-size="17" fill="#2a2a2a">Внутри кластера — max схожесть</text>
+  <text x="50" y="289" font-size="17" fill="#2a2a2a">Между кластерами — max различие</text>
+  
+  <text x="50" y="325" font-size="19" font-weight="bold" fill="#1a1a1a">Семейства алгоритмов:</text>
+  <text x="65" y="353" font-size="16" fill="#333">• Центроидные (k-means)</text>
+  <text x="65" y="378" font-size="16" fill="#333">• Иерархические</text>
+  <text x="65" y="403" font-size="16" fill="#333">• Плотностные (DBSCAN)</text>
+  <text x="65" y="428" font-size="16" fill="#333">• Модельно-ориентированные</text>
+  
+  <!-- ==================== БЛОК 2: k-means ==================== -->
+  <a href="https://github.com/sav-cs-gh/AIA/blob/main/chapters/Chapter6.md#sect2">
+  <rect x="615" y="125" width="555" height="315" rx="10" fill="#e6e6e6" stroke="#555" stroke-width="2"/>
+  <rect x="615" y="125" width="555" height="50" rx="10" fill="#4a4a4a"/>
+  <rect x="615" y="157" width="555" height="18" fill="#4a4a4a"/>
+  <text x="892" y="158" text-anchor="middle" font-size="24" font-weight="bold" fill="#ffffff">2. Метод k-средних</text>
+  </a>
+  <text x="635" y="205" font-size="19" font-weight="bold" fill="#1a1a1a">Цель:</text>
+  <text x="650" y="235" font-size="17" fill="#2a2a2a">Минимизация внутрикластерной</text>
+  <text x="650" y="262" font-size="17" fill="#2a2a2a">суммы квадратов расстояний</text>
+  
+  <text x="635" y="298" font-size="19" font-weight="bold" fill="#1a1a1a">Алгоритм:</text>
+  <text x="650" y="328" font-size="16" fill="#333">1. Инициализация центров</text>
+  <text x="650" y="355" font-size="16" fill="#333">2. Назначение объектов центру</text>
+  <text x="650" y="382" font-size="16" fill="#333">3. Пересчет центров</text>
+  <text x="650" y="409" font-size="16" fill="#333">4. Повтор до сходимости</text>
+  
+  <!-- ==================== БЛОК 3: Иерархическая кластеризация ==================== -->
+  <a href="https://github.com/sav-cs-gh/AIA/blob/main/chapters/Chapter6.md#sect3">
+  <rect x="30" y="455" width="555" height="300" rx="10" fill="#e6e6e6" stroke="#555" stroke-width="2"/>
+  <rect x="30" y="455" width="555" height="50" rx="10" fill="#4a4a4a"/>
+  <rect x="30" y="487" width="555" height="18" fill="#4a4a4a"/>
+  <text x="307" y="488" text-anchor="middle" font-size="24" font-weight="bold" fill="#ffffff">3. Иерархическая кластеризация</text>
+  </a>
+  <text x="50" y="540" font-size="19" font-weight="bold" fill="#1a1a1a">Типы:</text>
+  <a href="https://github.com/sav-cs-gh/AIA/blob/main/chapters/Chapter6.md#sect3.2">
+  <text x="65" y="568" font-size="17" fill="#2a2a2a">• Агломеративная (снизу вверх)</text>
+  </a>
+  <text x="65" y="595" font-size="17" fill="#2a2a2a">• Дивизимная (сверху вниз)</text>
+  
+  <text x="50" y="633" font-size="19" font-weight="bold" fill="#1a1a1a">Методы связи:</text>
+  <text x="65" y="661" font-size="16" fill="#333">• Single linkage — ближайшие объекты</text>
+  <text x="65" y="688" font-size="16" fill="#333">• Complete linkage — наиболее удалённые</text>
+  <text x="65" y="715" font-size="16" fill="#333">• Average linkage — среднее расстояние</text>
+  <text x="65" y="742" font-size="16" fill="#333">• Ward linkage — минимизация дисперсии</text>
+  
+  <!-- ==================== БЛОК 4: DBSCAN ==================== -->
+  <a href="https://github.com/sav-cs-gh/AIA/blob/main/chapters/Chapter6.md#sect4">
+  <rect x="615" y="455" width="555" height="300" rx="10" fill="#e6e6e6" stroke="#555" stroke-width="2"/>
+  <rect x="615" y="455" width="555" height="50" rx="10" fill="#4a4a4a"/>
+  <rect x="615" y="487" width="555" height="18" fill="#4a4a4a"/>
+  <text x="892" y="488" text-anchor="middle" font-size="24" font-weight="bold" fill="#ffffff">4. DBSCAN</text>
+  </a>
+  <text x="635" y="525" font-size="19" font-weight="bold" fill="#1a1a1a">Принцип:</text>
+  <text x="650" y="550" font-size="17" fill="#2a2a2a">Кластеры = области повышенной плотности</text>
+  
+  <text x="635" y="585" font-size="19" font-weight="bold" fill="#1a1a1a">Параметры:</text>
+  <text x="650" y="605" font-size="17" fill="#2a2a2a">• ε — радиус окрестности</text>
+  <text x="650" y="627" font-size="17" fill="#2a2a2a">• minPts — мин. число объектов</text>
+  
+  <text x="635" y="660" font-size="19" font-weight="bold" fill="#1a1a1a">Типы точек:</text>
+  <text x="650" y="690" font-size="16" fill="#333">• Core (ядро) — плотная область</text>
+  <text x="650" y="717" font-size="16" fill="#333">• Border (граница) — на границе</text>
+  <text x="650" y="744" font-size="16" fill="#333">• Noise (шум) — выброс</text>
+  
+  <!-- ==================== БЛОК 5: PCA ==================== -->
+  <a href="https://github.com/sav-cs-gh/AIA/blob/main/chapters/Chapter6.md#sect5">
+  <rect x="30" y="770" width="555" height="260" rx="10" fill="#e6e6e6" stroke="#555" stroke-width="2"/>
+  <rect x="30" y="770" width="555" height="50" rx="10" fill="#4a4a4a"/>
+  <rect x="30" y="802" width="555" height="18" fill="#4a4a4a"/>
+  <text x="307" y="803" text-anchor="middle" font-size="24" font-weight="bold" fill="#ffffff">5. Снижение размерности (PCA)</text>
+  </a>
+  <text x="50" y="840" font-size="19" font-weight="bold" fill="#1a1a1a">Идея:</text>
+  <text x="65" y="867" font-size="17" fill="#2a2a2a">Линейные комбинации признаков,</text>
+  <text x="65" y="894" font-size="17" fill="#2a2a2a">упорядоченные по дисперсии</text>
+  
+  <text x="50" y="931" font-size="19" font-weight="bold" fill="#1a1a1a">Применение:</text>
+  <text x="65" y="958" font-size="16" fill="#333">• Визуализация многомерных данных</text>
+  <text x="65" y="985" font-size="16" fill="#333">• Подготовка к кластеризации</text>
+  <text x="65" y="1012" font-size="16" fill="#333">• Уменьшение шума и мультиколлинеарности</text>
+  
+  <!-- ==================== БЛОК 6: Критерии качества ==================== -->
+  <a href="https://github.com/sav-cs-gh/AIA/blob/main/chapters/Chapter6.md#sect6">
+  <rect x="615" y="770" width="555" height="260" rx="10" fill="#e6e6e6" stroke="#555" stroke-width="2"/>
+  <rect x="615" y="770" width="555" height="50" rx="10" fill="#4a4a4a"/>
+  <rect x="615" y="802" width="555" height="18" fill="#4a4a4a"/>
+  <text x="892" y="803" text-anchor="middle" font-size="24" font-weight="bold" fill="#ffffff">6. Критерии качества</text>
+  </a>
+  <text x="635" y="840" font-size="19" font-weight="bold" fill="#1a1a1a">Внутренние критерии:</text>
+  <a href="https://github.com/sav-cs-gh/AIA/blob/main/chapters/Chapter6.md#sect6.1">
+  <text x="650" y="867" font-size="16" fill="#333">• Коэффициент силуэта</text>
+  </a>
+  <a href="https://github.com/sav-cs-gh/AIA/blob/main/chapters/Chapter6.md#sect6.2">
+  <text x="650" y="894" font-size="16" fill="#333">• Индекс Дэвиса—Болдина</text>
+  </a>
+  <a href="https://github.com/sav-cs-gh/AIA/blob/main/chapters/Chapter6.md#sect6.3">
+  <text x="650" y="921" font-size="16" fill="#333">• Индекс Калински—Харабаса</text>
+  </a>
+  <a href="https://github.com/sav-cs-gh/AIA/blob/main/chapters/Chapter6.md#sect6.4">
+  <text x="635" y="958" font-size="19" font-weight="bold" fill="#1a1a1a">Внешние критерии:</text>
+  </a>
+  <text x="650" y="985" font-size="16" fill="#333">• Adjusted Rand Index (ARI)</text>
+  <text x="650" y="1012" font-size="16" fill="#333">• Normalized Mutual Information (NMI)</text>
+  
+  <!-- ==================== БЛОК 7: Сегментация ==================== -->
+  <a href="https://github.com/sav-cs-gh/AIA/blob/main/chapters/Chapter6.md#sect7">
+  <rect x="30" y="1045" width="1140" height="210" rx="10" fill="#e6e6e6" stroke="#555" stroke-width="2"/>
+  <rect x="30" y="1045" width="1140" height="50" rx="10" fill="#4a4a4a"/>
+  <rect x="30" y="1077" width="1140" height="18" fill="#4a4a4a"/>
+  <text x="600" y="1078" text-anchor="middle" font-size="24" font-weight="bold" fill="#ffffff">7. Прикладная сегментация</text>
+  </a>
+  <text x="55" y="1115" font-size="18" font-weight="bold" fill="#1a1a1a">Примеры:</text>
+  <text x="70" y="1142" font-size="16" fill="#333">• Маркетинг: сегменты клиентов</text>
+  <text x="350" y="1142" font-size="16" fill="#333">• Медицина: группы пациентов</text>
+  <text x="670" y="1142" font-size="16" fill="#333">• Промышленность: режимы оборудования</text>
+  
+  <text x="70" y="1169" font-size="16" fill="#333">• Компьютерное зрение: сегментация изображений</text>
+  
+  <text x="55" y="1206" font-size="18" font-weight="bold" fill="#1a1a1a">Свойства хороших сегментов:</text>
+  <text x="70" y="1233" font-size="16" fill="#333">Измеримые, различимые, устойчивые, интерпретируемые, действенные</text>
+  
+  <!-- ==================== БЛОК 8: Сравнение методов ==================== -->
+  <a href="https://github.com/sav-cs-gh/AIA/blob/main/chapters/Chapter6.md#sect8">
+  <rect x="30" y="1275" width="1140" height="150" rx="10" fill="#d9d9d9" stroke="#555" stroke-width="2"/>
+  <rect x="30" y="1275" width="1140" height="50" rx="10" fill="#3a3a3a"/>
+  <rect x="30" y="1307" width="1140" height="18" fill="#3a3a3a"/>
+  <text x="600" y="1308" text-anchor="middle" font-size="24" font-weight="bold" fill="#ffffff">8. Сравнение методов кластеризации</text>
+  </a>
+  <a href="https://github.com/sav-cs-gh/AIA/blob/main/chapters/Chapter6.md#sect2">
+  <rect x="50" y="1340" width="250" height="70" rx="6" fill="#c0c0c0" stroke="#666" stroke-width="1.5"/>
+  <text x="175" y="1365" text-anchor="middle" font-size="18" font-weight="bold" fill="#1a1a1a">k-means</text>
+  </a>
+  <text x="175" y="1390" text-anchor="middle" font-size="14" fill="#333">Быстрый, сферические</text>
+  <a href="https://github.com/sav-cs-gh/AIA/blob/main/chapters/Chapter6.md#sect3">
+  <rect x="320" y="1340" width="250" height="70" rx="6" fill="#c0c0c0" stroke="#666" stroke-width="1.5"/>
+  <text x="445" y="1365" text-anchor="middle" font-size="18" font-weight="bold" fill="#1a1a1a">Иерархическая</text>
+  </a>
+  <text x="445" y="1390" text-anchor="middle" font-size="14" fill="#333">Дендрограмма, вложенность</text>
+  <a href="https://github.com/sav-cs-gh/AIA/blob/main/chapters/Chapter6.md#sect4">
+  <rect x="590" y="1340" width="250" height="70" rx="6" fill="#c0c0c0" stroke="#666" stroke-width="1.5"/>
+  <text x="715" y="1365" text-anchor="middle" font-size="18" font-weight="bold" fill="#1a1a1a">DBSCAN</text>
+  </a>
+  <text x="715" y="1390" text-anchor="middle" font-size="14" fill="#333">Произвольная форма, шум</text>
+  <a href="https://github.com/sav-cs-gh/AIA/blob/main/chapters/Chapter6.md#sect5">
+  <rect x="860" y="1340" width="280" height="70" rx="6" fill="#c0c0c0" stroke="#666" stroke-width="1.5"/>
+  <text x="1000" y="1365" text-anchor="middle" font-size="18" font-weight="bold" fill="#1a1a1a">PCA (снижение разм.)</text>
+  </a>
+  <text x="1000" y="1390" text-anchor="middle" font-size="14" fill="#333">Визуализация, подготовка</text>
+  
+  <!-- ==================== ВЫВОД ==================== -->
+  <a href="https://github.com/sav-cs-gh/AIA/blob/main/chapters/Chapter6.md#sect9">
+  <rect x="30" y="1443" width="1140" height="80" rx="10" fill="#2a2a2a"/>
+  <text x="600" y="1475" text-anchor="middle" font-size="22" font-weight="bold" fill="#ffffff">Вывод: Кластеризация + снижение размерности — ключевые методы</text>
+  </a>
+  <text x="600" y="1502" text-anchor="middle" font-size="20" fill="#bbbbbb">выявления скрытой структуры данных и поддержки принятия решений</text>
+  
+</svg>
