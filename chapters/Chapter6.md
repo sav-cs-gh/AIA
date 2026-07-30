@@ -506,8 +506,6 @@
 
 # Список литературы 
 
-> Ниже приведен оформленный список литературы в академическом стиле, приближенный к требованиям ГОСТ Р 7.0.100–2018. При финальной подготовке учебного пособия рекомендуется дополнительно унифицировать оформление в соответствии с локальными требованиями издательства или вуза.
-
 1. Pearson K. On lines and planes of closest fit to systems of points in space // The London, Edinburgh, and Dublin Philosophical Magazine and Journal of Science. 1901. Vol. 2, no. 11. P. 559–572.
 
 2. Hotelling H. Analysis of a complex of statistical variables into principal components // Journal of Educational Psychology. 1933. Vol. 24, no. 6. P. 417–441.
