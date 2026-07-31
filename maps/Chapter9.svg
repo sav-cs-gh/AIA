@@ -39,6 +39,7 @@
   </a>
  <a href="https://github.com/sav-cs-gh/AIA/blob/main/chapters/Chapter9.md#sect2.1">
   <text x="655" y="195" font-size="20" fill="#000" font-weight="bold">Принципы проектирования</text>
+ </a>
   <text x="665" y="220" font-size="18" fill="#333" text-anchor="start">1. Целевая ориентация (под задачу)</text>
   <text x="665" y="245" font-size="18" fill="#333" text-anchor="start">2. Иерархия информации</text>
   <text x="665" y="270" font-size="18" fill="#333" text-anchor="start">3. Контекстуализация метрик</text>
@@ -46,7 +47,6 @@
   <text x="665" y="320" font-size="18" fill="#333" text-anchor="start">5. Минимизация визуального шума</text>
   <text x="665" y="345" font-size="18" fill="#333" text-anchor="start">6. Интерактивность</text>
   <text x="665" y="370" font-size="18" fill="#333" text-anchor="start">7. Объяснимость результатов модели</text>
-</a>
   <!-- ============================================================ -->
   <!-- БЛОК 3: ИНТЕРПРЕТИРУЕМОСТЬ -->
   <!-- ============================================================ -->
