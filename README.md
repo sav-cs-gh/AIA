@@ -32,3 +32,7 @@ AI Analytics Course
 <a href = "https://raw.githubusercontent.com/sav-cs-gh/AIA/refs/heads/main/maps/Chapter8.svg">
 Глава 8. Анализ временных рядов в интеллектуальном анализе данных
 </a>
+<br>
+<a href = "https://raw.githubusercontent.com/sav-cs-gh/AIA/refs/heads/main/maps/Chapter9.svg">
+Глава 9. Визуальная аналитика и интерпретируемость моделей
+</a>
