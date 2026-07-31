@@ -328,16 +328,19 @@
 
 <!-- MAE = \frac{1}{n}\sum_{t=1}^{n}|y_t-\hat{y}_t| -->
 <img src="https://latex.codecogs.com/svg.latex?MAE%20%3D%20%5Cfrac%7B1%7D%7Bn%7D%5Csum_%7Bt%3D1%7D%5E%7Bn%7D%7Cy_t-%5Chat%7By%7D_t%7C" alt="MAE = \frac{1}{n}\sum_{t=1}^{n}|y_t-\hat{y}_t|" />
+
 <a name="sect6.3"></a>
 #### MSE — средняя квадратичная ошибка
 
 <!-- MSE = \frac{1}{n}\sum_{t=1}^{n}(y_t-\hat{y}_t)^2 -->
 <img src="https://latex.codecogs.com/svg.latex?MSE%20%3D%20%5Cfrac%7B1%7D%7Bn%7D%5Csum_%7Bt%3D1%7D%5E%7Bn%7D%28y_t-%5Chat%7By%7D_t%29%5E2" alt="MSE = \frac{1}{n}\sum_{t=1}^{n}(y_t-\hat{y}_t)^2" />
+
 <a name="sect6.8"></a>
 #### RMSE — корень из средней квадратичной ошибки
 
 <!-- RMSE = \sqrt{MSE} -->
 <img src="https://latex.codecogs.com/svg.latex?RMSE%20%3D%20%5Csqrt%7BMSE%7D" alt="RMSE = \sqrt{MSE}" />
+
 <a name="sect6.9"></a>
 #### MAPE — средняя абсолютная процентная ошибка
 
