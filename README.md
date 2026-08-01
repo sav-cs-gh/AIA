@@ -40,4 +40,7 @@ AI Analytics Course
 <a href = "https://raw.githubusercontent.com/sav-cs-gh/AIA/refs/heads/main/maps/Chapter10.svg">
 Глава 10. Анализ текстовых данных и основы NLP для аналитики
 </a>
-
+<br>
+<a href = "https://raw.githubusercontent.com/sav-cs-gh/AIA/refs/heads/main/maps/Chapter11.svg">
+Глава 11. Генеративный ИИ в интеллектуальной аналитике
+</a>
