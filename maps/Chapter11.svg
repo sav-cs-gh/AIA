@@ -1,0 +1,112 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" font-family="Arial, sans-serif">
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#444"/>
+    </marker>
+    <marker id="arrow-light" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#888"/>
+    </marker>
+  </defs>
+
+  <!-- Фон -->
+  <rect width="1200" height="900" fill="#f5f5f5"/>
+
+  <!-- Заголовок -->
+   <a href="https://github.com/sav-cs-gh/AIA/blob/main/chapters/Chapter11.md#sect1">
+  <rect x="50" y="20" width="1100" height="70" rx="10" fill="#333"/>
+  <text x="600" y="65" text-anchor="middle" fill="#fff" font-size="28" font-weight="bold">Глава 10. Генеративный ИИ в интеллектуальной аналитике</text>
+</a>
+  <!-- Блок 1: Определение -->
+  <rect x="50" y="110" width="530" height="110" rx="8" fill="#ddd" stroke="#666" stroke-width="2"/>
+  <text x="315" y="140" text-anchor="middle" fill="#222" font-size="20" font-weight="bold">Генеративный ИИ</text>
+  <text x="75" y="170" fill="#333" font-size="15">• Создаёт новые данные (текст, код, таблицы)</text>
+  <text x="75" y="195" fill="#333" font-size="15">• Обучается на больших массивах информации</text>
+   <a href="https://github.com/sav-cs-gh/AIA/blob/main/chapters/Chapter11.md#sect2">
+  <rect x="620" y="110" width="530" height="110" rx="8" fill="#ddd" stroke="#666" stroke-width="2"/>
+  <text x="885" y="140" text-anchor="middle" fill="#222" font-size="20" font-weight="bold">Большие языковые модели (LLM)</text>
+ </a>
+  <text x="645" y="170" fill="#333" font-size="15">• Нейросети на архитектуре Трансформер</text>
+  <text x="645" y="195" fill="#333" font-size="15">• Понимают естественный язык, код, таблицы</text>
+
+  <!-- Стрелка связи -->
+  <line x1="580" y1="165" x2="620" y2="165" stroke="#444" stroke-width="2" marker-end="url(#arrow)"/>
+<a href="https://github.com/sav-cs-gh/AIA/blob/main/chapters/Chapter11.md#sect3">
+  <!-- Блок 2: Возможности LLM в аналитике -->
+  <rect x="50" y="240" width="1100" height="150" rx="8" fill="#ccc" stroke="#666" stroke-width="2"/>
+  <text x="600" y="275" text-anchor="middle" fill="#222" font-size="22" font-weight="bold">Возможности LLM в интеллектуальной аналитике</text>
+</a>
+  <rect x="80" y="295" width="230" height="40" rx="5" fill="#999"/>
+  <text x="195" y="320" text-anchor="middle" fill="#fff" font-size="16">Text‑to‑SQL</text>
+
+  <rect x="330" y="295" width="230" height="40" rx="5" fill="#999"/>
+  <text x="445" y="320" text-anchor="middle" fill="#fff" font-size="16">Генерация кода (Python, R)</text>
+
+  <rect x="580" y="295" width="260" height="40" rx="5" fill="#999"/>
+  <text x="710" y="320" text-anchor="middle" fill="#fff" font-size="16">Интерпретация таблиц/графиков</text>
+
+  <rect x="850" y="295" width="270" height="40" rx="5" fill="#999"/>
+  <text x="985" y="320" text-anchor="middle" fill="#fff" font-size="16">Генерация аналитических отчётов</text>
+<a href="https://github.com/sav-cs-gh/AIA/blob/main/chapters/Chapter11.md#sect4">
+  <!-- Блок 3: Промпт-инжиниринг -->
+  <rect x="50" y="410" width="530" height="160" rx="8" fill="#bbb" stroke="#666" stroke-width="2"/>
+  <text x="315" y="445" text-anchor="middle" fill="#222" font-size="22" font-weight="bold">Промпт-инжиниринг</text>
+ </a>
+  <text x="75" y="475" fill="#333" font-size="15">Управление LLM через текстовые инструкции</text>
+  <text x="75" y="500" fill="#333" font-size="15">Элементы эффективного промпта:</text>
+  <text x="90" y="525" fill="#333" font-size="14">• Роль модели • Контекст задачи • Чёткая цель</text>
+  <text x="90" y="550" fill="#333" font-size="14">• Ограничения • Примеры (few‑shot) • Критерии проверки</text>
+<a href="https://github.com/sav-cs-gh/AIA/blob/main/chapters/Chapter11.md#sect5">
+  <rect x="620" y="410" width="530" height="160" rx="8" fill="#bbb" stroke="#666" stroke-width="2"/>
+  <text x="885" y="445" text-anchor="middle" fill="#222" font-size="22" font-weight="bold">Виды промптов</text>
+</a>  
+  <text x="645" y="480" fill="#333" font-size="15">• Instruction prompts — прямые инструкции</text>
+  <text x="645" y="505" fill="#333" font-size="15">• Few‑shot prompts — с примерами</text>
+  <text x="645" y="530" fill="#333" font-size="15">• Chain‑of‑thought — пошаговое рассуждение</text>
+  <text x="645" y="555" fill="#333" font-size="15">• Self‑critique — самопроверка ответа</text>
+
+  <!-- Блок 4: Аналитический copilot -->
+ <a href="https://github.com/sav-cs-gh/AIA/blob/main/chapters/Chapter11.md#sect6">  
+  <rect x="50" y="590" width="1100" height="130" rx="8" fill="#aaa" stroke="#666" stroke-width="2"/>
+  <text x="600" y="625" text-anchor="middle" fill="#222" font-size="22" font-weight="bold">Аналитический copilot — интеллектуальный помощник аналитика</text>
+</a>
+<a href="https://github.com/sav-cs-gh/AIA/blob/main/chapters/Chapter11.md#sect6.1">
+  <rect x="80" y="645" width="170" height="40" rx="5" fill="#777"/>
+  <text x="165" y="670" text-anchor="middle" fill="#fff" font-size="15">Генерация SQL</text>
+</a>
+ <a href="https://github.com/sav-cs-gh/AIA/blob/main/chapters/Chapter11.md#sect6.2">
+  <rect x="270" y="645" width="170" height="40" rx="5" fill="#777"/>
+  <text x="355" y="670" text-anchor="middle" fill="#fff" font-size="15">Написание кода</text>
+</a>
+  <rect x="460" y="645" width="170" height="40" rx="5" fill="#777"/>
+  <text x="545" y="670" text-anchor="middle" fill="#fff" font-size="15">Выбор методов</text>
+
+  <rect x="650" y="645" width="170" height="40" rx="5" fill="#777"/>
+  <text x="735" y="670" text-anchor="middle" fill="#fff" font-size="15">Интерпретация</text>
+<a href="https://github.com/sav-cs-gh/AIA/blob/main/chapters/Chapter11.md#sect6.3">
+  <rect x="840" y="645" width="170" height="40" rx="5" fill="#777"/>
+  <text x="925" y="670" text-anchor="middle" fill="#fff" font-size="15">Отчёты</text>
+</a>
+  <rect x="1025" y="645" width="110" height="40" rx="5" fill="#777"/>
+  <text x="1080" y="670" text-anchor="middle" fill="#fff" font-size="15">Визуализация</text>
+
+  <!-- Блок 5: Ограничения (важно!) -->
+<a href="https://github.com/sav-cs-gh/AIA/blob/main/chapters/Chapter11.md#sect7">  
+  <rect x="50" y="740" width="1100" height="140" rx="8" fill="#888" stroke="#555" stroke-width="2"/>
+  <text x="600" y="775" text-anchor="middle" fill="#fff" font-size="22" font-weight="bold">Ограничения и риски LLM в аналитике</text>
+</a>
+  <rect x="80" y="795" width="240" height="35" rx="5" fill="#555"/>
+  <text x="200" y="818" text-anchor="middle" fill="#fff" font-size="14">Галлюцинации (неверные факты)</text>
+
+  <rect x="340" y="795" width="240" height="35" rx="5" fill="#555"/>
+  <text x="460" y="818" text-anchor="middle" fill="#fff" font-size="14">Чувствительность к запросу</text>
+
+  <rect x="600" y="795" width="240" height="35" rx="5" fill="#555"/>
+  <text x="720" y="818" text-anchor="middle" fill="#fff" font-size="14">Неточная арифметика/логика</text>
+
+  <rect x="860" y="795" width="260" height="35" rx="5" fill="#555"/>
+  <text x="990" y="818" text-anchor="middle" fill="#fff" font-size="14">Невалидный или неэффективный код</text>
+
+  <!-- Итоговая фраза -->
+  <text x="600" y="860" text-anchor="middle" fill="#333" font-size="18" font-weight="bold">Генеративный ИИ — инструмент поддержки, а не замена аналитику. Обязательны проверка и верификация!</text>
+
+</svg>
