@@ -44,3 +44,7 @@ AI Analytics Course
 <a href = "https://raw.githubusercontent.com/sav-cs-gh/AIA/refs/heads/main/maps/Chapter11.svg">
 Глава 11. Генеративный ИИ в интеллектуальной аналитике
 </a>
+<br>
+<a href = "https://raw.githubusercontent.com/sav-cs-gh/AIA/refs/heads/main/maps/Chapter11.svg">
+Глава 12. Генерация синтетических данных
+</a>
