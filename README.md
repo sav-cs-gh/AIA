@@ -1,5 +1,5 @@
 # AIA
-AI Analytics Course
+AI Analytics Course (Интеллектуальный анализ данных)
 
 <a href = "https://raw.githubusercontent.com/sav-cs-gh/AIA/refs/heads/main/maps/Chapter1.svg">
 Глава 1. Введение в интеллектуальную аналитику данных: от Data Mining к AI Analytics
