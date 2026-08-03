@@ -139,7 +139,7 @@
   <text x="460" y="1170" font-size="16" fill="#333">порождает иллюзию</text>
   <text x="460" y="1195" font-size="16" fill="#333">корректности результатов</text>
 </a>  
-<a href="https://github.com/sav-cs-gh/AIA/blob/main/chapters/Chapter13.md#sect0">  
+<a href="https://github.com/sav-cs-gh/AIA/blob/main/chapters/Chapter13.md#sect7.3">  
   <rect x="800" y="1085" width="320" height="130" rx="8" fill="#ccc" stroke="#666" stroke-width="1.5"/>
   <text x="960" y="1115" text-anchor="middle" font-size="19" font-weight="bold" fill="#222">Утечка данных</text>
   <text x="820" y="1145" font-size="16" fill="#333">Некачественная генерация</text>
