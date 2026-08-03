@@ -4,13 +4,13 @@
   <rect width="1200" height="1670" fill="#f0f0f0"/>
   
   <!-- ==================== ЗАГОЛОВОК ==================== -->
-<a href="https://github.com/sav-cs-gh/AIA/blob/main/chapters/Chapter14.md#sect0">
+<a href="https://github.com/sav-cs-gh/AIA/blob/main/chapters/Chapter12.md#sect0">
   <rect x="30" y="15" width="1140" height="90" rx="12" fill="#2a2a2a"/>
-  <text x="600" y="55" text-anchor="middle" font-size="32" font-weight="bold" fill="#ffffff">Глава 14. RAG-подходы в аналитике</text>
+  <text x="600" y="55" text-anchor="middle" font-size="32" font-weight="bold" fill="#ffffff">Глава 12. RAG-подходы в аналитике</text>
   <text x="600" y="92" text-anchor="middle" font-size="26" fill="#cccccc">по корпоративным документам и базам знаний</text>
 </a>  
   <!-- ==================== БЛОК 1: Что такое RAG ==================== -->
-<a href="https://github.com/sav-cs-gh/AIA/blob/main/chapters/Chapter14.md#sect1">  
+<a href="https://github.com/sav-cs-gh/AIA/blob/main/chapters/Chapter12.md#sect1">  
   <rect x="30" y="125" width="555" height="320" rx="10" fill="#e6e6e6" stroke="#555" stroke-width="2"/>
   <rect x="30" y="125" width="555" height="50" rx="10" fill="#4a4a4a"/>
   <rect x="30" y="157" width="555" height="18" fill="#4a4a4a"/>
@@ -28,103 +28,103 @@
   <text x="65" y="430" font-size="17" fill="#2a2a2a">• Отсутствие привязки к источникам</text>
   
   <!-- ==================== БЛОК 2: Компоненты RAG ==================== -->
- <a href="https://github.com/sav-cs-gh/AIA/blob/main/chapters/Chapter14.md#sect2"> 
+ <a href="https://github.com/sav-cs-gh/AIA/blob/main/chapters/Chapter12.md#sect2"> 
   <rect x="615" y="125" width="555" height="320" rx="10" fill="#e6e6e6" stroke="#555" stroke-width="2"/>
   <rect x="615" y="125" width="555" height="50" rx="10" fill="#4a4a4a"/>
   <rect x="615" y="157" width="555" height="18" fill="#4a4a4a"/>
   <text x="892" y="158" text-anchor="middle" font-size="24" font-weight="bold" fill="#ffffff">2. Компоненты RAG-архитектуры</text>
 </a>
-<a href="https://github.com/sav-cs-gh/AIA/blob/main/chapters/Chapter14.md#sect2.1">
+<a href="https://github.com/sav-cs-gh/AIA/blob/main/chapters/Chapter12.md#sect2.1">
   <text x="635" y="205" font-size="19" font-weight="bold" fill="#1a1a1a">Источники данных:</text>
 </a>  
   <text x="650" y="232" font-size="17" fill="#2a2a2a">• PDF, DOCX, XLSX, PPTX</text>
   <text x="650" y="256" font-size="17" fill="#2a2a2a">• Базы знаний, wiki-системы</text>
   <text x="650" y="280" font-size="17" fill="#2a2a2a">• CRM, ERP, Service Desk</text>
-<a href="https://github.com/sav-cs-gh/AIA/blob/main/chapters/Chapter14.md#sect2.2">  
+<a href="https://github.com/sav-cs-gh/AIA/blob/main/chapters/Chapter12.md#sect2.2">  
   <text x="635" y="320" font-size="19" font-weight="bold" fill="#1a1a1a">Механизмы поиска:</text>
   <text x="650" y="347" font-size="17" fill="#2a2a2a">• Векторный поиск (эмбеддинги)</text>
   <text x="650" y="371" font-size="17" fill="#2a2a2a">• Лексический поиск (BM25)</text>
   <text x="650" y="395" font-size="17" fill="#2a2a2a">• Гибридный поиск</text>
 </a>  
   <!-- ==================== БЛОК 3: Этапы работы RAG ==================== -->
-<a href="https://github.com/sav-cs-gh/AIA/blob/main/chapters/Chapter14.md#sect3">  
+<a href="https://github.com/sav-cs-gh/AIA/blob/main/chapters/Chapter12.md#sect3">  
   <rect x="30" y="475" width="1140" height="150" rx="10" fill="#e6e6e6" stroke="#555" stroke-width="2"/>
   <rect x="30" y="475" width="1140" height="50" rx="10" fill="#4a4a4a"/>
   <rect x="30" y="507" width="1140" height="18" fill="#4a4a4a"/>
   <text x="600" y="508" text-anchor="middle" font-size="24" font-weight="bold" fill="#ffffff">3. Базовый конвейер RAG-системы</text>
 </a>  
   <!-- Этапы -->
-<a href="https://github.com/sav-cs-gh/AIA/blob/main/chapters/Chapter14.md#sect3.1">  
+<a href="https://github.com/sav-cs-gh/AIA/blob/main/chapters/Chapter12.md#sect3.1">  
   <rect x="50" y="540" width="155" height="65" rx="6" fill="#c8c8c8" stroke="#666" stroke-width="1.5"/>
   <text x="127" y="570" text-anchor="middle" font-size="17" font-weight="bold" fill="#1a1a1a">Подготовка</text>
   <text x="127" y="590" text-anchor="middle" font-size="15" fill="#333">корпуса</text>
 </a>  
   <line x1="205" y1="517" x2="230" y2="517" stroke="#555" stroke-width="2"/>
   <polygon points="235,517 228,513 228,521" fill="#555"/>
-<a href="https://github.com/sav-cs-gh/AIA/blob/main/chapters/Chapter14.md#sect3.2">  
+<a href="https://github.com/sav-cs-gh/AIA/blob/main/chapters/Chapter12.md#sect3.2">  
   <rect x="240" y="540" width="155" height="65" rx="6" fill="#c8c8c8" stroke="#666" stroke-width="1.5"/>
   <text x="317" y="570" text-anchor="middle" font-size="17" font-weight="bold" fill="#1a1a1a">Индексирование</text>
   <text x="317" y="590" text-anchor="middle" font-size="15" fill="#333">(эмбеддинги)</text>
 </a>  
   <line x1="395" y1="517" x2="420" y2="517" stroke="#555" stroke-width="2"/>
   <polygon points="425,517 418,513 418,521" fill="#555"/>
-<a href="https://github.com/sav-cs-gh/AIA/blob/main/chapters/Chapter14.md#sect3.3">  
+<a href="https://github.com/sav-cs-gh/AIA/blob/main/chapters/Chapter12.md#sect3.3">  
   <rect x="430" y="540" width="155" height="65" rx="6" fill="#c8c8c8" stroke="#666" stroke-width="1.5"/>
   <text x="507" y="570" text-anchor="middle" font-size="17" font-weight="bold" fill="#1a1a1a">Поиск</text>
   <text x="507" y="590" text-anchor="middle" font-size="15" fill="#333">(retrieval)</text>
 </a>  
   <line x1="585" y1="517" x2="610" y2="517" stroke="#555" stroke-width="2"/>
   <polygon points="615,517 608,513 608,521" fill="#555"/>
-<a href="https://github.com/sav-cs-gh/AIA/blob/main/chapters/Chapter14.md#sect3.4">  
+<a href="https://github.com/sav-cs-gh/AIA/blob/main/chapters/Chapter12.md#sect3.4">  
   <rect x="620" y="540" width="175" height="65" rx="6" fill="#c8c8c8" stroke="#666" stroke-width="1.5"/>
   <text x="707" y="570" text-anchor="middle" font-size="17" font-weight="bold" fill="#1a1a1a">Формирование</text>
   <text x="707" y="590" text-anchor="middle" font-size="15" fill="#333">промпта</text>
 </a>  
   <line x1="795" y1="517" x2="820" y2="517" stroke="#555" stroke-width="2"/>
   <polygon points="825,517 818,513 818,521" fill="#555"/>
-<a href="https://github.com/sav-cs-gh/AIA/blob/main/chapters/Chapter14.md#sect5"> 
+<a href="https://github.com/sav-cs-gh/AIA/blob/main/chapters/Chapter12.md#sect5"> 
   <rect x="830" y="540" width="155" height="65" rx="6" fill="#c8c8c8" stroke="#666" stroke-width="1.5"/>
   <text x="907" y="570" text-anchor="middle" font-size="17" font-weight="bold" fill="#1a1a1a">Генерация</text>
   <text x="907" y="590" text-anchor="middle" font-size="15" fill="#333">(LLM)</text>
 </a>  
   <line x1="985" y1="517" x2="1010" y2="517" stroke="#555" stroke-width="2"/>
   <polygon points="1015,517 1008,513 1008,521" fill="#555"/>
-<a href="https://github.com/sav-cs-gh/AIA/blob/main/chapters/Chapter14.md#sect3.6">  
+<a href="https://github.com/sav-cs-gh/AIA/blob/main/chapters/Chapter12.md#sect3.6">  
   <rect x="1020" y="540" width="140" height="65" rx="6" fill="#c8c8c8" stroke="#666" stroke-width="1.5"/>
   <text x="1090" y="570" text-anchor="middle" font-size="17" font-weight="bold" fill="#1a1a1a">Верификация</text>
   <text x="1090" y="590" text-anchor="middle" font-size="15" fill="#333">и ответ</text>
 </a>  
   <!-- ==================== БЛОК 4: Построение прототипа ==================== -->
-<a href="https://github.com/sav-cs-gh/AIA/blob/main/chapters/Chapter14.md#sect5">  
+<a href="https://github.com/sav-cs-gh/AIA/blob/main/chapters/Chapter12.md#sect5">  
   <rect x="30" y="645" width="555" height="345" rx="10" fill="#e6e6e6" stroke="#555" stroke-width="2"/>
   <rect x="30" y="645" width="555" height="50" rx="10" fill="#4a4a4a"/>
   <rect x="30" y="677" width="555" height="18" fill="#4a4a4a"/>
   <text x="307" y="678" text-anchor="middle" font-size="22" font-weight="bold" fill="#ffffff">4. Построение RAG-прототипа</text>
 </a>
-<a href="https://github.com/sav-cs-gh/AIA/blob/main/chapters/Chapter14.md#sect5.1">  
+<a href="https://github.com/sav-cs-gh/AIA/blob/main/chapters/Chapter12.md#sect5.1">  
   <text x="50" y="725" font-size="19" font-weight="bold" fill="#1a1a1a">1. Подготовка документов:</text>
 </a>  
   <text x="65" y="752" font-size="17" fill="#2a2a2a">• Извлечение текста из файлов</text>
   <text x="65" y="776" font-size="17" fill="#2a2a2a">• Нормализация и очистка</text>
   <text x="65" y="800" font-size="17" fill="#2a2a2a">• Разметка метаданных</text>
-<a href="https://github.com/sav-cs-gh/AIA/blob/main/chapters/Chapter14.md#sect5.2">  
+<a href="https://github.com/sav-cs-gh/AIA/blob/main/chapters/Chapter12.md#sect5.2">  
   <text x="50" y="838" font-size="19" font-weight="bold" fill="#1a1a1a">2. Чанкирование:</text>
 </a>  
   <text x="65" y="865" font-size="17" fill="#2a2a2a">• Размер 300–1000 слов</text>
   <text x="65" y="889" font-size="17" fill="#2a2a2a">• Перекрытие 10–20%</text>
-<a href="https://github.com/sav-cs-gh/AIA/blob/main/chapters/Chapter14.md#sect5.3">  
+<a href="https://github.com/sav-cs-gh/AIA/blob/main/chapters/Chapter12.md#sect5.3">  
   <text x="50" y="927" font-size="19" font-weight="bold" fill="#1a1a1a">3. Индексирование:</text>
   <text x="65" y="954" font-size="17" fill="#2a2a2a">• Вычисление эмбеддингов</text>
   <text x="65" y="978" font-size="17" fill="#2a2a2a">• Загрузка в векторную БД</text>
 </a>  
   <!-- ==================== БЛОК 5: Векторный поиск ==================== -->
-<a href="https://github.com/sav-cs-gh/AIA/blob/main/chapters/Chapter14.md#sect6">  
+<a href="https://github.com/sav-cs-gh/AIA/blob/main/chapters/Chapter12.md#sect6">  
   <rect x="615" y="645" width="555" height="345" rx="10" fill="#e6e6e6" stroke="#555" stroke-width="2"/>
   <rect x="615" y="645" width="555" height="50" rx="10" fill="#4a4a4a"/>
   <rect x="615" y="677" width="555" height="18" fill="#4a4a4a"/>
   <text x="892" y="678" text-anchor="middle" font-size="22" font-weight="bold" fill="#ffffff">5. Векторный поиск и эмбеддинги</text>
 </a>  
-<a href="https://github.com/sav-cs-gh/AIA/blob/main/chapters/Chapter14.md#sect6.1">
+<a href="https://github.com/sav-cs-gh/AIA/blob/main/chapters/Chapter12.md#sect6.1">
   <text x="635" y="725" font-size="19" font-weight="bold" fill="#1a1a1a">Как работает:</text>
 </a>  
   <text x="650" y="755" font-size="17" fill="#2a2a2a">Текст → Модель эмбеддингов →</text>
@@ -136,34 +136,34 @@
   <text x="650" y="915" font-size="17" fill="#2a2a2a">FAISS, Milvus, Qdrant, Weaviate</text>
   
   <!-- ==================== БЛОК 6: Практические применения ==================== -->
-<a href="https://github.com/sav-cs-gh/AIA/blob/main/chapters/Chapter14.md#sect7">  
+<a href="https://github.com/sav-cs-gh/AIA/blob/main/chapters/Chapter12.md#sect7">  
   <rect x="30" y="1015" width="1140" height="210" rx="10" fill="#e6e6e6" stroke="#555" stroke-width="2"/>
   <rect x="30" y="1015" width="1140" height="50" rx="10" fill="#4a4a4a"/>
   <rect x="30" y="1047" width="1140" height="18" fill="#4a4a4a"/>
   <text x="600" y="1048" text-anchor="middle" font-size="24" font-weight="bold" fill="#ffffff">6. Применения в корпоративной аналитике</text>
 </a>  
-<a href="https://github.com/sav-cs-gh/AIA/blob/main/chapters/Chapter14.md#sect7.1">
+<a href="https://github.com/sav-cs-gh/AIA/blob/main/chapters/Chapter12.md#sect7.1">
   <rect x="55" y="1080" width="250" height="125" rx="6" fill="#c0c0c0" stroke="#666" stroke-width="1.5"/>
   <text x="180" y="1110" text-anchor="middle" font-size="18" font-weight="bold" fill="#1a1a1a">Семантический</text>
   <text x="180" y="1135" text-anchor="middle" font-size="18" font-weight="bold" fill="#1a1a1a">поиск</text>
 </a>  
   <text x="180" y="1165" text-anchor="middle" font-size="15" fill="#333">Ответы на вопросы</text>
   <text x="180" y="1190" text-anchor="middle" font-size="15" fill="#333">по документам</text>
-<a href="https://github.com/sav-cs-gh/AIA/blob/main/chapters/Chapter14.md#sect7.2">  
+<a href="https://github.com/sav-cs-gh/AIA/blob/main/chapters/Chapter12.md#sect7.2">  
   <rect x="325" y="1080" width="250" height="125" rx="6" fill="#c0c0c0" stroke="#666" stroke-width="1.5"/>
   <text x="450" y="1110" text-anchor="middle" font-size="18" font-weight="bold" fill="#1a1a1a">Аналитические</text>
   <text x="450" y="1135" text-anchor="middle" font-size="18" font-weight="bold" fill="#1a1a1a">справки</text>
 </a>  
   <text x="450" y="1165" text-anchor="middle" font-size="15" fill="#333">Агрегация сведений</text>
   <text x="450" y="1190" text-anchor="middle" font-size="15" fill="#333">по теме</text>
-<a href="https://github.com/sav-cs-gh/AIA/blob/main/chapters/Chapter14.md#sect7.3">  
+<a href="https://github.com/sav-cs-gh/AIA/blob/main/chapters/Chapter12.md#sect7.3">  
   <rect x="595" y="1080" width="250" height="125" rx="6" fill="#c0c0c0" stroke="#666" stroke-width="1.5"/>
   <text x="720" y="1110" text-anchor="middle" font-size="18" font-weight="bold" fill="#1a1a1a">Сопоставление</text>
   <text x="720" y="1135" text-anchor="middle" font-size="18" font-weight="bold" fill="#1a1a1a">документов</text>
  </a> 
   <text x="720" y="1165" text-anchor="middle" font-size="15" fill="#333">Выявление</text>
   <text x="720" y="1190" text-anchor="middle" font-size="15" fill="#333">противоречий</text>
-<a href="https://github.com/sav-cs-gh/AIA/blob/main/chapters/Chapter14.md#sect7.4">  
+<a href="https://github.com/sav-cs-gh/AIA/blob/main/chapters/Chapter12.md#sect7.4">  
   <rect x="865" y="1080" width="280" height="125" rx="6" fill="#c0c0c0" stroke="#666" stroke-width="1.5"/>
   <text x="1005" y="1110" text-anchor="middle" font-size="18" font-weight="bold" fill="#1a1a1a">Поддержка</text>
   <text x="1005" y="1135" text-anchor="middle" font-size="18" font-weight="bold" fill="#1a1a1a">решений</text>
@@ -172,7 +172,7 @@
   <text x="1005" y="1190" text-anchor="middle" font-size="15" fill="#333">и требований</text>
   
   <!-- ==================== БЛОК 7: Ограничения ==================== -->
-<a href="https://github.com/sav-cs-gh/AIA/blob/main/chapters/Chapter14.md#sect8">  
+<a href="https://github.com/sav-cs-gh/AIA/blob/main/chapters/Chapter12.md#sect8">  
   <rect x="30" y="1250" width="1140" height="170" rx="10" fill="#d9d9d9" stroke="#555" stroke-width="2"/>
   <rect x="30" y="1250" width="1140" height="50" rx="10" fill="#3a3a3a"/>
   <rect x="30" y="1282" width="1140" height="18" fill="#3a3a3a"/>
@@ -181,18 +181,18 @@
   <rect x="55" y="1315" width="340" height="85" rx="6" fill="#c0c0c0" stroke="#666" stroke-width="1.5"/>
   <text x="225" y="1345" text-anchor="middle" font-size="18" font-weight="bold" fill="#1a1a1a">Качество документов</text>
   <text x="70" y="1380" font-size="16" fill="#333">Низкое качество → низкое качество ответа</text>
-<a href="https://github.com/sav-cs-gh/AIA/blob/main/chapters/Chapter14.md#sect8.2">  
+<a href="https://github.com/sav-cs-gh/AIA/blob/main/chapters/Chapter12.md#sect8.2">  
   <rect x="420" y="1315" width="340" height="85" rx="6" fill="#c0c0c0" stroke="#666" stroke-width="1.5"/>
   <text x="590" y="1345" text-anchor="middle" font-size="18" font-weight="bold" fill="#1a1a1a">Конфиденциальность</text>
   <text x="435" y="1380" font-size="16" fill="#333">Разграничение доступа и безопасность</text>
 </a> 
-<a href="https://github.com/sav-cs-gh/AIA/blob/main/chapters/Chapter14.md#sect8.3">
+<a href="https://github.com/sav-cs-gh/AIA/blob/main/chapters/Chapter12.md#sect8.3">
   <rect x="785" y="1315" width="360" height="85" rx="6" fill="#c0c0c0" stroke="#666" stroke-width="1.5"/>
   <text x="965" y="1345" text-anchor="middle" font-size="18" font-weight="bold" fill="#1a1a1a">Устаревание документов</text>
   <text x="800" y="1380" font-size="16" fill="#333">Актуализация индекса и версионность</text>
 </a>  
   <!-- ==================== БЛОК 8: Рекомендации ==================== -->
-<a href="https://github.com/sav-cs-gh/AIA/blob/main/chapters/Chapter14.md#sect9">  
+<a href="https://github.com/sav-cs-gh/AIA/blob/main/chapters/Chapter12.md#sect9">  
   <rect x="30" y="1435" width="1140" height="150" rx="10" fill="#e6e6e6" stroke="#555" stroke-width="2"/>
   <rect x="30" y="1435" width="1140" height="50" rx="10" fill="#4a4a4a"/>
   <rect x="30" y="1467" width="1140" height="18" fill="#4a4a4a"/>
@@ -203,7 +203,7 @@
   <text x="55" y="1575" font-size="18" fill="#1a1a1a">3. Включать метаданные в контекст и проектировать ответы с цитированием</text>
   
   <!-- ==================== ВЫВОД ==================== -->
-<a href="https://github.com/sav-cs-gh/AIA/blob/main/chapters/Chapter14.md#sect10">  
+<a href="https://github.com/sav-cs-gh/AIA/blob/main/chapters/Chapter12.md#sect10">  
   <rect x="30" y="1605" width="1140" height="50" rx="10" fill="#2a2a2a"/>
   <text x="600" y="1637" text-anchor="middle" font-size="22" font-weight="bold" fill="#ffffff">Вывод: RAG — основа нового поколения интеллектуальных инструментов для работы с документами</text>
 </a> 
