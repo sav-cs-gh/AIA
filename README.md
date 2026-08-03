@@ -45,10 +45,14 @@ AI Analytics Course (Интеллектуальный анализ данных)
 Глава 11. Генеративный ИИ в интеллектуальной аналитике
 </a>
 <br>
-<a href = "https://raw.githubusercontent.com/sav-cs-gh/AIA/refs/heads/main/maps/Chapter12.svg">
-Глава 12. Генерация синтетических данных
+<a href = "https://raw.githubusercontent.com/sav-cs-gh/AIA/refs/heads/main/maps/Chapter14.svg">
+Глава 12. RAG-подходы в аналитике по корпоративным документам и базам знаний
 </a>
 <br>
 <a href = "https://raw.githubusercontent.com/sav-cs-gh/AIA/refs/heads/main/maps/Chapter13.svg">
-Глава 13. Мультимодальный ИИ для интеллектуальной аналитики
+Глава 13. Генерация синтетических данных
+</a>
+<br>
+<a href = "https://raw.githubusercontent.com/sav-cs-gh/AIA/refs/heads/main/maps/Chapter14.svg">
+Глава 14. Мультимодальный ИИ для интеллектуальной аналитики
 </a>
