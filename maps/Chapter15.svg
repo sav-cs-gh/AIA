@@ -1,0 +1,215 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1700" font-family="Arial, Helvetica, sans-serif">
+  
+  <!-- Общий фон -->
+  <rect width="1200" height="1700" fill="#f0f0f0"/>
+  
+  <!-- ==================== ЗАГОЛОВОК ==================== -->
+ <a href="https://github.com/sav-cs-gh/AIA/blob/main/chapters/Chapter15.md#sect0"> 
+  <rect x="30" y="15" width="1140" height="90" rx="12" fill="#2a2a2a"/>
+  <text x="600" y="55" text-anchor="middle" font-size="32" font-weight="bold" fill="#ffffff">Глава 15. MLOps, LLMOps, этика и безопасность ИИ</text>
+  <text x="600" y="92" text-anchor="middle" font-size="26" fill="#cccccc">в аналитике</text>
+ </a> 
+  <!-- ==================== БЛОК 1: MLOps ==================== -->
+ <a href="https://github.com/sav-cs-gh/AIA/blob/main/chapters/Chapter15.md#sect1">   
+  <rect x="30" y="125" width="555" height="315" rx="10" fill="#e6e6e6" stroke="#555" stroke-width="2"/>
+  <rect x="30" y="125" width="555" height="50" rx="10" fill="#4a4a4a"/>
+  <rect x="30" y="157" width="555" height="18" fill="#4a4a4a"/>
+  <text x="307" y="158" text-anchor="middle" font-size="24" font-weight="bold" fill="#ffffff">1. MLOps</text>
+</a>  
+  <text x="50" y="205" font-size="20" font-weight="bold" fill="#1a1a1a">Определение:</text>
+  <text x="50" y="235" font-size="18" fill="#2a2a2a">Machine Learning Operations —</text>
+  <text x="50" y="263" font-size="18" fill="#2a2a2a">практики управления жизненным циклом</text>
+  <text x="50" y="291" font-size="18" fill="#2a2a2a">моделей ML в промышленной среде</text>
+  
+  <text x="50" y="330" font-size="20" font-weight="bold" fill="#1a1a1a">Ключевые задачи:</text>
+  <text x="65" y="358" font-size="17" fill="#2a2a2a">• Воспроизводимость экспериментов</text>
+  <text x="65" y="382" font-size="17" fill="#2a2a2a">• Управление версиями данных и кода</text>
+  <text x="65" y="406" font-size="17" fill="#2a2a2a">• Автоматизация деплоя и мониторинг</text>
+  <text x="65" y="430" font-size="17" fill="#2a2a2a">• Обнаружение дрейфа данных</text>
+  
+ <a href="https://github.com/sav-cs-gh/AIA/blob/main/chapters/Chapter15.md#sect2">   
+  <!-- ==================== БЛОК 2: Воспроизводимость ==================== -->
+  <rect x="615" y="125" width="555" height="315" rx="10" fill="#e6e6e6" stroke="#555" stroke-width="2"/>
+  <rect x="615" y="125" width="555" height="50" rx="10" fill="#4a4a4a"/>
+  <rect x="615" y="157" width="555" height="18" fill="#4a4a4a"/>
+  <text x="892" y="158" text-anchor="middle" font-size="24" font-weight="bold" fill="#ffffff">2. Воспроизводимость</text>
+</a>  
+  <text x="635" y="205" font-size="20" font-weight="bold" fill="#1a1a1a">Необходимо фиксировать:</text>
+  <text x="650" y="235" font-size="17" fill="#2a2a2a">• Версии данных</text>
+  <text x="650" y="263" font-size="17" fill="#2a2a2a">• Код и конфигурации</text>
+  <text x="650" y="291" font-size="17" fill="#2a2a2a">• Параметры модели</text>
+  <text x="650" y="319" font-size="17" fill="#2a2a2a">• Библиотеки и зависимости</text>
+  <text x="650" y="347" font-size="17" fill="#2a2a2a">• Вычислительную среду</text>
+  
+  <text x="635" y="385" font-size="20" font-weight="bold" fill="#1a1a1a">Инструменты:</text>
+  <text x="650" y="415" font-size="17" fill="#2a2a2a">Git, Docker, MLflow, DVC, WandB</text>
+  
+  <!-- ==================== БЛОК 3: Деплой ==================== -->
+ <a href="https://github.com/sav-cs-gh/AIA/blob/main/chapters/Chapter15.md#sect3">   
+  <rect x="30" y="460" width="555" height="255" rx="10" fill="#e6e6e6" stroke="#555" stroke-width="2"/>
+  <rect x="30" y="460" width="555" height="50" rx="10" fill="#4a4a4a"/>
+  <rect x="30" y="492" width="555" height="18" fill="#4a4a4a"/>
+  <text x="307" y="493" text-anchor="middle" font-size="24" font-weight="bold" fill="#ffffff">3. Развертывание (деплой) моделей</text>
+</a>
+ <a href="https://github.com/sav-cs-gh/AIA/blob/main/chapters/Chapter15.md#sect3.1">  
+  <text x="50" y="535" font-size="20" font-weight="bold" fill="#1a1a1a">Сценарии развертывания:</text>
+</a>  
+  <text x="65" y="565" font-size="17" fill="#2a2a2a">• Пакетная обработка (batch)</text>
+  <text x="65" y="593" font-size="17" fill="#2a2a2a">• Онлайн-инференс (REST API)</text>
+  <text x="65" y="621" font-size="17" fill="#2a2a2a">• Потоковая обработка (streaming)</text>
+  <text x="65" y="648" font-size="17" fill="#2a2a2a">• Edge / встраиваемые системы</text>
+ <a href="https://github.com/sav-cs-gh/AIA/blob/main/chapters/Chapter15.md#sect3.2"> 
+  <text x="50" y="677" font-size="20" font-weight="bold" fill="#1a1a1a">Требования:</text>
+</a>  
+  <text x="65" y="704" font-size="17" fill="#2a2a2a">Стабильность, масштабируемость, безопасность</text>
+  
+  <!-- ==================== БЛОК 4: Мониторинг ==================== -->
+ <a href="https://github.com/sav-cs-gh/AIA/blob/main/chapters/Chapter15.md#sect4">   
+  <rect x="615" y="460" width="555" height="255" rx="10" fill="#e6e6e6" stroke="#555" stroke-width="2"/>
+  <rect x="615" y="460" width="555" height="50" rx="10" fill="#4a4a4a"/>
+  <rect x="615" y="492" width="555" height="18" fill="#4a4a4a"/>
+  <text x="892" y="493" text-anchor="middle" font-size="24" font-weight="bold" fill="#ffffff">4. Мониторинг качества</text>
+</a> 
+ <a href="https://github.com/sav-cs-gh/AIA/blob/main/chapters/Chapter15.md#sect4.1"> 
+  <text x="635" y="535" font-size="20" font-weight="bold" fill="#1a1a1a">Типы дрейфа:</text>
+</a>
+  <text x="650" y="565" font-size="17" fill="#2a2a2a">• Data drift — изменение данных</text>
+  <text x="650" y="593" font-size="17" fill="#2a2a2a">• Concept drift — изменение связи</text>
+  <text x="650" y="621" font-size="17" fill="#2a2a2a">• Label drift — изменение меток</text>
+ <a href="https://github.com/sav-cs-gh/AIA/blob/main/chapters/Chapter15.md#sect4.2"> 
+  <text x="635" y="660" font-size="20" font-weight="bold" fill="#1a1a1a">Методы обнаружения:</text>
+</a>  
+  <text x="650" y="687" font-size="17" fill="#2a2a2a">PSI, KL-дивергенция, стат. тесты</text>
+  
+  <!-- ==================== БЛОК 5: LLMOps ==================== -->
+ <a href="https://github.com/sav-cs-gh/AIA/blob/main/chapters/Chapter15.md#sect5">   
+  <rect x="30" y="730" width="555" height="295" rx="10" fill="#e6e6e6" stroke="#555" stroke-width="2"/>
+  <rect x="30" y="730" width="555" height="50" rx="10" fill="#4a4a4a"/>
+  <rect x="30" y="762" width="555" height="18" fill="#4a4a4a"/>
+  <text x="307" y="763" text-anchor="middle" font-size="24" font-weight="bold" fill="#ffffff">5. LLMOps</text>
+</a>
+<a href="https://github.com/sav-cs-gh/AIA/blob/main/chapters/Chapter15.md#sect5.1">
+  <text x="50" y="805" font-size="20" font-weight="bold" fill="#1a1a1a">Особенности vs MLOps:</text>
+</a>  
+  <text x="65" y="835" font-size="17" fill="#2a2a2a">• Зависимость от промптов</text>
+  <text x="65" y="863" font-size="17" fill="#2a2a2a">• Версионирование промптов</text>
+  <text x="65" y="891" font-size="17" fill="#2a2a2a">• Retrieval-компоненты</text>
+  <text x="65" y="919" font-size="17" fill="#2a2a2a">• Недетерминированные ответы</text>
+  <text x="65" y="947" font-size="17" fill="#2a2a2a">• Галлюцинации</text>
+<a href="https://github.com/sav-cs-gh/AIA/blob/main/chapters/Chapter15.md#sect5.2"> 
+  <text x="50" y="985" font-size="20" font-weight="bold" fill="#1a1a1a">Компоненты LLM-системы:</text>
+</a>  
+  <text x="65" y="1015" font-size="17" fill="#2a2a2a">LLM + Промпты + Retrieval + Инструменты + Память + Фильтры</text>
+  
+  <!-- ==================== БЛОК 6: Управление промптами ==================== -->
+ <a href="https://github.com/sav-cs-gh/AIA/blob/main/chapters/Chapter15.md#sect6">   
+  <rect x="615" y="730" width="555" height="295" rx="10" fill="#e6e6e6" stroke="#555" stroke-width="2"/>
+  <rect x="615" y="730" width="555" height="50" rx="10" fill="#4a4a4a"/>
+  <rect x="615" y="762" width="555" height="18" fill="#4a4a4a"/>
+  <text x="892" y="763" text-anchor="middle" font-size="24" font-weight="bold" fill="#ffffff">6. Управление промптами</text>
+</a>
+<a href="https://github.com/sav-cs-gh/AIA/blob/main/chapters/Chapter15.md#sect6.1"> 
+  <text x="635" y="805" font-size="20" font-weight="bold" fill="#1a1a1a">Версионировать:</text>
+</a>  
+  <text x="650" y="835" font-size="17" fill="#2a2a2a">• Системные промпты</text>
+  <text x="650" y="863" font-size="17" fill="#2a2a2a">• Пользовательские шаблоны</text>
+  <text x="650" y="891" font-size="17" fill="#2a2a2a">• Few-shot примеры</text>
+  <text x="650" y="919" font-size="17" fill="#2a2a2a">• Параметры генерации</text>
+  <text x="650" y="947" font-size="17" fill="#2a2a2a">• Версии retrieval-источников</text>
+<a href="https://github.com/sav-cs-gh/AIA/blob/main/chapters/Chapter15.md#sect6.2">  
+  <text x="635" y="985" font-size="20" font-weight="bold" fill="#1a1a1a">Практики:</text>
+</a>  
+  <text x="650" y="1015" font-size="17" fill="#2a2a2a">Хранение в репозитории, A/B-тесты, журналирование</text>
+  
+  <!-- ==================== БЛОК 7: Ответственный ИИ ==================== -->
+<a href="https://github.com/sav-cs-gh/AIA/blob/main/chapters/Chapter15.md#sect7">   
+  <rect x="30" y="1045" width="555" height="305" rx="10" fill="#e6e6e6" stroke="#555" stroke-width="2"/>
+  <rect x="30" y="1045" width="555" height="50" rx="10" fill="#4a4a4a"/>
+  <rect x="30" y="1087" width="555" height="18" fill="#4a4a4a"/>
+  <text x="307" y="1088" text-anchor="middle" font-size="24" font-weight="bold" fill="#ffffff">7. Ответственный ИИ</text>
+</a>
+ <a href="https://github.com/sav-cs-gh/AIA/blob/main/chapters/Chapter15.md#sect7.1"> 
+  <text x="50" y="1130" font-size="20" font-weight="bold" fill="#1a1a1a">Принципы:</text>
+</a>  
+  <text x="65" y="1157" font-size="17" fill="#2a2a2a">• Справедливость (Fairness)</text>
+  <text x="65" y="1188" font-size="17" fill="#2a2a2a">• Прозрачность</text>
+  <text x="65" y="1216" font-size="17" fill="#2a2a2a">• Подотчетность</text>
+  <text x="65" y="1244" font-size="17" fill="#2a2a2a">• Безопасность и надежность</text>
+ <a href="https://github.com/sav-cs-gh/AIA/blob/main/chapters/Chapter15.md#sect7.2"> 
+  <text x="50" y="1285" font-size="20" font-weight="bold" fill="#1a1a1a">Приватность данных:</text>
+</a>  
+  <text x="65" y="1315" font-size="17" fill="#2a2a2a">Минимизация, анонимизация, разграничение доступа</text>
+  
+  <!-- ==================== БЛОК 8: Риски ==================== -->
+ <a href="https://github.com/sav-cs-gh/AIA/blob/main/chapters/Chapter15.md#sect8">   
+  <rect x="615" y="1045" width="555" height="305" rx="10" fill="#d9d9d9" stroke="#555" stroke-width="2"/>
+  <rect x="615" y="1045" width="555" height="50" rx="10" fill="#3a3a3a"/>
+  <rect x="615" y="1087" width="555" height="18" fill="#3a3a3a"/>
+  <text x="892" y="1088" text-anchor="middle" font-size="24" font-weight="bold" fill="#ffffff">8. Риски генеративного ИИ</text>
+</a>  
+  <text x="635" y="1130" font-size="19" font-weight="bold" fill="#1a1a1a">Галлюцинации</text>
+  <text x="650" y="1157" font-size="17" fill="#333">Правдоподобные, но неверные выводы</text>
+ <a href="https://github.com/sav-cs-gh/AIA/blob/main/chapters/Chapter15.md#sect8.1"> 
+  <text x="635" y="1194" font-size="19" font-weight="bold" fill="#1a1a1a">Prompt injection</text>
+</a>  
+  <text x="650" y="1221" font-size="17" fill="#333">Атаки через вредоносные инструкции</text>
+ <a href="https://github.com/sav-cs-gh/AIA/blob/main/chapters/Chapter15.md#sect8.2">
+  <text x="635" y="1258" font-size="19" font-weight="bold" fill="#1a1a1a">Утечка информации</text>
+</a>  
+  <text x="650" y="1285" font-size="17" fill="#333">Раскрытие конфиденциальных данных</text>
+ <a href="https://github.com/sav-cs-gh/AIA/blob/main/chapters/Chapter15.md#sect8.3"> 
+  <text x="635" y="1312" font-size="19" font-weight="bold" fill="#1a1a1a">Смещение автоматизации (Automation bias)</text>
+</a>  
+  <text x="650" y="1339" font-size="17" fill="#333">Чрезмерное доверие к автоматическим выводам</text>
+  
+  <!-- ==================== БЛОК 9: Роли в команде ==================== -->
+ <a href="https://github.com/sav-cs-gh/AIA/blob/main/chapters/Chapter15.md#sect9">   
+  <rect x="30" y="1365" width="1140" height="200" rx="10" fill="#e6e6e6" stroke="#555" stroke-width="2"/>
+  <rect x="30" y="1365" width="1140" height="50" rx="10" fill="#4a4a4a"/>
+  <rect x="30" y="1407" width="1140" height="18" fill="#4a4a4a"/>
+  <text x="600" y="1408" text-anchor="middle" font-size="24" font-weight="bold" fill="#ffffff">9. Роли в команде аналитического проекта</text>
+</a> 
+ <a href="https://github.com/sav-cs-gh/AIA/blob/main/chapters/Chapter15.md#sect9.1"> 
+  <rect x="50" y="1440" width="200" height="45" rx="6" fill="#c0c0c0" stroke="#666" stroke-width="1.5"/>
+  <text x="150" y="1468" text-anchor="middle" font-size="17" fill="#1a1a1a">Бизнес-заказчик</text>
+</a>
+ <a href="https://github.com/sav-cs-gh/AIA/blob/main/chapters/Chapter15.md#sect9.2"> 
+  <rect x="270" y="1440" width="200" height="45" rx="6" fill="#c0c0c0" stroke="#666" stroke-width="1.5"/>
+  <text x="370" y="1468" text-anchor="middle" font-size="17" fill="#1a1a1a">Аналитик данных</text>
+</a>
+ <a href="https://github.com/sav-cs-gh/AIA/blob/main/chapters/Chapter15.md#sect9.3"> 
+  <rect x="490" y="1440" width="200" height="45" rx="6" fill="#c0c0c0" stroke="#666" stroke-width="1.5"/>
+  <text x="590" y="1468" text-anchor="middle" font-size="17" fill="#1a1a1a">Data Scientist</text>
+</a> 
+ <a href="https://github.com/sav-cs-gh/AIA/blob/main/chapters/Chapter15.md#sect9.4"> 
+  <rect x="710" y="1440" width="200" height="45" rx="6" fill="#c0c0c0" stroke="#666" stroke-width="1.5"/>
+  <text x="810" y="1468" text-anchor="middle" font-size="17" fill="#1a1a1a">ML Engineer</text>
+</a>
+ <a href="https://github.com/sav-cs-gh/AIA/blob/main/chapters/Chapter15.md#sect9.5"> 
+  <rect x="930" y="1440" width="220" height="45" rx="6" fill="#c0c0c0" stroke="#666" stroke-width="1.5"/>
+  <text x="1040" y="1468" text-anchor="middle" font-size="17" fill="#1a1a1a">LLM / Prompt Engineer</text>
+</a>
+ <a href="https://github.com/sav-cs-gh/AIA/blob/main/chapters/Chapter15.md#sect9.6"> 
+  <rect x="50" y="1500" width="200" height="45" rx="6" fill="#c0c0c0" stroke="#666" stroke-width="1.5"/>
+  <text x="150" y="1528" text-anchor="middle" font-size="17" fill="#1a1a1a">Data Engineer</text>
+ </a> 
+ <a href="https://github.com/sav-cs-gh/AIA/blob/main/chapters/Chapter15.md#sect9.7"> 
+  <rect x="270" y="1500" width="200" height="45" rx="6" fill="#c0c0c0" stroke="#666" stroke-width="1.5"/>
+  <text x="370" y="1528" text-anchor="middle" font-size="17" fill="#1a1a1a">Спец. по безопасности</text>
+</a>
+ <a href="https://github.com/sav-cs-gh/AIA/blob/main/chapters/Chapter15.md#sect9.10">   
+  <rect x="490" y="1500" width="200" height="45" rx="6" fill="#c0c0c0" stroke="#666" stroke-width="1.5"/>
+  <text x="590" y="1528" text-anchor="middle" font-size="17" fill="#1a1a1a">Юрист / Compliance</text>
+</a>
+ <a href="https://github.com/sav-cs-gh/AIA/blob/main/chapters/Chapter15.md#sect9.9"> 
+  <rect x="710" y="1500" width="440" height="45" rx="6" fill="#c0c0c0" stroke="#666" stroke-width="1.5"/>
+  <text x="940" y="1528" text-anchor="middle" font-size="17" fill="#1a1a1a">Эксперт предметной области</text>
+</a>  
+  <!-- ==================== ВЫВОД ==================== -->
+ <a href="https://github.com/sav-cs-gh/AIA/blob/main/chapters/Chapter15.md#sect10">   
+  <rect x="30" y="1585" width="1140" height="90" rx="10" fill="#2a2a2a"/>
+  <text x="600" y="1620" text-anchor="middle" font-size="22" font-weight="bold" fill="#ffffff">Вывод: MLOps/LLMOps + этика + управление рисками → основа</text>
+</a>  
+  <text x="600" y="1655" text-anchor="middle" font-size="20" fill="#bbbbbb">промышленной, безопасной и ответственной аналитики на базе ИИ</text>
+  
+</svg>
