@@ -1,6 +1,6 @@
-# Глава 14. RAG-подходы в аналитике по корпоративным документам и базам знаний
+# Глава 12. RAG-подходы в аналитике по корпоративным документам и базам знаний
 
-[Открыть интерактивную карту главы →](https://raw.githubusercontent.com/sav-cs-gh/AIA/refs/heads/main/maps/Chapter14.svg)
+[Открыть интерактивную карту главы →](https://raw.githubusercontent.com/sav-cs-gh/AIA/refs/heads/main/maps/Chapter12.svg)
 
 ## Введение
 
