@@ -57,6 +57,6 @@ AI Analytics Course (Интеллектуальный анализ данных)
 Глава 14. Мультимодальный ИИ для интеллектуальной аналитики
 </a>
 <br>
-<a href = "https://raw.githubusercontent.com/sav-cs-gh/AIA/refs/heads/main/maps/Chapter14.svg">
+<a href = "https://raw.githubusercontent.com/sav-cs-gh/AIA/refs/heads/main/maps/Chapter15.svg">
 Глава 15. MLOps, LLMOps, этика и безопасность ИИ в аналитике
 </a>
