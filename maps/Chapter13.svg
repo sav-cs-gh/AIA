@@ -1,0 +1,170 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1600" font-family="Arial, Helvetica, sans-serif">
+  
+  <!-- Фон -->
+  <rect width="1200" height="1600" fill="#f5f5f5"/>
+  
+  <!-- Заголовок -->
+<a href="https://github.com/sav-cs-gh/AIA/blob/main/chapters/Chapter13.md#sect0">  
+  <rect x="50" y="30" width="1100" height="100" rx="10" fill="#333"/>
+  <text x="600" y="80" text-anchor="middle" font-size="36" font-weight="bold" fill="#fff">Глава 13. Генерация синтетических данных</text> 
+  <text x="600" y="120" text-anchor="middle" font-size="28" fill="#fff">и автоматизация аналитического цикла</text>
+</a>
+  <!-- Блок 1: Синтетические данные -->
+<a href="https://github.com/sav-cs-gh/AIA/blob/main/chapters/Chapter13.md#sect1">  
+  <rect x="50" y="150" width="530" height="285" rx="10" fill="#e0e0e0" stroke="#555" stroke-width="2"/>
+  <rect x="50" y="150" width="530" height="50" rx="10" fill="#555"/>
+  <rect x="50" y="180" width="530" height="20" fill="#555"/>
+  <text x="315" y="182" text-anchor="middle" font-size="24" font-weight="bold" fill="#fff">1. Синтетические данные</text>
+</a>  
+  <text x="70" y="225" font-size="20" font-weight="bold" fill="#222">Определение:</text>
+  <text x="70" y="255" font-size="18" fill="#333">Искусственно созданные данные,</text>
+  <text x="70" y="280" font-size="18" fill="#333">имитирующие свойства реальных</text>
+  
+  <text x="70" y="320" font-size="18" font-weight="bold" fill="#222">Применение:</text>
+  <text x="80" y="348" font-size="17" fill="#333">• Тестирование систем</text>
+  <text x="80" y="372" font-size="17" fill="#333">• Обучение моделей</text>
+  <text x="80" y="396" font-size="17" fill="#333">• Балансировка классов</text>
+  <text x="80" y="420" font-size="17" fill="#333">• Защита конфиденциальности</text>
+  
+  <!-- Блок 2: Методы генерации -->
+<a href="https://github.com/sav-cs-gh/AIA/blob/main/chapters/Chapter13.md#sect2">  
+  <rect x="620" y="150" width="530" height="285" rx="10" fill="#e0e0e0" stroke="#555" stroke-width="2"/>
+  <rect x="620" y="150" width="530" height="50" rx="10" fill="#555"/>
+  <rect x="620" y="180" width="530" height="20" fill="#555"/>
+  <text x="885" y="182" text-anchor="middle" font-size="24" font-weight="bold" fill="#fff">2. Методы генерации</text>
+</a> 
+  <text x="640" y="225" font-size="19" font-weight="bold" fill="#222">Правило-ориентированная:</text>
+  <text x="650" y="252" font-size="17" fill="#333">• Прозрачность</text>
+  <text x="650" y="276" font-size="17" fill="#333">• Ограниченная реалистичность</text>
+  
+  <text x="640" y="312" font-size="19" font-weight="bold" fill="#222">Статистическое моделирование:</text>
+  <text x="650" y="339" font-size="17" fill="#333">• Сохранение закономерностей</text>
+  <text x="650" y="363" font-size="17" fill="#333">• Трудности с нелинейностями</text>
+  
+  <text x="640" y="399" font-size="19" font-weight="bold" fill="#222">Генеративные модели (GAN, VAE, CTGAN):</text>
+  <text x="650" y="426" font-size="17" fill="#333">• Сложные многомерные зависимости</text>
+  
+  <!-- Блок 3: Аугментация данных -->
+<a href="https://github.com/sav-cs-gh/AIA/blob/main/chapters/Chapter13.md#sect3">  
+  <rect x="50" y="460" width="530" height="250" rx="10" fill="#e0e0e0" stroke="#555" stroke-width="2"/>
+  <rect x="50" y="460" width="530" height="50" rx="10" fill="#555"/>
+  <rect x="50" y="490" width="530" height="20" fill="#555"/>
+  <text x="315" y="492" text-anchor="middle" font-size="24" font-weight="bold" fill="#fff">3. Аугментация данных</text>
+</a>  
+<a href="https://github.com/sav-cs-gh/AIA/blob/main/chapters/Chapter13.md#sect3.1">  
+  <text x="70" y="535" font-size="18" font-weight="bold" fill="#222">Цели:</text>
+</a>  
+  <text x="80" y="563" font-size="17" fill="#333">• Увеличение объёма выборки</text>
+  <text x="80" y="590" font-size="17" fill="#333">• Борьба с переобучением</text>
+  <text x="80" y="617" font-size="17" fill="#333">• Балансировка редких классов</text>
+<a href="https://github.com/sav-cs-gh/AIA/blob/main/chapters/Chapter13.md#sect0">  
+  <text x="70" y="655" font-size="18" font-weight="bold" fill="#222">Методы для табличных данных:</text>
+</a>  
+  <text x="80" y="683" font-size="17" fill="#333">• SMOTE, oversampling, вариация признаков</text>
+  
+  <!-- Блок 4: Auto-EDA -->
+<a href="https://github.com/sav-cs-gh/AIA/blob/main/chapters/Chapter13.md#sect4">  
+  <rect x="620" y="460" width="530" height="250" rx="10" fill="#e0e0e0" stroke="#555" stroke-width="2"/>
+  <rect x="620" y="460" width="530" height="50" rx="10" fill="#555"/>
+  <rect x="620" y="490" width="530" height="20" fill="#555"/>
+  <text x="885" y="492" text-anchor="middle" font-size="24" font-weight="bold" fill="#fff">4. Auto-EDA</text>
+</a>  
+<a href="https://github.com/sav-cs-gh/AIA/blob/main/chapters/Chapter13.md#sect4.1">  
+  <text x="640" y="535" font-size="18" font-weight="bold" fill="#222">Функции:</text>
+</a>  
+  <text x="650" y="563" font-size="17" fill="#333">• Описание структуры данных</text>
+  <text x="650" y="590" font-size="17" fill="#333">• Расчёт базовой статистики</text>
+  <text x="650" y="617" font-size="17" fill="#333">• Анализ пропусков и дубликатов</text>
+  <text x="650" y="644" font-size="17" fill="#333">• Построение распределений</text>
+  <text x="650" y="671" font-size="17" fill="#333">• Анализ корреляций и выбросов</text>
+  
+  <!-- Блок 5: Auto-reporting -->
+<a href="https://github.com/sav-cs-gh/AIA/blob/main/chapters/Chapter13.md#sect5">  
+  <rect x="50" y="740" width="530" height="255" rx="10" fill="#e0e0e0" stroke="#555" stroke-width="2"/>
+  <rect x="50" y="740" width="530" height="50" rx="10" fill="#555"/>
+  <rect x="50" y="770" width="530" height="20" fill="#555"/>
+  <text x="315" y="772" text-anchor="middle" font-size="24" font-weight="bold" fill="#fff">5. Auto-reporting</text>
+</a>  
+<a href="https://github.com/sav-cs-gh/AIA/blob/main/chapters/Chapter13.md#sect5.1">  
+  <text x="70" y="815" font-size="18" font-weight="bold" fill="#222">Форматы:</text>
+</a>  
+  <text x="80" y="843" font-size="17" fill="#333">• PDF-документы</text>
+  <text x="80" y="870" font-size="17" fill="#333">• Интерактивные панели</text>
+  <text x="80" y="897" font-size="17" fill="#333">• Текстовые сводки</text>
+  <text x="80" y="924" font-size="17" fill="#333">• Презентации</text>
+<a href="https://github.com/sav-cs-gh/AIA/blob/main/chapters/Chapter13.md#sect5.2">  
+  <text x="70" y="960" font-size="18" font-weight="bold" fill="#222">LLM позволяют:</text>
+</a>  
+  <text x="80" y="988" font-size="17" fill="#333">• Адаптировать стиль и уровень детализации</text>
+  
+  <!-- Блок 6: Summary generation -->
+<a href="https://github.com/sav-cs-gh/AIA/blob/main/chapters/Chapter13.md#sect6">  
+  <rect x="620" y="740" width="530" height="255" rx="10" fill="#e0e0e0" stroke="#555" stroke-width="2"/>
+  <rect x="620" y="740" width="530" height="50" rx="10" fill="#555"/>
+  <rect x="620" y="770" width="530" height="20" fill="#555"/>
+  <text x="885" y="772" text-anchor="middle" font-size="24" font-weight="bold" fill="#fff">6. Генерация Summary</text>
+</a>
+<a href="https://github.com/sav-cs-gh/AIA/blob/main/chapters/Chapter13.md#sect6.1">  
+  <text x="640" y="815" font-size="18" font-weight="bold" fill="#222">Подходы:</text>
+</a>
+<a href="https://github.com/sav-cs-gh/AIA/blob/main/chapters/Chapter13.md#sect6.2">  
+  <text x="650" y="845" font-size="17" font-weight="bold" fill="#333">Шаблонная генерация:</text>
+</a>  
+  <text x="660" y="870" font-size="17" fill="#333">• Высокая контролируемость</text>
+  <text x="660" y="895" font-size="17" fill="#333">• Ограниченная гибкость</text>
+<a href="https://github.com/sav-cs-gh/AIA/blob/main/chapters/Chapter13.md#sect6.3">  
+  <text x="650" y="925" font-size="17" font-weight="bold" fill="#333">Языковые модели:</text>
+</a>  
+  <text x="660" y="950" font-size="17" fill="#333">• Адаптация к аудитории</text>
+  <text x="660" y="975" font-size="17" fill="#333">• Риск недостоверных утверждений</text>
+  
+  <!-- Блок 7: Риски -->
+<a href="https://github.com/sav-cs-gh/AIA/blob/main/chapters/Chapter13.md#sect7">  
+  <rect x="50" y="1020" width="1100" height="220" rx="10" fill="#d0d0d0" stroke="#555" stroke-width="2"/>
+  <rect x="50" y="1020" width="1100" height="50" rx="10" fill="#444"/>
+  <rect x="50" y="1050" width="1100" height="20" fill="#444"/>
+  <text x="600" y="1052" text-anchor="middle" font-size="24" font-weight="bold" fill="#fff">7. Риски генеративного подхода</text>
+</a>  
+<a href="https://github.com/sav-cs-gh/AIA/blob/main/chapters/Chapter13.md#sect7.1">  
+  <rect x="80" y="1085" width="320" height="130" rx="8" fill="#ccc" stroke="#666" stroke-width="1.5"/>
+  <text x="240" y="1115" text-anchor="middle" font-size="19" font-weight="bold" fill="#222">Искажение реальности</text>
+  <text x="100" y="1145" font-size="16" fill="#333">Искусственный материал</text>
+  <text x="100" y="1170" font-size="16" fill="#333">кажется реалистичным, но</text>
+  <text x="100" y="1195" font-size="16" fill="#333">искажает предметную область</text>
+</a>  
+<a href="https://github.com/sav-cs-gh/AIA/blob/main/chapters/Chapter13.md#sect7.2">  
+  <rect x="440" y="1085" width="320" height="130" rx="8" fill="#ccc" stroke="#666" stroke-width="1.5"/>
+  <text x="600" y="1115" text-anchor="middle" font-size="19" font-weight="bold" fill="#222">Ложное доверие</text>
+  <text x="460" y="1145" font-size="16" fill="#333">Профессиональный вид</text>
+  <text x="460" y="1170" font-size="16" fill="#333">порождает иллюзию</text>
+  <text x="460" y="1195" font-size="16" fill="#333">корректности результатов</text>
+</a>  
+<a href="https://github.com/sav-cs-gh/AIA/blob/main/chapters/Chapter13.md#sect0">  
+  <rect x="800" y="1085" width="320" height="130" rx="8" fill="#ccc" stroke="#666" stroke-width="1.5"/>
+  <text x="960" y="1115" text-anchor="middle" font-size="19" font-weight="bold" fill="#222">Утечка данных</text>
+  <text x="820" y="1145" font-size="16" fill="#333">Некачественная генерация</text>
+  <text x="820" y="1170" font-size="16" fill="#333">сохраняет близость к</text>
+  <text x="820" y="1195" font-size="16" fill="#333">реальным записям</text>
+</a>  
+  <!-- Блок 8: Рекомендации -->
+<a href="https://github.com/sav-cs-gh/AIA/blob/main/chapters/Chapter13.md#sect8">  
+  <rect x="50" y="1270" width="1100" height="200" rx="10" fill="#e8e8e8" stroke="#555" stroke-width="2"/>
+  <rect x="50" y="1270" width="1100" height="50" rx="10" fill="#555"/>
+  <rect x="50" y="1300" width="1100" height="20" fill="#555"/>
+  <text x="600" y="1302" text-anchor="middle" font-size="24" font-weight="bold" fill="#fff">8. Практические рекомендации</text>
+</a>  
+  <text x="80" y="1345" font-size="18" fill="#222">1. Чётко определять цель генерации</text>
+  <text x="80" y="1375" font-size="18" fill="#222">2. Проверять статистическое и прикладное качество</text>
+  <text x="80" y="1405" font-size="18" fill="#222">3. Не заменять полностью реальные данные</text>
+  <text x="80" y="1435" font-size="18" fill="#222">4. Использовать auto-EDA как стартовый этап</text>
+  <text x="550" y="1345" font-size="18" fill="#222">5. Редактировать автоматически созданные отчёты</text>
+  <text x="550" y="1375" font-size="18" fill="#222">6. Оценивать риски конфиденциальности</text>
+  <text x="550" y="1405" font-size="18" fill="#222">7. Фиксировать ограничения и допущения</text>
+  
+  <!-- Вывод -->
+<a href="https://github.com/sav-cs-gh/AIA/blob/main/chapters/Chapter13.md#sect9">  
+  <rect x="50" y="1500" width="1100" height="80" rx="10" fill="#333"/>
+  <text x="600" y="1535" text-anchor="middle" font-size="22" font-weight="bold" fill="#fff">Вывод: Генеративный подход — средство интеллектуальной поддержки,</text>
+  <text x="600" y="1565" text-anchor="middle" font-size="20" fill="#ddd">а не автономная замена аналитика. Требует валидации и экспертной проверки.</text>
+</a>
+</svg>
