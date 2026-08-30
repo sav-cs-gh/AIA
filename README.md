@@ -60,3 +60,11 @@ AI Analytics Course (Интеллектуальный анализ данных)
 <a href = "https://raw.githubusercontent.com/sav-cs-gh/AIA/refs/heads/main/maps/Chapter15.svg">
 Глава 15. MLOps, LLMOps, этика и безопасность ИИ в аналитике
 </a>
+<br>
+<a href = "https://github.com/sav-cs-gh/AIA/tree/main/self-check/readme.md">
+Контрольные вопросы
+</a>
+<br>
+<a href = "https://github.com/sav-cs-gh/AIA/blob/main/sources/Sources.md">
+Источники
+</a>
