@@ -269,8 +269,8 @@
 
 81. **Nobre, C.** Large-Scale Comparative Visualisation of Multidimensional Data [Электронный ресурс] / C. Nobre, M. Meyer // Computer Graphics Forum. — 2018. — Vol. 37, № 3. — P. 379–390. — URL: https://doi.org/10.1111/cgf.13427 (дата обращения: 29.08.2026).
 
-82. **Novikov, N.** Development of a System for Analysing Corporate Reporting of Russian Companies Based on Multimodal Data Using Text Recognition and Automated Processing Methods : ВКР [Электронный ресурс] / N. Novikov ; НИУ ВШЭ. — М., 2025. — URL: https://www.hse.ru/en/ba/stat/students/diplomas/1045388586 (дата обращения: 09.05.2026).
-
+<!-- 82. **Novikov, N.** Development of a System for Analysing Corporate Reporting of Russian Companies Based on Multimodal Data Using Text Recognition and Automated Processing Methods : ВКР [Электронный ресурс] / N. Novikov ; НИУ ВШЭ. — М., 2025. — URL: https://www.hse.ru/en/ba/stat/students/diplomas/1045388586 (дата обращения: 09.05.2026).
+-->
 83. **OpenAI.** GPT-4 Technical Report [Электронный ресурс] // arXiv. — 2023. — arXiv:2303.08774. — URL: https://arxiv.org/abs/2303.08774 (дата обращения: 09.05.2026).
 
 84. **Ouyang, L.** Training Language Models to Follow Instructions with Human Feedback [Электронный ресурс] / L. Ouyang [et al.] // arXiv. — 2022. — arXiv:2203.02155. — URL: https://arxiv.org/abs/2203.02155 (дата обращения: 29.08.2026).
