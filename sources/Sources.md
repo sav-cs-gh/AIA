@@ -1,4 +1,4 @@
-### Список источников
+# Список источников
 
 ## 📚 1. Книги и монографии
 *Включает фундаментальные труды, учебные пособия, монографии и комплексные онлайн-учебники.*
@@ -391,7 +391,7 @@
 
 ## ⚙️ 3. Официальная документация, стандарты и электронные ресурсы
 
-# 1. Официальная документация платформ, библиотек и инструментов
+### 1. Официальная документация платформ, библиотек и инструментов
 
 1. About dbt Copilot [Электронный ресурс] // dbt Developer Hub. — URL: https://docs.getdbt.com/docs/cloud/dbt-copilot (дата обращения: 09.05.2026).
 2. Artificial Intelligence and Intelligent Applications — SQL Server [Электронный ресурс] // Microsoft Learn. — URL: https://learn.microsoft.com/ru-ru/sql/sql-server/ai/artificial-intelligence-intelligent-applications (дата обращения: 09.05.2026).
@@ -430,7 +430,7 @@
 35. XGBoost Documentation [Электронный ресурс]. — URL: https://xgboost.readthedocs.io/en/stable/ (дата обращения: 23.04.2026).
 36. ydata-profiling Documentation [Электронный ресурс]. — URL: https://docs.profiling.ydata.ai/latest/ (дата обращения: 15.10.2024).
 
-# 2. Стандарты, государственные и международные регуляторные материалы
+### 2. Стандарты, государственные и международные регуляторные материалы
 
 37. ГОСТ Р 58772-2019. Системы искусственного интеллекта. Термины и определения [Текст]. — Введ. 2020-09-01. — Москва : Стандартинформ, 2019. — 24 с.
 38. ISO 8000-1:2022. Data quality – Part 1: Overview and key concepts [Текст]. — Geneva : ISO, 2022. — 28 p.
@@ -442,7 +442,7 @@
 44. EU AI Act portal [Электронный ресурс]. — URL: https://artificialintelligenceact.eu/ (дата обращения: 09.05.2026).
 45. Responsible AI — AI Practice Playbooks [Электронный ресурс] // GovTech Singapore. — URL: https://playbooks.aip.gov.sg/responsibleai/responsibleai/ (дата обращения: 09.05.2026).
 
-# 3. Официальные справочные страницы, учебные материалы и отраслевые электронные ресурсы
+### 3. Официальные справочные страницы, учебные материалы и отраслевые электронные ресурсы
 
 46. e-Handbook of Statistical Methods: Time Series Analysis [Электронный ресурс] // NIST/SEMATECH. — URL: https://www.itl.nist.gov/div898/handbook/pmc/section4/pmc4.htm (дата обращения: 13.06.2026).
 47. Data quality overview [Электронный ресурс] // IBM. — URL: https://www.ibm.com/topics/data-quality (дата обращения: 11.04.2026).
