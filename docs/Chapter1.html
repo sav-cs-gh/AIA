@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<title>Граф связей: Основы интеллектуального анализа данных</title>
+<style>
+  * { box-sizing: border-box; }
+  body { margin:0; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif; background:#0d1014; color:#e8eaed; overflow:auto; }
+  svg { display:block; user-select:none; }
+  .main-title { font-size:26px; font-weight:800; fill:#fff; text-anchor:middle; letter-spacing:0.5px; }
+  .main-subtitle { font-size:12px; fill:#8ab4f8; text-anchor:middle; letter-spacing:2.5px; text-transform:uppercase; font-weight:500; }
+  .main-legend { font-size:11px; fill:#7a8290; text-anchor:middle; }
+  .title-line { stroke:url(#titleGradient); stroke-width:1.5; opacity:0.55; }
+  .cluster-zone { fill-opacity:0.04; stroke-opacity:0.5; stroke-width:1.8; stroke-dasharray:7,5; }
+  .subcluster-zone { fill-opacity:0.06; stroke-opacity:0.35; stroke-width:1; }
+  .cluster-label { font-size:14px; font-weight:700; letter-spacing:0.3px; }
+  .cluster-count { font-size:10px; opacity:0.5; }
+  .subcluster-label { font-size:11px; font-weight:700; letter-spacing:0.4px; }
+  .edge { fill:none; stroke-width:0.9; opacity:0.26; transition:opacity 0.2s, stroke-width 0.2s; }
+  .edge.dim { opacity:0.03; }
+  .edge.hi  { opacity:0.95; stroke-width:1.9; }
+  .edge-label { font-size:7.5px; font-family:Arial,sans-serif; text-anchor:middle; opacity:0.55; pointer-events:none; }
+  .edge-label.dim { opacity:0.03; }
+  .edge-label.hi  { opacity:1; font-weight:700; }
+  .node-circle { cursor:pointer; transition:filter 0.15s, stroke-width 0.15s; stroke-width:1.1; stroke:rgba(255,255,255,0.15); }
+  .node-circle:hover { filter:brightness(1.6) drop-shadow(0 0 6px currentColor); stroke-width:2; stroke:rgba(255,255,255,0.6); }
+  .node-circle.active { stroke:#8ab4f8; stroke-width:2.5; filter:brightness(1.3) drop-shadow(0 0 10px #8ab4f8); }
+  .node-circle.dim { opacity:0.08; }
+  .node-icon { pointer-events:none; }
+  .node-label { font-size:8px; fill:#dbe1ea; text-anchor:middle; pointer-events:none; font-weight:500; }
+  .node-group.dim .node-label, .node-group.dim .node-icon { opacity:0.1; }
+  .tooltip { position:fixed; max-width:420px; background:#1a2029; border:1px solid #2f3745; border-radius:10px; padding:11px 13px; font-size:12px; line-height:1.5; box-shadow:0 14px 40px rgba(0,0,0,0.7); pointer-events:none; z-index:1000; opacity:0; transform:translateY(4px); transition:opacity 0.12s, transform 0.12s; }
+  .tooltip.visible { opacity:1; transform:translateY(0); }
+  .tooltip h4 { margin:0 0 2px; font-size:13px; color:#fff; }
+  .tooltip .tt-sub { font-size:10px; text-transform:uppercase; letter-spacing:0.6px; margin-bottom:8px; font-weight:600; }
+  .tooltip .tt-desc { color:#c8cdd6; font-size:12px; line-height:1.55; }
+  .tooltip .tt-hint { margin-top:8px; padding-top:6px; border-top:1px solid #262c37; font-size:10px; color:#5f6775; }
+</style>
+</head>
+<body>
+
+<div id="graphWrap"><svg id="graph" xmlns="http://www.w3.org/2000/svg"></svg></div>
+<div class="tooltip" id="tooltip"></div>
+
+<script>
+// ============================================================
+// ПОДКАТЕГОРИИ (2 ряда по 3 категории)
+// ============================================================
+const SUBCATS = [
+  // ─── Row 1: concepts | tasks | datatypes ───
+  { id:'c1',  cat:'concepts',   name:'Этапы эволюции',              x:40,   w:190, color:'#7ba7ff' },
+  { id:'t1',  cat:'tasks',      name:'Задачи Data Mining',           x:300,  w:150, color:'#f5a623' },
+  { id:'t2',  cat:'tasks',      name:'ML: прогноз',                  x:465,  w:170, color:'#e05c5c' },
+  { id:'t3',  cat:'tasks',      name:'ML: кластер.',                 x:650,  w:170, color:'#e05c5c' },
+  { id:'t4',  cat:'tasks',      name:'Методы RL',                    x:835,  w:130, color:'#e05c5c' },
+  { id:'t5',  cat:'tasks',      name:'Основы Decision Intell.',      x:980,  w:240, color:'#7ba7ff' },
+  { id:'d1',  cat:'datatypes',  name:'По структуре',                 x:1290, w:130, color:'#00bcd4' },
+  { id:'d2',  cat:'datatypes',  name:'По природе',                   x:1435, w:130, color:'#00bcd4' },
+  // ─── Row 2: tech | analytics | challenges ───
+  { id:'i1',  cat:'tech',       name:'Типы обучения ML',             x:40,   w:140, color:'#7ba7ff' },
+  { id:'i2',  cat:'tech',       name:'AI Analytics',                 x:195,  w:130, color:'#f5a623' },
+  { id:'i3',  cat:'tech',       name:'Генеративные модели',          x:340,  w:160, color:'#e05c5c' },
+  { id:'i4',  cat:'tech',       name:'Данные и инфраструктура',      x:515,  w:180, color:'#5cb87a' },
+  { id:'a1',  cat:'analytics',  name:'Виды аналитики',               x:770,  w:130, color:'#f5a623' },
+  { id:'a2',  cat:'analytics',  name:'Инструменты',                  x:915,  w:130, color:'#5cb87a' },
+  { id:'ch1', cat:'challenges', name:'Данные и модели',              x:1110, w:150, color:'#a855f7' },
+  { id:'ch2', cat:'challenges', name:'Этика и право',                x:1275, w:140, color:'#e05c5c' },
+  { id:'ch3', cat:'challenges', name:'Генеративный ИИ',              x:1430, w:150, color:'#a855f7' },
+];
+
+// ============================================================
+// КАТЕГОРИИ: 1-й ряд — concepts/tasks/datatypes; 2-й — tech/analytics/challenges
+// ============================================================
+const CATS = {
+  concepts:   { name:'💡 Основные концепции',    color:'#5b8def', x:20,   y:140,  w:230  },
+  tasks:      { name:'🛠 Задачи и методы',       color:'#e05c5c', x:280,  y:140,  w:960  },
+  datatypes:  { name:'📊 Типы данных',           color:'#00bcd4', x:1270, y:140,  w:310  },
+  tech:       { name:'⚙️ Технологии ИИ',         color:'#a855f7', x:20,   y:708,  w:700  },
+  analytics:  { name:'📈 Аналитика',             color:'#f5a623', x:750,  y:708,  w:310  },
+  challenges: { name:'⚠️ Вызовы и ограничения',  color:'#e05c5c', x:1090, y:708,  w:510  },
+};
+
+// ============================================================
+// ОПИСАНИЯ
+// ============================================================
+const DESCRIPTIONS = {
+  2:'Извлечение закономерностей из больших массивов данных статистическими и алгоритмическими методами.',
+  3:'Междисциплинарная область о работе с данными на всём их жизненном цикле: от сбора до принятия решений.',
+  4:'Класс методов, позволяющих системе обучаться на данных без явного программирования правил.',
+  5:'Аналитические системы на основе ИИ, автоматизирующие интерпретацию данных и генерацию выводов.',
+  6:'Подход, объединяющий данные, модели и экспертизу для обоснованных управленческих решений.',
+  12:'Отнесение объектов к заранее известным классам на основе обучающей выборки.',
+  13:'Предсказание количественного значения целевой переменной по набору признаков.',
+  14:'Группировка объектов по схожести без заранее известных меток классов.',
+  15:'Поиск часто встречающихся комбинаций событий: «если A, то B».',
+  16:'Выявление наблюдений, существенно отклоняющихся от типичного поведения.',
+  17:'Анализ упорядоченных во времени событий с целью выявления паттернов и предсказания.',
+  18:'Сокращение числа признаков с сохранением максимальной информативности данных.',
+  19:'Модель линейной зависимости между признаками и целевой переменной.',
+  20:'Модель для бинарной классификации на основе логистической функции.',
+  21:'Иерархическая модель, разбивающая пространство признаков на решающие правила.',
+  22:'Ансамбль решающих деревьев, снижающий переобучение за счёт бэггинга.',
+  23:'Ансамблевый метод последовательного построения деревьев с коррекцией ошибок.',
+  24:'Метод построения разделяющей гиперплоскости с максимальным зазором.',
+  25:'Модели, состоящие из слоёв нейронов, способные аппроксимировать сложные зависимости.',
+  26:'Итеративный алгоритм кластеризации, минимизирующий внутрикластерную сумму квадратов.',
+  27:'Построение дерева вложенных кластеров по мере близости объектов.',
+  28:'Плотностная кластеризация, выделяющая произвольные по форме кластеры.',
+  29:'Метод главных компонент — линейное снижение размерности через ортогональные проекции.',
+  30:'Нейросетевая модель, обучаемая восстанавливать входные данные через сжатое представление.',
+  31:'Метод обучения с подкреплением на основе таблицы значений состояний и действий.',
+  32:'Deep Q-Network — нейросетевое приближение Q-функции.',
+  33:'Асинхронный актор-критик — параллельный метод обучения с подкреплением.',
+  34:'Раздел, изучающий формальные модели выбора решений в условиях неопределённости.',
+  35:'Дисциплина о применении математических методов для оптимизации решений.',
+  36:'Обучение на размеченных данных, где для каждого объекта известен правильный ответ.',
+  37:'Обучение на неразмеченных данных с поиском скрытой структуры.',
+  38:'Обучение через взаимодействие со средой с получением награды за действия.',
+  39:'Автоматизация выбора модели, гиперпараметров и признаков в ML.',
+  40:'Обработка естественного языка: анализ, понимание и генерация текста.',
+  41:'Text-to-SQL — преобразование запроса на естественном языке в SQL.',
+  42:'Text-to-Visualization — генерация визуализаций по текстовому описанию.',
+  43:'Методы ИИ, объясняющие свои решения в понятной человеку форме.',
+  44:'Класс моделей, способных создавать новые данные: текст, изображения, код.',
+  45:'Большие языковые модели на архитектуре трансформер.',
+  46:'Модели, генерирующие данные через постепенное удаление шума.',
+  47:'Генеративно-состязательные сети: генератор и дискриминатор обучаются совместно.',
+  48:'Вариационные автоэнкодеры — генеративные модели на основе вероятностного латентного пространства.',
+  49:'Архитектура на основе механизма самовнимания, основа современных LLM.',
+  50:'Системы, работающие одновременно с текстом, изображениями, аудио и другими модальностями.',
+  51:'Causal AI — методы выявления причинно-следственных связей, а не только корреляций.',
+  52:'Процессы извлечения, преобразования и загрузки данных в хранилища.',
+  53:'Векторное представление объектов в пространстве признаков, сохраняющее семантику.',
+  54:'Данные, представленные в виде векторов чисел для ML-моделей.',
+  55:'Данные в табличной форме с жёстко заданной схемой.',
+  56:'Данные с частичной структурой: JSON, XML, логи.',
+  57:'Текст, изображения, аудио — данные без явной структуры.',
+  58:'Упорядоченные во времени последовательности значений.',
+  59:'Непрерывно поступающие данные в реальном времени.',
+  60:'Данные, описывающие связи между объектами: узлы и рёбра.',
+  61:'Данные с географической привязкой: координаты, полигоны, маршруты. Требуют особых методов анализа пространственной автокорреляции.',
+  62:'Данные, объединяющие несколько модальностей одновременно.',
+  63:'Аналитика, отвечающая на вопрос «что произошло?».',
+  64:'Аналитика, отвечающая на вопрос «почему это произошло?».',
+  65:'Аналитика, предсказывающая будущие события на основе моделей.',
+  66:'Аналитика, рекомендующая оптимальные действия.',
+  67:'Business Intelligence — инструменты и практики анализа бизнес-данных.',
+  68:'Интерактивные панели с ключевыми показателями и графиками.',
+  69:'Регулярные или ad-hoc отчёты по данным.',
+  70:'Чат-интерфейсы для общения с данными на естественном языке.',
+  71:'ИИ-ассистенты, помогающие аналитику в работе с данными и моделями.',
+  72:'Степень пригодности данных для решения аналитической задачи.',
+  73:'Способность модели объяснить свои решения понятным человеку образом.',
+  74:'Модели, внутренняя логика которых непонятна даже разработчику.',
+  75:'Систематические искажения в решениях алгоритмов, связанные с данными или дизайном.',
+  76:'Риск раскрытия персональных данных через модели и аналитику.',
+  77:'Отсутствие понятного объяснения автоматизированных решений.',
+  78:'Вопрос о том, кто несёт ответственность за ошибки ИИ-систем.',
+  79:'Генерация моделью правдоподобной, но фактически неверной информации.',
+  80:'Зависимость качества генеративных моделей от обучающего корпуса.',
+  81:'Правовые и этические проблемы использования данных при обучении моделей.',
+  82:'Способность ИИ уверенно выдавать ложные факты и утверждения.',
+};
+
+// ============================================================
+// УЗЛЫ
+// ============================================================
+const NODES_RAW = [
+  [2,'Data Mining','c1'],[3,'Data Science','c1'],[4,'Machine Learning','c1'],
+  [5,'AI Analytics','c1'],[6,'Decision Intelligence','c1'],
+  [12,'Классификация','t1'],[13,'Регрессия','t1'],[14,'Кластеризация','t1'],
+  [15,'Поиск ассоциативных правил','t1'],[16,'Обнаружение аномалий','t1'],
+  [17,'Анализ последовательностей','t1'],[18,'Снижение размерности','t1'],
+  [19,'Линейная регрессия','t2'],[20,'Логистическая регрессия','t2'],
+  [21,'Деревья решений','t2'],[22,'Случайный лес','t2'],[23,'Градиентный бустинг','t2'],
+  [24,'Метод опорных векторов (SVM)','t2'],[25,'Нейронные сети','t2'],
+  [26,'K-means','t3'],[27,'Иерархическая кластеризация','t3'],[28,'DBSCAN','t3'],
+  [29,'PCA','t3'],[30,'Автоэнкодеры','t3'],
+  [31,'Q-learning','t4'],[32,'DQN','t4'],[33,'A3C','t4'],
+  [34,'Теория принятия решений','t5'],[35,'Исследование операций','t5'],
+  [36,'Обучение с учителем','i1'],[37,'Обучение без учителя','i1'],[38,'Обучение с подкреплением','i1'],
+  [39,'AutoML','i2'],[40,'NLP','i2'],[41,'NL2SQL','i2'],[42,'NL2Viz','i2'],
+  [43,'Объяснимый ИИ','i2'],[51,'Causal AI','i2'],
+  [44,'Генеративный ИИ','i3'],[45,'Большие языковые модели (LLM)','i3'],
+  [46,'Диффузионные модели','i3'],[47,'GAN','i3'],[48,'VAE','i3'],[49,'Трансформеры','i3'],
+  [50,'Мультимодальный ИИ','i3'],
+  [52,'ETL','i4'],[53,'Эмбеддинг','i4'],
+  [54,'Векторные данные','d1'],[55,'Структурированные данные','d1'],
+  [56,'Полуструктурированные данные','d1'],[57,'Неструктурированные данные','d1'],
+  [60,'Графовые данные','d1'],
+  [58,'Временные ряды','d2'],[59,'Потоковые данные','d2'],
+  [61,'Пространственные и геоданные','d2'],[62,'Мультимодальные данные','d2'],
+  [63,'Дескриптивная аналитика','a1'],[64,'Диагностическая аналитика','a1'],
+  [65,'Предиктивная аналитика','a1'],[66,'Прескриптивная аналитика','a1'],
+  [67,'Бизнес-аналитика (BI)','a1'],
+  [68,'Дашборды','a2'],[69,'Отчеты','a2'],
+  [70,'Диалоговые интерфейсы','a2'],[71,'Цифровые помощники аналитика','a2'],
+  [72,'Качество данных','ch1'],[73,'Интерпретируемость','ch1'],[74,'«Черный ящик»','ch1'],
+  [75,'Предвзятость алгоритмов','ch2'],[76,'Нарушение приватности','ch2'],
+  [77,'Непрозрачность автоматизированных решений','ch2'],
+  [78,'Ответственность за ошибочные рекомендации','ch2'],
+  [81,'Проблемы конфиденциальности и авторских прав','ch2'],
+  [79,'Галлюцинации','ch3'],[80,'Зависимость от качества обучающих данных','ch3'],
+  [82,'Генерация правдоподобной, но неверной информации','ch3'],
+];
+
+// ============================================================
+// СВЯЗИ (узел 61 больше не изолирован — добавлены связи с 16, 17, 72)
+// ============================================================
+const EDGES_RAW = [
+  // Эволюция
+  [2,3,'#7ba7ff','этап'],[3,4,'#7ba7ff','этап'],[4,5,'#7ba7ff','этап'],[5,6,'#7ba7ff','этап'],
+  // Задачи → методы ML
+  [12,20,'#e05c5c',''],[12,21,'#e05c5c',''],[12,22,'#e05c5c',''],[12,23,'#e05c5c',''],
+  [12,24,'#e05c5c',''],[12,25,'#e05c5c',''],
+  [13,19,'#e05c5c',''],[13,21,'#e05c5c',''],[13,22,'#e05c5c',''],[13,23,'#e05c5c',''],
+  [14,26,'#e05c5c',''],[14,27,'#e05c5c',''],[14,28,'#e05c5c',''],
+  [18,29,'#e05c5c',''],[18,30,'#e05c5c',''],[16,28,'#e05c5c',''],
+  // Типы обучения
+  [12,36,'#7ba7ff',''],[13,36,'#7ba7ff',''],
+  [14,37,'#7ba7ff',''],[15,37,'#7ba7ff',''],[16,37,'#7ba7ff',''],[18,37,'#7ba7ff',''],
+  [31,38,'#e05c5c',''],[32,38,'#e05c5c',''],[33,38,'#e05c5c',''],
+  [19,36,'#7ba7ff',''],[20,36,'#7ba7ff',''],[21,36,'#7ba7ff',''],[22,36,'#7ba7ff',''],
+  [23,36,'#7ba7ff',''],[24,36,'#7ba7ff',''],[25,36,'#7ba7ff',''],
+  [26,37,'#7ba7ff',''],[27,37,'#7ba7ff',''],[28,37,'#7ba7ff',''],[29,37,'#7ba7ff',''],[30,37,'#7ba7ff',''],
+  // AI Analytics
+  [4,39,'#5cb87a',''],[4,40,'#5cb87a',''],[4,43,'#5cb87a',''],[4,51,'#5cb87a',''],
+  [39,21,'#5cb87a',''],[39,22,'#5cb87a',''],[39,23,'#5cb87a',''],
+  [40,45,'#5cb87a',''],[41,45,'#5cb87a',''],[42,45,'#5cb87a',''],
+  [43,73,'#5cb87a',''],[51,6,'#5cb87a',''],
+  [5,39,'#5cb87a',''],[5,40,'#5cb87a',''],[5,44,'#5cb87a',''],[5,51,'#5cb87a',''],
+  // Генеративные модели
+  [44,45,'#e05c5c',''],[44,46,'#e05c5c',''],[44,47,'#e05c5c',''],
+  [44,48,'#e05c5c',''],[44,49,'#e05c5c',''],
+  [45,49,'#e05c5c',''],[49,50,'#e05c5c',''],
+  [25,49,'#e05c5c',''],[25,44,'#e05c5c',''],[25,50,'#e05c5c',''],[30,48,'#e05c5c',''],
+  // Типы данных
+  [53,54,'#00bcd4',''],[54,57,'#00bcd4',''],[54,56,'#00bcd4',''],
+  [62,50,'#00bcd4',''],[52,55,'#00bcd4',''],[52,72,'#00bcd4',''],
+  [55,12,'#00bcd4',''],[58,17,'#00bcd4',''],[59,16,'#00bcd4',''],
+  [57,40,'#00bcd4',''],[60,6,'#00bcd4',''],[62,40,'#00bcd4',''],
+  // НОВЫЕ СВЯЗИ для узла 61 «Пространственные и геоданные»
+  [61,16,'#00bcd4',''],[61,17,'#00bcd4',''],[61,72,'#00bcd4','пространств.'],
+  // Аналитика
+  [63,64,'#f5a623',''],[64,65,'#f5a623',''],[65,66,'#f5a623',''],
+  [67,68,'#f5a623',''],[67,69,'#f5a623',''],
+  [63,2,'#f5a623',''],[64,2,'#f5a623',''],[65,4,'#f5a623',''],[65,5,'#f5a623',''],[66,6,'#f5a623',''],
+  [70,41,'#f5a623',''],[70,42,'#f5a623',''],
+  [71,39,'#f5a623',''],[71,40,'#f5a623',''],[71,43,'#f5a623',''],
+  // Вызовы
+  [72,80,'#a855f7',''],[72,75,'#a855f7',''],[73,74,'#a855f7','взаим.'],
+  [79,45,'#a855f7',''],[79,82,'#a855f7',''],[76,45,'#a855f7',''],
+  [81,45,'#a855f7',''],[77,74,'#a855f7',''],[78,66,'#a855f7',''],
+  [82,45,'#a855f7',''],[80,44,'#a855f7',''],
+  // Основы DI
+  [6,34,'#7ba7ff',''],[6,35,'#7ba7ff',''],
+  [34,66,'#7ba7ff',''],[35,66,'#7ba7ff',''],
+];
+
+const ICONS = {
+  flag:    [ ['path',{d:'M-1,-8 L-1,8 M-1,-8 L7,-5 L-1,-2'}] ],
+  check:   [ ['path',{d:'M-8,0 L-3,5 L8,-6'}] ],
+  wrench:  [ ['path',{d:'M-6,-6 L-2,-2 L-6,2 L-4,4 L0,0 L4,4 L8,0 L4,-4 L0,-8 L-4,-4 Z'}] ],
+  gear:    [ ['circle',{cx:0,cy:0,r:4}],
+             ['path',{d:'M0,-9 L0,-6 M0,6 L0,9 M-9,0 L-6,0 M6,0 L9,0 M-6,-6 L-4,-4 M4,4 L6,6 M-6,6 L-4,4 M4,-4 L6,-6'}] ],
+  database:[ ['ellipse',{cx:0,cy:-5,rx:7,ry:2.5}],
+             ['path',{d:'M-7,-5 L-7,5 Q-7,7.5 0,7.5 Q7,7.5 7,5 L7,-5'}],
+             ['path',{d:'M-7,0 Q-7,2.5 0,2.5 Q7,2.5 7,0'}] ],
+  shield:  [ ['path',{d:'M0,-8 L7,-5 L7,1 Q7,6 0,8 Q-7,6 -7,1 L-7,-5 Z'}] ]
+};
+const SUBCAT_ICON = {
+  c1:'flag',
+  t1:'check', t2:'wrench', t3:'wrench', t4:'gear', t5:'flag',
+  i1:'flag', i2:'wrench', i3:'gear', i4:'database',
+  d1:'database', d2:'database',
+  a1:'check', a2:'gear',
+  ch1:'shield', ch2:'shield', ch3:'shield'
+};
+
+const SUBCAT_TO_CAT = {};
+SUBCATS.forEach(s => SUBCAT_TO_CAT[s.id] = s.cat);
+
+const LAYOUT = (() => {
+  const ROW_H = 60, SUB_HEADER = 32, BOTTOM_PAD = 24, CAT_HEADER = 48;
+  const bySub = {};
+  SUBCATS.forEach(s => bySub[s.id] = []);
+  NODES_RAW.forEach(([num, name, sub]) => bySub[sub].push({ id:'n'+num, num, title:name, sub }));
+
+  SUBCATS.forEach(sc => {
+    const cat = CATS[sc.cat];
+    sc.y = cat.y + CAT_HEADER;
+    sc.count = bySub[sc.id].length;
+    sc.h = SUB_HEADER + Math.max(1, sc.count) * ROW_H + BOTTOM_PAD;
+  });
+
+  Object.entries(CATS).forEach(([cid, cat]) => {
+    const subs = SUBCATS.filter(s => s.cat === cid);
+    cat.h = CAT_HEADER + Math.max(...subs.map(s => s.h)) + 14;
+  });
+
+  Object.values(bySub).forEach(arr => {
+    if (!arr.length) return;
+    const sc = SUBCATS.find(s => s.id === arr[0].sub);
+    arr.forEach((n, i) => {
+      n.x = sc.x + sc.w / 2;
+      n.y = sc.y + SUB_HEADER + 20 + i * ROW_H;
+      n.r = 13;
+    });
+  });
+
+  const nodes = [];
+  Object.values(bySub).forEach(arr => arr.forEach(n => nodes.push(n)));
+
+  const totalW = 1600;
+  const totalH = Math.max(...Object.values(CATS).map(c => c.y + c.h)) + 60;
+  return { nodes, totalW, totalH };
+})();
+
+const NS = 'http://www.w3.org/2000/svg';
+const tooltip = document.getElementById('tooltip');
+let pinnedNode = null;
+
+function createIcon(name) {
+  const g = document.createElementNS(NS, 'g');
+  (ICONS[name] || ICONS.check).forEach(([tag, attrs]) => {
+    const el = document.createElementNS(NS, tag);
+    Object.entries(attrs).forEach(([k, v]) => el.setAttribute(k, v));
+    g.appendChild(el);
+  });
+  return g;
+}
+function wrapLabel(text, max) {
+  if (text.length <= max) return [text];
+  const words = text.split(' '); const lines = []; let cur = '';
+  words.forEach(w => {
+    if ((cur + ' ' + w).trim().length <= max) cur = (cur + ' ' + w).trim();
+    else { if (cur) lines.push(cur); cur = w; }
+  });
+  if (cur) lines.push(cur);
+  return lines.slice(0, 3);
+}
+function escapeHtml(s) {
+  return String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+}
+
+function render() {
+  const { nodes, totalW, totalH } = LAYOUT;
+  const svg = document.getElementById('graph');
+  svg.setAttribute('width', totalW);
+  svg.setAttribute('height', totalH);
+  svg.setAttribute('viewBox', `0 0 ${totalW} ${totalH}`);
+
+  const defs = document.createElementNS(NS, 'defs');
+  const grad = document.createElementNS(NS, 'linearGradient');
+  grad.setAttribute('id', 'titleGradient');
+  grad.setAttribute('x1', '0%'); grad.setAttribute('x2', '100%');
+  [['0%','#5b8def','0'],['20%','#8ab4f8','1'],['50%','#ffffff','1'],
+   ['80%','#8ab4f8','1'],['100%','#5b8def','0']].forEach(([off, col, op]) => {
+    const s = document.createElementNS(NS, 'stop');
+    s.setAttribute('offset', off); s.setAttribute('stop-color', col); s.setAttribute('stop-opacity', op);
+    grad.appendChild(s);
+  });
+  defs.appendChild(grad); svg.appendChild(defs);
+
+  const titleGroup = document.createElementNS(NS, 'g');
+  const addText = (cls, y, text) => {
+    const t = document.createElementNS(NS, 'text');
+    t.setAttribute('class', cls); t.setAttribute('x', totalW / 2); t.setAttribute('y', y);
+    t.textContent = text; return t;
+  };
+  titleGroup.appendChild(addText('main-subtitle', 32, 'ИНТЕРАКТИВНЫЙ ГРАФ СВЯЗЕЙ · ЛЕКЦИЯ 1'));
+  titleGroup.appendChild(addText('main-title', 66, 'Основы интеллектуального анализа данных и ИИ'));
+  const divider = document.createElementNS(NS, 'line');
+  divider.setAttribute('class', 'title-line');
+  divider.setAttribute('x1', totalW * 0.18); divider.setAttribute('x2', totalW * 0.82);
+  divider.setAttribute('y1', 84); divider.setAttribute('y2', 84);
+  titleGroup.appendChild(divider);
+  titleGroup.appendChild(addText('main-legend', 104,
+    `${NODES_RAW.length} понятий · ${SUBCATS.length} подкатегорий · ${Object.keys(CATS).length} категорий · ${EDGES_RAW.length} связей · 0 изолированных узлов`));
+  svg.appendChild(titleGroup);
+
+  Object.entries(CATS).forEach(([cid, cat]) => {
+    const g = document.createElementNS(NS, 'g');
+    const bg = document.createElementNS(NS, 'rect');
+    bg.setAttribute('x', cat.x); bg.setAttribute('y', cat.y);
+    bg.setAttribute('width', cat.w); bg.setAttribute('height', cat.h);
+    bg.setAttribute('rx', 14); bg.setAttribute('fill', cat.color);
+    bg.setAttribute('class', 'cluster-zone'); bg.setAttribute('stroke', cat.color);
+    g.appendChild(bg);
+    const t = document.createElementNS(NS, 'text');
+    t.setAttribute('x', cat.x + 18); t.setAttribute('y', cat.y + 30);
+    t.setAttribute('class', 'cluster-label'); t.setAttribute('fill', cat.color);
+    t.textContent = cat.name; g.appendChild(t);
+    const cnt = NODES_RAW.filter(n => SUBCAT_TO_CAT[n[2]] === cid).length;
+    const ce = document.createElementNS(NS, 'text');
+    ce.setAttribute('x', cat.x + cat.w - 18); ce.setAttribute('y', cat.y + 30);
+    ce.setAttribute('class', 'cluster-count'); ce.setAttribute('fill', cat.color);
+    ce.setAttribute('text-anchor', 'end');
+    ce.textContent = cnt + ' узлов'; g.appendChild(ce);
+    svg.appendChild(g);
+  });
+
+  SUBCATS.forEach(sc => {
+    const g = document.createElementNS(NS, 'g');
+    const bg = document.createElementNS(NS, 'rect');
+    bg.setAttribute('x', sc.x); bg.setAttribute('y', sc.y);
+    bg.setAttribute('width', sc.w); bg.setAttribute('height', sc.h);
+    bg.setAttribute('rx', 8); bg.setAttribute('fill', sc.color);
+    bg.setAttribute('class', 'subcluster-zone'); bg.setAttribute('stroke', sc.color);
+    g.appendChild(bg);
+    const t = document.createElementNS(NS, 'text');
+    t.setAttribute('x', sc.x + sc.w / 2); t.setAttribute('y', sc.y + 20);
+    t.setAttribute('class', 'subcluster-label'); t.setAttribute('fill', sc.color);
+    t.setAttribute('text-anchor', 'middle'); t.textContent = sc.name;
+    g.appendChild(t);
+    const ce = document.createElementNS(NS, 'text');
+    ce.setAttribute('x', sc.x + sc.w - 8); ce.setAttribute('y', sc.y + 20);
+    ce.setAttribute('class', 'cluster-count'); ce.setAttribute('fill', sc.color);
+    ce.setAttribute('text-anchor', 'end'); ce.textContent = sc.count;
+    g.appendChild(ce);
+    svg.appendChild(g);
+  });
+
+  const nodeMap = {};
+  nodes.forEach(n => nodeMap[n.id] = n);
+
+  const edgesG = document.createElementNS(NS, 'g');
+  const edgeEls = [], edgeLabelEls = [];
+
+  EDGES_RAW.forEach(([fromNum, toNum, color, label]) => {
+    const a = nodeMap['n'+fromNum], b = nodeMap['n'+toNum];
+    if (!a || !b) return;
+    const dx = b.x - a.x, dy = b.y - a.y;
+    const dist = Math.sqrt(dx*dx + dy*dy) || 1;
+    const ux = dx/dist, uy = dy/dist;
+    const x1 = a.x + ux*a.r, y1 = a.y + uy*a.r;
+    const x2 = b.x - ux*b.r, y2 = b.y - uy*b.r;
+    const mx = (x1+x2)/2, my = (y1+y2)/2;
+    const off = 0.12 * dist;
+    const cx = mx - uy*off, cy = my + ux*off;
+
+    const path = document.createElementNS(NS, 'path');
+    path.setAttribute('class', 'edge');
+    path.setAttribute('d', `M ${x1} ${y1} Q ${cx} ${cy} ${x2} ${y2}`);
+    path.setAttribute('stroke', color);
+    path.dataset.from = a.id; path.dataset.to = b.id;
+    edgesG.appendChild(path); edgeEls.push(path);
+
+    if (label) {
+      const t = 0.5;
+      const lx = (1-t)*(1-t)*x1 + 2*(1-t)*t*cx + t*t*x2;
+      const ly = (1-t)*(1-t)*y1 + 2*(1-t)*t*cy + t*t*y2;
+      const txt = document.createElementNS(NS, 'text');
+      txt.setAttribute('class', 'edge-label');
+      txt.setAttribute('x', lx); txt.setAttribute('y', ly - 2);
+      txt.setAttribute('fill', color); txt.textContent = label;
+      txt.dataset.from = a.id; txt.dataset.to = b.id;
+      edgesG.appendChild(txt); edgeLabelEls.push(txt);
+    }
+  });
+  svg.appendChild(edgesG);
+
+  const nodesG = document.createElementNS(NS, 'g');
+  const nodeEls = [];
+
+  nodes.forEach(n => {
+    const sc = SUBCATS.find(s => s.id === n.sub);
+    const g = document.createElementNS(NS, 'g');
+    g.setAttribute('class', 'node-group'); g.dataset.id = n.id;
+
+    const circle = document.createElementNS(NS, 'circle');
+    circle.setAttribute('class', 'node-circle');
+    circle.setAttribute('cx', n.x); circle.setAttribute('cy', n.y);
+    circle.setAttribute('r', n.r); circle.setAttribute('fill', sc.color);
+    circle.style.color = sc.color;
+    g.appendChild(circle);
+
+    const iconWrap = document.createElementNS(NS, 'g');
+    iconWrap.setAttribute('class', 'node-icon');
+    iconWrap.setAttribute('transform', `translate(${n.x}, ${n.y}) scale(0.55)`);
+    iconWrap.setAttribute('fill', 'none');
+    iconWrap.setAttribute('stroke', '#ffffff');
+    iconWrap.setAttribute('stroke-width', '2.4');
+    iconWrap.setAttribute('stroke-linecap', 'round');
+    iconWrap.setAttribute('stroke-linejoin', 'round');
+    iconWrap.appendChild(createIcon(SUBCAT_ICON[n.sub]));
+    g.appendChild(iconWrap);
+
+    const label = document.createElementNS(NS, 'text');
+    label.setAttribute('class', 'node-label');
+    label.setAttribute('x', n.x); label.setAttribute('y', n.y + n.r + 11);
+    wrapLabel(n.title, 24).forEach((ln, i) => {
+      const tspan = document.createElementNS(NS, 'tspan');
+      tspan.setAttribute('x', n.x); tspan.setAttribute('dy', i === 0 ? 0 : 9);
+      tspan.textContent = ln; label.appendChild(tspan);
+    });
+    g.appendChild(label);
+
+    g.addEventListener('mouseenter', evt => {
+      if (!pinnedNode) highlightNode(n.id, edgeEls, edgeLabelEls, nodeEls);
+      showTooltip(n, sc, evt);
+    });
+    g.addEventListener('mousemove', moveTooltip);
+    g.addEventListener('mouseleave', () => {
+      if (!pinnedNode) { clearHighlight(edgeEls, edgeLabelEls, nodeEls); hideTooltip(); }
+    });
+    g.addEventListener('click', evt => {
+      evt.stopPropagation();
+      if (pinnedNode && pinnedNode.id === n.id) {
+        pinnedNode = null;
+        clearHighlight(edgeEls, edgeLabelEls, nodeEls);
+        tooltip.classList.remove('visible');
+      } else {
+        pinnedNode = n;
+        highlightNode(n.id, edgeEls, edgeLabelEls, nodeEls);
+        showTooltip(n, sc, { clientX: evt.clientX, clientY: evt.clientY }, true);
+      }
+    });
+
+    nodesG.appendChild(g);
+    nodeEls.push({ id: n.id, g, circle });
+  });
+  svg.appendChild(nodesG);
+}
+
+function highlightNode(id, edgeEls, edgeLabelEls, nodeEls) {
+  const conn = new Set([id]);
+  edgeEls.forEach(el => {
+    if (el.dataset.from === id || el.dataset.to === id) {
+      el.classList.add('hi'); el.classList.remove('dim');
+      conn.add(el.dataset.from); conn.add(el.dataset.to);
+    } else { el.classList.add('dim'); el.classList.remove('hi'); }
+  });
+  edgeLabelEls.forEach(el => {
+    if (el.dataset.from === id || el.dataset.to === id) {
+      el.classList.add('hi'); el.classList.remove('dim');
+    } else { el.classList.add('dim'); el.classList.remove('hi'); }
+  });
+  nodeEls.forEach(ne => {
+    if (conn.has(ne.id)) { ne.circle.classList.remove('dim'); ne.g.classList.remove('dim'); }
+    else { ne.circle.classList.add('dim'); ne.g.classList.add('dim'); }
+  });
+}
+function clearHighlight(edgeEls, edgeLabelEls, nodeEls) {
+  edgeEls.forEach(el => el.classList.remove('hi','dim'));
+  edgeLabelEls.forEach(el => el.classList.remove('hi','dim'));
+  nodeEls.forEach(ne => {
+    ne.circle.classList.remove('dim','active');
+    ne.g.classList.remove('dim');
+  });
+}
+function showTooltip(n, sc, evt, isPinned) {
+  const cat = CATS[sc.cat];
+  const desc = DESCRIPTIONS[n.num] || '';
+  tooltip.innerHTML = `
+    <h4>${escapeHtml(n.title)}</h4>
+    <div class="tt-sub" style="color:${sc.color}">${escapeHtml(cat.name.replace(/^[^\s]+\s/, ''))} · ${escapeHtml(sc.name)}</div>
+    <div class="tt-desc">${escapeHtml(desc)}</div>
+    <div class="tt-hint">${isPinned ? 'Кликните ещё раз, чтобы открепить' : 'Кликните, чтобы закрепить →'}</div>
+  `;
+  tooltip.classList.add('visible');
+  moveTooltip(evt);
+}
+function moveTooltip(evt) {
+  const pad = 16;
+  const w = tooltip.offsetWidth, h = tooltip.offsetHeight;
+  let x = evt.clientX + pad, y = evt.clientY + pad;
+  if (x + w > window.innerWidth - 8)  x = evt.clientX - w - pad;
+  if (y + h > window.innerHeight - 8) y = evt.clientY - h - pad;
+  tooltip.style.left = Math.max(8, x) + 'px';
+  tooltip.style.top  = Math.max(8, y) + 'px';
+}
+function hideTooltip() { if (!pinnedNode) tooltip.classList.remove('visible'); }
+
+function clearAll() {
+  pinnedNode = null;
+  document.querySelectorAll('.edge').forEach(el => el.classList.remove('hi','dim'));
+  document.querySelectorAll('.edge-label').forEach(el => el.classList.remove('hi','dim'));
+  document.querySelectorAll('.node-circle').forEach(el => el.classList.remove('dim','active'));
+  document.querySelectorAll('.node-group').forEach(el => el.classList.remove('dim'));
+  tooltip.classList.remove('visible');
+}
+document.addEventListener('click', () => { if (pinnedNode) clearAll(); });
+document.addEventListener('keydown', e => { if (e.key === 'Escape' && pinnedNode) clearAll(); });
+
+render();
+</script>
+</body>
+</html>
