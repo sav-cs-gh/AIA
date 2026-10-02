@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<title>Граф связей: Образование в потоке перемен</title>
+<style>
+  * { box-sizing: border-box; }
+  body { margin:0; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif; background:#0d1014; color:#e8eaed; overflow:auto; }
+  svg { display:block; user-select:none; }
+  .main-title { font-size:26px; font-weight:800; fill:#fff; text-anchor:middle; letter-spacing:0.5px; }
+  .main-subtitle { font-size:12px; fill:#8ab4f8; text-anchor:middle; letter-spacing:2.5px; text-transform:uppercase; font-weight:500; }
+  .main-legend { font-size:11px; fill:#7a8290; text-anchor:middle; }
+  .title-line { stroke:url(#titleGradient); stroke-width:1.5; opacity:0.55; }
+  .category-panel { fill-opacity:0.05; stroke-opacity:0.55; stroke-width:1.8; stroke-dasharray:7,5; }
+  .sub-zone { fill-opacity:0.06; stroke-opacity:0.3; stroke-width:1; }
+  .cat-label { font-size:15px; font-weight:700; letter-spacing:0.3px; }
+  .sub-label { font-size:11px; font-weight:700; letter-spacing:0.4px; }
+  .cat-count { font-size:10px; opacity:0.5; }
+  .edge { fill:none; stroke-width:0.9; opacity:0.28; transition:opacity 0.2s, stroke-width 0.2s; }
+  .edge.dim { opacity:0.03; }
+  .edge.hi  { opacity:0.95; stroke-width:1.9; }
+  .edge-label { font-size:7.5px; font-family:Arial,sans-serif; text-anchor:middle; opacity:0.55; pointer-events:none; }
+  .edge-label.dim { opacity:0.03; }
+  .edge-label.hi  { opacity:1; font-weight:700; }
+  .node-circle { cursor:pointer; transition:filter 0.15s, stroke-width 0.15s; stroke-width:1.1; stroke:rgba(255,255,255,0.15); }
+  .node-circle:hover { filter:brightness(1.6) drop-shadow(0 0 6px currentColor); stroke-width:2; stroke:rgba(255,255,255,0.6); }
+  .node-circle.dim { opacity:0.08; }
+  .node-label { font-size:11px; fill:#dbe1ea; text-anchor:middle; pointer-events:none; font-weight:500; }
+  .node-group.dim .node-label, .node-group.dim .node-icon { opacity:0.1; }
+  .tooltip { position:fixed; max-width:420px; background:#1a2029; border:1px solid #2f3745; border-radius:10px; padding:11px 13px; font-size:12px; line-height:1.5; box-shadow:0 14px 40px rgba(0,0,0,0.7); pointer-events:none; z-index:1000; opacity:0; transform:translateY(4px); transition:opacity 0.12s, transform 0.12s; }
+  .tooltip.visible { opacity:1; transform:translateY(0); }
+  .tooltip h4 { margin:0 0 2px; font-size:13px; color:#fff; }
+  .tooltip .tt-sub { font-size:10px; text-transform:uppercase; letter-spacing:0.6px; margin-bottom:8px; font-weight:600; }
+  .tooltip .tt-desc { color:#c8cdd6; font-size:12px; line-height:1.55; }
+  .tooltip .tt-hint { margin-top:8px; padding-top:6px; border-top:1px solid #262c37; font-size:10px; color:#5f6775; }
+</style>
+</head>
+<body>
+
+<div id="graphWrap"><svg id="graph" xmlns="http://www.w3.org/2000/svg"></svg></div>
+<div class="tooltip" id="tooltip"></div>
+
+<script>
+// ============== ДАННЫЕ ==============
+const CATEGORIES = [
+  {
+    id: 'diag', name: '🔮 Диагностика эпохи', color: '#5b8def',
+    subs: [
+      { name: 'Модели мира', nodes: [
+        { num: 1, title: 'SPOD' },
+        { num: 2, title: 'VUCA' },
+        { num: 3, title: 'BANI' },
+        { num: 4, title: 'TACI' },
+      ]}
+    ]
+  },
+  {
+    id: 'trends', name: '📈 Тенденции образования', color: '#00bcd4',
+    subs: [
+      { name: 'Принципы', nodes: [
+        { num: 7, title: 'Гуманизация' },
+        { num: 8, title: 'Гуманитаризация' },
+        { num: 9, title: 'Демократизация' },
+        { num: 10, title: 'Индивидуализация' },
+        { num: 11, title: 'Вариативность' },
+        { num: 12, title: 'Стандартизация' },
+        { num: 13, title: 'Экологизация' },
+        { num: 14, title: 'Дифференциация' },
+        { num: 15, title: 'Интегративность' },
+      ]}
+    ]
+  },
+  {
+    id: 'methods', name: '🧭 Методологические подходы', color: '#5cb87a',
+    subs: [
+      { name: 'Человек', nodes: [
+        { num: 22, title: 'Антропологический' },
+        { num: 23, title: 'Личностно-ориент.' },
+        { num: 24, title: 'Субъектный' },
+      ]},
+      { name: 'Культура', nodes: [
+        { num: 25, title: 'Культурологический' },
+        { num: 26, title: 'Поликультурный' },
+      ]},
+      { name: 'Специальные', nodes: [
+        { num: 27, title: 'Травма-информативный' },
+        { num: 28, title: 'Габитуальный' },
+        { num: 29, title: 'Эрратологический' },
+        { num: 30, title: 'Ресурсный' },
+      ]},
+      { name: 'Антропопрактика', nodes: [
+        { num: 6, title: 'Антропопрактика' },
+      ]}
+    ]
+  },
+  {
+    id: 'exis', name: '🌀 Экзистенциальный подход', color: '#a855f7',
+    subs: [
+      { name: 'Определение', nodes: [
+        { num: 31, title: 'Экзистенциальный подход' },
+      ]},
+      { name: 'Принципы', nodes: [
+        { num: 32, title: 'Фокус на ученике' },
+        { num: 33, title: 'Диалог и встреча' },
+        { num: 34, title: 'Свобода и ответств.' },
+        { num: 35, title: 'Поиск смысла' },
+        { num: 36, title: 'Принятие неопр.' },
+        { num: 37, title: 'Аутентичность' },
+      ]},
+      { name: 'Состояния личности', nodes: [
+        { num: 38, title: 'Экз. безопасность' },
+        { num: 39, title: 'Экз. грамотность' },
+        { num: 40, title: 'Экз. исполненность' },
+        { num: 41, title: 'Экз. компетенция' },
+        { num: 42, title: 'Экз. самоопределение' },
+        { num: 43, title: 'Экз. кризис' },
+      ]},
+      { name: 'Ценности', nodes: [
+        { num: 44, title: 'Экз. ценности' },
+        { num: 45, title: 'Жизнь' },
+        { num: 46, title: 'Смерть' },
+        { num: 47, title: 'Выбор' },
+        { num: 48, title: 'Любовь' },
+        { num: 49, title: 'Смысл' },
+        { num: 50, title: 'Творчество' },
+      ]},
+      { name: 'Средства', nodes: [
+        { num: 51, title: 'Экз. диалог' },
+        { num: 52, title: 'Экз. сторителлинг' },
+        { num: 53, title: 'Экз. путешествие' },
+      ]},
+    ]
+  },
+  {
+    id: 'progs', name: '🎓 Образовательные программы', color: '#9c27b0',
+    subs: [
+      { name: 'Зарубежные', nodes: [
+        { num: 70, title: 'Building ed. bridges' },
+        { num: 71, title: 'Intergroup Dialogue' },
+      ]}
+    ]
+  },
+  {
+    id: 'diag2', name: '📊 Диагностический инструментарий', color: '#7ba7ff',
+    subs: [
+      { name: 'Методики', nodes: [
+        { num: 59, title: 'Шкала экзистенции' },
+        { num: 60, title: 'Тест экз. мотиваций' },
+        { num: 61, title: 'Опросник СЖО' },
+        { num: 62, title: 'Тест жизнестойкости' },
+      ]}
+    ]
+  },
+  {
+    id: 'strategies', name: '🔄 Стратегии трансформации', color: '#f5a623',
+    subs: [
+      { name: 'Виды стратегий', nodes: [
+        { num: 16, title: 'Цифровая' },
+        { num: 17, title: 'Интерактивная' },
+        { num: 18, title: 'Гуманистическая' },
+      ]},
+      { name: 'Концепции', nodes: [
+        { num: 19, title: 'Education 5.0' },
+      ]},
+      { name: 'Процессы', nodes: [
+        { num: 20, title: 'Ре-цифровизация' },
+        { num: 21, title: 'Ре-гуманизация' },
+      ]}
+    ]
+  },
+  {
+    id: 'ethnic', name: '🌍 Межэтнические отношения', color: '#ff9800',
+    subs: [
+      { name: 'Понятия', nodes: [
+        { num: 63, title: 'Гармонизация' },
+        { num: 64, title: 'Готовность педагога' },
+      ]},
+      { name: 'Компоненты готовности', nodes: [
+        { num: 65, title: 'Когнитивный' },
+        { num: 66, title: 'Аксиологический' },
+        { num: 67, title: 'Операциональный' },
+        { num: 68, title: 'Рефлексивный' },
+      ]}
+    ]
+  },
+  {
+    id: 'instr', name: '🛠 Педагогические инструменты', color: '#e05c5c',
+    subs: [
+      { name: 'Интерактивные', nodes: [
+        { num: 54, title: 'Хакатон' },
+        { num: 55, title: 'Экз. шаффл' },
+        { num: 56, title: 'Арт-сессия' },
+        { num: 57, title: 'Тренинг' },
+      ]},
+      { name: 'Проектные', nodes: [
+        { num: 58, title: 'Форсайт-проект' },
+      ]}
+    ]
+  },
+  {
+    id: 'persons', name: '👤 Персоналии', color: '#607d8b',
+    subs: [
+      { name: 'Философы', nodes: [
+        { num: 76, title: 'С. Кьеркегор' },
+        { num: 77, title: 'Н. Бердяев' },
+      ]},
+      { name: 'Психологи', nodes: [
+        { num: 78, title: 'В. Франкл' },
+        { num: 80, title: 'Д. Леонтьев' },
+      ]},
+      { name: 'Психотерапевты', nodes: [
+        { num: 79, title: 'И. Ялом' },
+      ]}
+    ]
+  },
+];
+
+// ============== ОПИСАНИЯ ==============
+const DESCRIPTIONS = {
+  1: 'Модель устойчивого, предсказуемого, простого и определённого мира.',
+  2: 'Модель изменчивого, неопределённого, сложного и двусмысленного мира.',
+  3: 'Модель хрупкого, тревожного, нелинейного и непонятного мира.',
+  4: 'Модель турбулентного, случайного, хаотичного и враждебного мира.',
+  6: 'Особый вид деятельности, направленный на развитие и преобразование человеческого потенциала.',
+  7: 'Тенденция усиления человеческого начала в образовании, внимание к личности обучающегося.',
+  8: 'Усиление роли гуманитарных дисциплин и гуманитарного знания в образовании.',
+  9: 'Развитие демократических начал в управлении образованием.',
+  10: 'Ориентация на индивидуальные особенности и траектории развития каждого обучающегося.',
+  11: 'Многообразие образовательных программ, форм и методов, обеспечивающее выбор.',
+  12: 'Введение и соблюдение образовательных стандартов, обеспечивающих единство требований.',
+  13: 'Включение экологических знаний и ценностей в содержание образования.',
+  14: 'Учёт различий между группами обучающихся при организации образовательного процесса.',
+  15: 'Усиление взаимосвязей между различными компонентами и уровнями образования.',
+  16: 'Интеграция искусственного интеллекта, VR/AR-технологий, виртуальных лабораторий и смешанного обучения.',
+  17: 'Геймификация, проектное обучение, обучение на основе опыта и совместное обучение.',
+  18: 'Персонализированное обучение, саморегулируемое обучение, ценностно-смысловые технологии.',
+  19: 'Концепция перехода от ре-цифровизации к ре-гуманизации, синтез цифровых и гуманистических начал.',
+  20: 'Процесс всё более глубокого проникновения цифровых технологий в образование.',
+  21: 'Возвращение гуманистических ценностей и смыслов в образование в условиях цифровизации.',
+  22: 'Подход, рассматривающий человека как целостное существо, его сущностные силы и потенциал.',
+  23: 'Подход, ориентированный на личность обучающегося, её интересы, ценности и развитие.',
+  24: 'Подход, рассматривающий обучающегося как активного субъекта образовательной деятельности.',
+  25: 'Подход, основанный на идеях культуры, её ценностей, норм и способов деятельности.',
+  26: 'Подход, учитывающий многообразие культур и необходимость диалога между ними.',
+  27: 'Организация образовательного процесса с уважением к травматическому опыту участников.',
+  28: 'Подход, рассматривающий устойчивые, телесно укоренённые формы образовательного взаимодействия.',
+  29: 'Подход, в центре которого работа с ошибкой как основа обучения.',
+  30: 'Подход, ориентированный на выявление и развитие ресурсов личности и образовательной среды.',
+  31: 'Педагогика помощи человеку в постижении смысла жизни и полного смыслового самовыражения пути.',
+  32: 'Ребёнок — не объект, а субъект образования, уникальная личность.',
+  33: 'Образование происходит в подлинных отношениях «Я–Ты».',
+  34: 'Задача — воспитать свободного и ответственного человека.',
+  35: 'Знания должны быть осмысленными, связанными с жизнью.',
+  36: 'Жизнь — это тревога и выбор; образование должно готовить к этому.',
+  37: 'Быть самим собой, а не играть роль.',
+  38: 'Состояние защищённости и уверенности личности в образовательной среде.',
+  39: 'Способность понимать экзистенциальные аспекты бытия и ориентироваться в них.',
+  40: 'Переживание полноты и осмысленности собственной жизни.',
+  41: 'Способность личности осмысленно действовать в ситуациях экзистенциального выбора.',
+  42: 'Процесс обретения личностью смысла и направления собственной жизни.',
+  43: 'Состояние острого переживания бессмысленности или утраты ценностей.',
+  44: 'Основополагающие аспекты человеческого бытия, придающие жизни направление и цель.',
+  45: 'Фундаментальная экзистенциальная ценность, основа человеческого существования.',
+  46: 'Осознание конечности существования, придающее жизни глубину.',
+  47: 'Акт свободного волеизъявления, неотъемлемый от ответственности.',
+  48: 'Способность к глубокой привязанности и принятию другого.',
+  49: 'Содержательный ответ на вопрос о назначении и цели жизни.',
+  50: 'Способность создавать новое, выражать себя в продуктивной деятельности.',
+  51: 'Форма педагогического взаимодействия, направленная на осмысление экзистенциальных вопросов.',
+  52: 'Метод рассказа и повествования, помогающий осмыслить жизненный опыт.',
+  53: 'Форма образовательного путешествия, направленная на самопознание и поиск смысла.',
+  54: 'Интерактивный формат, предполагающий командную работу над задачей за ограниченное время.',
+  55: 'Интерактивная техника, связанная с перестановкой и переосмыслением смысловых элементов.',
+  56: 'Форма работы, использующая искусство для самовыражения и осмысления.',
+  57: 'Форма активного обучения, направленная на развитие навыков и личностных качеств.',
+  58: 'Проектный формат, направленный на моделирование желаемого будущего.',
+  59: 'Методика диагностики экзистенциальной исполненности (А. Лэнгле, К. Орглер).',
+  60: 'Тест для оценки экзистенциальных мотиваций (В.Б. Шумский, Е.М. Уколова, Е.Н. Осин).',
+  61: 'Опросник для оценки смысложизненных ориентаций (Дж. Крамбо, Л. Махолик, адаптация Д.А. Леонтьева).',
+  62: 'Тест жизнестойкости С. Мадди.',
+  63: 'Процесс установления оптимального взаимодействия между субъектами, баланса интересов и взаимоуважения.',
+  64: 'Интегративное личностно-профессиональное качество педагога, отражающее способность к диалогичным отношениям.',
+  65: 'Знаниевый компонент готовности педагога к гармонизации отношений.',
+  66: 'Ценностно-смысловой компонент готовности педагога к гармонизации отношений.',
+  67: 'Деятельностный компонент готовности педагога к гармонизации отношений.',
+  68: 'Рефлексивный компонент готовности педагога к гармонизации отношений.',
+  70: 'Программа для развития межкультурной компетенции педагогов (Германия).',
+  71: 'Программа подготовки фасилитаторов межгруппового диалога (США).',
+  76: 'Датский философ, предшественник экзистенциализма.',
+  77: 'Русский философ, автор «Самопознания», верил в наступление творческой эпохи.',
+  78: 'Австрийский психолог и психотерапевт, основатель логотерапии.',
+  79: 'Американский психотерапевт, автор экзистенциальной психотерапии.',
+  80: 'Российский психолог, исследователь смысложизненных ориентаций и экзистенциальной психологии.',
+};
+
+// ============== СВЯЗИ ==============
+const EDGES_RAW = [
+  [1,31,'#5b8def','эпистем. сдвиг'],
+  [2,31,'#5b8def','эпистем. сдвиг'],
+  [3,31,'#5b8def','эпистем. сдвиг'],
+  [4,31,'#5b8def','эпистем. сдвиг'],
+  [1,6,'#5b8def',''],[2,6,'#5b8def',''],[3,6,'#5b8def',''],[4,6,'#5b8def',''],
+  [4,36,'#e05c5c','принятие неопр.'],
+
+  [31,32,'#a855f7',''],[31,33,'#a855f7',''],[31,34,'#a855f7',''],
+  [31,35,'#a855f7',''],[31,36,'#a855f7',''],[31,37,'#a855f7',''],
+  [31,38,'#a855f7',''],[31,39,'#a855f7',''],[31,40,'#a855f7',''],
+  [31,41,'#a855f7',''],[31,42,'#a855f7',''],[31,43,'#a855f7',''],
+  [31,51,'#a855f7',''],[31,52,'#a855f7',''],[31,53,'#a855f7',''],
+  [44,45,'#a855f7',''],[44,46,'#a855f7',''],[44,47,'#a855f7',''],
+  [44,48,'#a855f7',''],[44,49,'#a855f7',''],[44,50,'#a855f7',''],
+
+  [7,18,'#00bcd4','гуманизация'],
+  [8,18,'#00bcd4','гуманит.'],
+  [10,18,'#00bcd4','индивидуализ.'],
+
+  [9,24,'#00bcd4','субъектность'],
+  [11,23,'#00bcd4','выбор'],
+  [12,19,'#00bcd4','стандарт'],
+  [13,31,'#00bcd4','ценности'],
+  [14,22,'#00bcd4','учёт различий'],
+  [15,19,'#00bcd4','синтез'],
+
+  [16,19,'#f5a623',''],[17,19,'#f5a623',''],[18,19,'#f5a623',''],
+  [19,20,'#f5a623',''],[19,21,'#f5a623',''],
+
+  [18,31,'#f5a623','ре-гуманизация'],
+
+  [17,54,'#f5a623',''],[17,55,'#f5a623',''],
+  [17,56,'#f5a623',''],[17,57,'#f5a623',''],
+
+  [6,22,'#5cb87a',''],[6,23,'#5cb87a',''],[6,24,'#5cb87a',''],
+
+  [27,38,'#5cb87a','безопасность'],
+  [30,31,'#5cb87a',''],
+  [29,36,'#5cb87a',''],
+  [28,63,'#5cb87a',''],
+  [25,63,'#5cb87a',''],
+  [26,63,'#5cb87a',''],
+  [25,70,'#5cb87a',''],
+  [26,71,'#5cb87a',''],
+
+  [31,54,'#a855f7',''],[31,55,'#a855f7',''],
+  [31,56,'#a855f7',''],[31,57,'#a855f7',''],[31,58,'#a855f7',''],
+
+  [31,59,'#a855f7',''],[31,60,'#a855f7',''],
+  [31,61,'#a855f7',''],[31,62,'#a855f7',''],
+  [42,59,'#a855f7',''],[42,60,'#a855f7',''],
+  [42,61,'#a855f7',''],[42,62,'#a855f7',''],
+
+  [63,64,'#ff9800',''],
+  [64,65,'#ff9800',''],[64,66,'#ff9800',''],
+  [64,67,'#ff9800',''],[64,68,'#ff9800',''],
+
+  [31,63,'#a855f7','со-бытие'],
+
+  [76,31,'#607d8b',''],[77,31,'#607d8b',''],
+  [78,31,'#607d8b',''],[79,31,'#607d8b',''],[80,31,'#607d8b',''],
+
+  [70,63,'#9c27b0',''],[71,63,'#9c27b0',''],
+];
+
+// ============== КОНФИГ РАЗМЕТКИ ==============
+const NODE_X = 108;
+const NODE_Y = 80;
+const NODE_R = 13;
+const CAT_HEADER = 50;
+const SUB_LABEL_H = 25;
+const SUBS_GAP = 5;
+const CAT_PAD_BOTTOM = 12;
+
+// Колонки сдвинуты вплотную; y пересчитаны с зазором ~15 px
+const LAYOUT_SPEC = [
+  { id:'diag',       colX:30,   colW:600, y:140,  maxCols:4 },
+  { id:'trends',     colX:30,   colW:600, y:327,  maxCols:5 },
+  { id:'methods',    colX:30,   colW:600, y:594,  maxCols:4 },
+  { id:'exis',       colX:650,  colW:500, y:140,  maxCols:4 },
+  { id:'progs',      colX:650,  colW:500, y:1007, maxCols:2 },
+  { id:'diag2',      colX:650,  colW:500, y:1194, maxCols:4 },
+  { id:'strategies', colX:1170, colW:500, y:140,  maxCols:3 },
+  { id:'ethnic',     colX:1170, colW:500, y:547,  maxCols:4 },
+  { id:'instr',      colX:1170, colW:500, y:844,  maxCols:4 },
+  { id:'persons',    colX:1170, colW:500, y:1141, maxCols:2 },
+];
+
+const TOTAL_W = 1700;   // было 2230 — правая пустота убрана
+const TOTAL_H = 1600;
+const TOP = 140;
+
+// ============== ПРЕДРАСЧЁТ ==============
+const NODES = {};
+const NODE_LIST = [];
+
+CATEGORIES.forEach(cat => {
+  cat.subs.forEach(sub => {
+    sub.nodes.forEach(n => {
+      NODES[n.num] = { ...n, category: cat, subcategory: sub, id: 'n' + n.num };
+      NODE_LIST.push(NODES[n.num]);
+    });
+  });
+});
+
+const CAT_LAYOUT = {};
+LAYOUT_SPEC.forEach(spec => {
+  const cat = CATEGORIES.find(c => c.id === spec.id);
+  if (!cat) return;
+
+  let innerH = 0;
+  const subYs = [];
+  cat.subs.forEach(sub => {
+    const rows = Math.ceil(sub.nodes.length / spec.maxCols);
+    const subH = SUB_LABEL_H + rows * NODE_Y;
+    subYs.push({ sub, y: innerH, h: subH, rows });
+    innerH += subH + SUBS_GAP;
+  });
+  const catH = CAT_HEADER + innerH + CAT_PAD_BOTTOM;
+
+  let maxRowNodes = 0;
+  cat.subs.forEach(sub => {
+    for (let r = 0; r < Math.ceil(sub.nodes.length / spec.maxCols); r++) {
+      const inRow = Math.min(spec.maxCols, sub.nodes.length - r * spec.maxCols);
+      if (inRow > maxRowNodes) maxRowNodes = inRow;
+    }
+  });
+  const catW = maxRowNodes * NODE_X + 40;
+
+  const catX = spec.colX + (spec.colW - catW) / 2;
+
+  CAT_LAYOUT[cat.id] = { x: catX, y: spec.y, w: catW, h: catH };
+
+  subYs.forEach(({ sub, y: subY, rows }) => {
+    const N = sub.nodes.length;
+    for (let r = 0; r < rows; r++) {
+      const start = r * spec.maxCols;
+      const end = Math.min(start + spec.maxCols, N);
+      const inRow = end - start;
+      const rowW = (inRow - 1) * NODE_X;
+      const startX = catX + catW / 2 - rowW / 2;
+      for (let c = 0; c < inRow; c++) {
+        const node = NODES[sub.nodes[start + c].num];
+        node.x = startX + c * NODE_X;
+        node.y = spec.y + CAT_HEADER + subY + SUB_LABEL_H + r * NODE_Y + NODE_Y / 2 - 10;
+        node.r = NODE_R;
+      }
+    }
+  });
+});
+
+// ============== РЕНДЕРИНГ ==============
+const NS = 'http://www.w3.org/2000/svg';
+const tooltip = document.getElementById('tooltip');
+let pinnedNode = null;
+
+function escapeHtml(s) {
+  return String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+}
+function wrapLabel(text, max) {
+  if (text.length <= max) return [text];
+  const words = text.split(' '); const lines = []; let cur = '';
+  words.forEach(w => {
+    if ((cur + ' ' + w).trim().length <= max) cur = (cur + ' ' + w).trim();
+    else { if (cur) lines.push(cur); cur = w; }
+  });
+  if (cur) lines.push(cur);
+  return lines.slice(0, 3);
+}
+
+function render() {
+  const svg = document.getElementById('graph');
+  svg.setAttribute('width', TOTAL_W);
+  svg.setAttribute('height', TOTAL_H);
+  svg.setAttribute('viewBox', `0 0 ${TOTAL_W} ${TOTAL_H}`);
+
+  const defs = document.createElementNS(NS, 'defs');
+  const grad = document.createElementNS(NS, 'linearGradient');
+  grad.setAttribute('id', 'titleGradient');
+  grad.setAttribute('x1', '0%'); grad.setAttribute('x2', '100%');
+  [['0%','#5b8def','0'],['20%','#8ab4f8','1'],['50%','#ffffff','1'],
+   ['80%','#8ab4f8','1'],['100%','#5b8def','0']].forEach(([off, col, op]) => {
+    const s = document.createElementNS(NS, 'stop');
+    s.setAttribute('offset', off); s.setAttribute('stop-color', col); s.setAttribute('stop-opacity', op);
+    grad.appendChild(s);
+  });
+  defs.appendChild(grad); svg.appendChild(defs);
+
+  const titleG = document.createElementNS(NS, 'g');
+  const addText = (cls, y, text) => {
+    const t = document.createElementNS(NS, 'text');
+    t.setAttribute('class', cls); t.setAttribute('x', TOTAL_W / 2); t.setAttribute('y', y);
+    t.textContent = text; return t;
+  };
+  titleG.appendChild(addText('main-subtitle', 32, 'ИНТЕРАКТИВНЫЙ ГРАФ СВЯЗЕЙ · «ОБРАЗОВАНИЕ В ПОТОКЕ ПЕРЕМЕН»'));
+  titleG.appendChild(addText('main-title', 66, 'Методологические ориентиры и тенденции'));
+  const divider = document.createElementNS(NS, 'line');
+  divider.setAttribute('class', 'title-line');
+  divider.setAttribute('x1', TOTAL_W * 0.18); divider.setAttribute('x2', TOTAL_W * 0.82);
+  divider.setAttribute('y1', 84); divider.setAttribute('y2', 84);
+  titleG.appendChild(divider);
+  titleG.appendChild(addText('main-legend', 104,
+    NODE_LIST.length + ' понятий · ' + CATEGORIES.length + ' категорий · ' +
+    CATEGORIES.reduce((s,c) => s + c.subs.length, 0) + ' подкатегорий · ' +
+    EDGES_RAW.length + ' связей'));
+  svg.appendChild(titleG);
+
+  CATEGORIES.forEach(cat => {
+    const L = CAT_LAYOUT[cat.id];
+    if (!L) return;
+    const g = document.createElementNS(NS, 'g');
+
+    const bg = document.createElementNS(NS, 'rect');
+    bg.setAttribute('x', L.x); bg.setAttribute('y', L.y);
+    bg.setAttribute('width', L.w); bg.setAttribute('height', L.h);
+    bg.setAttribute('rx', 14); bg.setAttribute('fill', cat.color);
+    bg.setAttribute('class', 'category-panel'); bg.setAttribute('stroke', cat.color);
+    g.appendChild(bg);
+
+    const t = document.createElementNS(NS, 'text');
+    t.setAttribute('x', L.x + 18); t.setAttribute('y', L.y + 32);
+    t.setAttribute('class', 'cat-label'); t.setAttribute('fill', cat.color);
+    t.textContent = cat.name; g.appendChild(t);
+
+    const cnt = cat.subs.reduce((s, sub) => s + sub.nodes.length, 0);
+    const ce = document.createElementNS(NS, 'text');
+    ce.setAttribute('x', L.x + L.w - 18); ce.setAttribute('y', L.y + 32);
+    ce.setAttribute('class', 'cat-count'); ce.setAttribute('fill', cat.color);
+    ce.setAttribute('text-anchor', 'end');
+    ce.textContent = cnt + ' узлов'; g.appendChild(ce);
+
+    svg.appendChild(g);
+
+    let innerY = 0;
+    cat.subs.forEach(sub => {
+      const rows = Math.ceil(sub.nodes.length / (LAYOUT_SPEC.find(s => s.id === cat.id)?.maxCols || 4));
+      const subH = SUB_LABEL_H + rows * NODE_Y;
+      const sg = document.createElementNS(NS, 'g');
+
+      const sBG = document.createElementNS(NS, 'rect');
+      sBG.setAttribute('x', L.x + 10); sBG.setAttribute('y', L.y + CAT_HEADER + innerY);
+      sBG.setAttribute('width', L.w - 20); sBG.setAttribute('height', subH);
+      sBG.setAttribute('rx', 8); sBG.setAttribute('fill', cat.color);
+      sBG.setAttribute('class', 'sub-zone'); sBG.setAttribute('stroke', cat.color);
+      sg.appendChild(sBG);
+
+      const st = document.createElementNS(NS, 'text');
+      st.setAttribute('x', L.x + 22); st.setAttribute('y', L.y + CAT_HEADER + innerY + 18);
+      st.setAttribute('class', 'sub-label'); st.setAttribute('fill', cat.color);
+      st.textContent = sub.name; sg.appendChild(st);
+
+      svg.appendChild(sg);
+
+      innerY += subH + SUBS_GAP;
+    });
+  });
+
+  const edgesG = document.createElementNS(NS, 'g');
+  const edgeEls = [], edgeLabelEls = [];
+
+  EDGES_RAW.forEach(([fromNum, toNum, color, label]) => {
+    const a = NODES[fromNum], b = NODES[toNum];
+    if (!a || !b) return;
+    const dx = b.x - a.x, dy = b.y - a.y;
+    const dist = Math.sqrt(dx*dx + dy*dy) || 1;
+    const ux = dx/dist, uy = dy/dist;
+    const x1 = a.x + ux*a.r, y1 = a.y + uy*a.r;
+    const x2 = b.x - ux*b.r, y2 = b.y - uy*b.r;
+    const mx = (x1+x2)/2, my = (y1+y2)/2;
+    const off = 0.10 * dist;
+    const cx = mx - uy*off, cy = my + ux*off;
+
+    const path = document.createElementNS(NS, 'path');
+    path.setAttribute('class', 'edge');
+    path.setAttribute('d', `M ${x1} ${y1} Q ${cx} ${cy} ${x2} ${y2}`);
+    path.setAttribute('stroke', color);
+    path.dataset.from = a.id; path.dataset.to = b.id;
+    edgesG.appendChild(path); edgeEls.push(path);
+
+    if (label) {
+      const t = 0.5;
+      const lx = (1-t)*(1-t)*x1 + 2*(1-t)*t*cx + t*t*x2;
+      const ly = (1-t)*(1-t)*y1 + 2*(1-t)*t*cy + t*t*y2;
+      const txt = document.createElementNS(NS, 'text');
+      txt.setAttribute('class', 'edge-label');
+      txt.setAttribute('x', lx); txt.setAttribute('y', ly - 2);
+      txt.setAttribute('fill', color); txt.textContent = label;
+      txt.dataset.from = a.id; txt.dataset.to = b.id;
+      edgesG.appendChild(txt); edgeLabelEls.push(txt);
+    }
+  });
+  svg.appendChild(edgesG);
+
+  const nodesG = document.createElementNS(NS, 'g');
+  const nodeEls = [];
+
+  NODE_LIST.forEach(n => {
+    const cat = n.category;
+    const g = document.createElementNS(NS, 'g');
+    g.setAttribute('class', 'node-group'); g.dataset.id = n.id;
+
+    const circle = document.createElementNS(NS, 'circle');
+    circle.setAttribute('class', 'node-circle');
+    circle.setAttribute('cx', n.x); circle.setAttribute('cy', n.y);
+    circle.setAttribute('r', n.r); circle.setAttribute('fill', cat.color);
+    circle.style.color = cat.color;
+    g.appendChild(circle);
+
+    const label = document.createElementNS(NS, 'text');
+    label.setAttribute('class', 'node-label');
+    label.setAttribute('x', n.x); label.setAttribute('y', n.y + n.r + 11);
+    const lines = wrapLabel(n.title, 18);
+    lines.forEach((ln, i) => {
+      const tspan = document.createElementNS(NS, 'tspan');
+      tspan.setAttribute('x', n.x); tspan.setAttribute('dy', i === 0 ? 0 : 11);
+      tspan.textContent = ln; label.appendChild(tspan);
+    });
+    g.appendChild(label);
+
+    g.addEventListener('mouseenter', evt => {
+      if (!pinnedNode) highlightNode(n.id, edgeEls, edgeLabelEls, nodeEls);
+      showTooltip(n, evt);
+    });
+    g.addEventListener('mousemove', moveTooltip);
+    g.addEventListener('mouseleave', () => {
+      if (!pinnedNode) { clearHighlight(edgeEls, edgeLabelEls, nodeEls); hideTooltip(); }
+    });
+    g.addEventListener('click', evt => {
+      evt.stopPropagation();
+      if (pinnedNode && pinnedNode.id === n.id) {
+        pinnedNode = null;
+        clearHighlight(edgeEls, edgeLabelEls, nodeEls);
+        tooltip.classList.remove('visible');
+      } else {
+        pinnedNode = n;
+        highlightNode(n.id, edgeEls, edgeLabelEls, nodeEls);
+        showTooltip(n, { clientX: evt.clientX, clientY: evt.clientY }, true);
+      }
+    });
+
+    nodesG.appendChild(g);
+    nodeEls.push({ id: n.id, g, circle });
+  });
+  svg.appendChild(nodesG);
+}
+
+function highlightNode(id, edgeEls, edgeLabelEls, nodeEls) {
+  const conn = new Set([id]);
+  edgeEls.forEach(el => {
+    if (el.dataset.from === id || el.dataset.to === id) {
+      el.classList.add('hi'); el.classList.remove('dim');
+      conn.add(el.dataset.from); conn.add(el.dataset.to);
+    } else { el.classList.add('dim'); el.classList.remove('hi'); }
+  });
+  edgeLabelEls.forEach(el => {
+    if (el.dataset.from === id || el.dataset.to === id) {
+      el.classList.add('hi'); el.classList.remove('dim');
+    } else { el.classList.add('dim'); el.classList.remove('hi'); }
+  });
+  nodeEls.forEach(ne => {
+    if (conn.has(ne.id)) { ne.circle.classList.remove('dim'); ne.g.classList.remove('dim'); }
+    else { ne.circle.classList.add('dim'); ne.g.classList.add('dim'); }
+  });
+}
+function clearHighlight(edgeEls, edgeLabelEls, nodeEls) {
+  edgeEls.forEach(el => el.classList.remove('hi','dim'));
+  edgeLabelEls.forEach(el => el.classList.remove('hi','dim'));
+  nodeEls.forEach(ne => {
+    ne.circle.classList.remove('dim','active');
+    ne.g.classList.remove('dim');
+  });
+}
+function showTooltip(n, evt, isPinned) {
+  const desc = DESCRIPTIONS[n.num] || '';
+  tooltip.innerHTML = `
+    <h4>${escapeHtml(n.title)}</h4>
+    <div class="tt-sub" style="color:${n.category.color}">${escapeHtml(n.category.name.replace(/^[^\s]+\s/, ''))} · ${escapeHtml(n.subcategory.name)}</div>
+    <div class="tt-desc">${escapeHtml(desc)}</div>
+    <div class="tt-hint">${isPinned ? 'Кликните ещё раз, чтобы открепить' : 'Кликните, чтобы закрепить →'}</div>
+  `;
+  tooltip.classList.add('visible');
+  moveTooltip(evt);
+}
+function moveTooltip(evt) {
+  const pad = 16;
+  const w = tooltip.offsetWidth, h = tooltip.offsetHeight;
+  let x = evt.clientX + pad, y = evt.clientY + pad;
+  if (x + w > window.innerWidth - 8)  x = evt.clientX - w - pad;
+  if (y + h > window.innerHeight - 8) y = evt.clientY - h - pad;
+  tooltip.style.left = Math.max(8, x) + 'px';
+  tooltip.style.top  = Math.max(8, y) + 'px';
+}
+function hideTooltip() { if (!pinnedNode) tooltip.classList.remove('visible'); }
+
+function clearAll() {
+  pinnedNode = null;
+  document.querySelectorAll('.edge').forEach(el => el.classList.remove('hi','dim'));
+  document.querySelectorAll('.edge-label').forEach(el => el.classList.remove('hi','dim'));
+  document.querySelectorAll('.node-circle').forEach(el => el.classList.remove('dim','active'));
+  document.querySelectorAll('.node-group').forEach(el => el.classList.remove('dim'));
+  tooltip.classList.remove('visible');
+}
+document.addEventListener('click', () => { if (pinnedNode) clearAll(); });
+document.addEventListener('keydown', e => { if (e.key === 'Escape' && pinnedNode) clearAll(); });
+
+render();
+</script>
+</body>
+</html>
